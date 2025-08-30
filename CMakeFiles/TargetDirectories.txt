@@ -1,0 +1,3 @@
+/home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir
+/home/santourh/abstract-vm-32bits/CMakeFiles/edit_cache.dir
+/home/santourh/abstract-vm-32bits/CMakeFiles/rebuild_cache.dir

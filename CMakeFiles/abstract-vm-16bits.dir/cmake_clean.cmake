@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/abstract-vm-16bits.dir/link.d"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o.d"
+  "CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o"
+  "CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o.d"
+  "abstract-vm-16bits"
+  "abstract-vm-16bits.pdb"
+  "generated-sources/VMGrammarBaseListener.cpp"
+  "generated-sources/VMGrammarBaseListener.h"
+  "generated-sources/VMGrammarBaseVisitor.cpp"
+  "generated-sources/VMGrammarBaseVisitor.h"
+  "generated-sources/VMGrammarLexer.cpp"
+  "generated-sources/VMGrammarLexer.h"
+  "generated-sources/VMGrammarLexer.interp"
+  "generated-sources/VMGrammarLexer.tokens"
+  "generated-sources/VMGrammarListener.cpp"
+  "generated-sources/VMGrammarListener.h"
+  "generated-sources/VMGrammarParser.cpp"
+  "generated-sources/VMGrammarParser.h"
+  "generated-sources/VMGrammarVisitor.cpp"
+  "generated-sources/VMGrammarVisitor.h"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/abstract-vm-16bits.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

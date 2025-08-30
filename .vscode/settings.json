@@ -1,0 +1,98 @@
+{
+    // C++ IntelliSense settings
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/generated-sources",
+        "/usr/local/include/antlr4-runtime",
+        "/usr/include/antlr4-runtime"
+    ],
+    
+    "C_Cpp.default.defines": [],
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    
+    // CMake settings
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureSettings": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+    },
+    
+    // File associations
+    "files.associations": {
+        "*.tex": "latex",
+        "*.g4": "antlr",
+        "*.interp": "plaintext",
+        "*.tokens": "plaintext",
+        "CMakeLists.txt": "cmake",
+        "iostream": "cpp",
+        "any": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "codecvt": "cpp",
+        "condition_variable": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "ratio": "cpp",
+        "string_view": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "fstream": "cpp",
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "mutex": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "shared_mutex": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp",
+        "typeinfo": "cpp"
+    },
+    
+    // Files to include in workspace
+    "search.include": {
+        "**/*.cpp": true,
+        "**/*.h": true,
+        "**/*.hpp": true,
+        "**/*.g4": true,
+        "**/generated-sources/**": true
+    },
+    
+    // Files to exclude from search
+    "search.exclude": {
+        "**/CMakeFiles": true,
+        "**/build": true,
+        "**/*.o": true
+    },
+    
+    // Show generated files in explorer
+    "files.exclude": {
+        // Don't exclude generated-sources so you can see ANTLR output
+    }
+}
