@@ -35,15 +35,13 @@ int main(int argc, const char* argv[]) {
         
         VMListener listener;
         tree::ParseTreeWalker walker;
-
         walker.walk(&listener, tree);
-
-        const Program& programAST = listener.getProgramAST();
-        const std::vector<std::unique_ptr<IInstruction>>& insts = programAST.getInstructions();
-        for (const auto& instruction : insts) 
-        {
-            instruction->execute();
-        }
+        
+        listener.finalizeProgram();
+        Program& programAST = listener.getProgramAST();
+        programAST.executeProgram();
+        
+        
     }
     catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;

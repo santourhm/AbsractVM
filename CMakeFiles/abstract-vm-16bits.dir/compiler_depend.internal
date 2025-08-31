@@ -3883,6 +3883,14 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o
  /usr/lib/linux/uapi/x86/asm/posix_types_64.h
  /usr/lib/linux/uapi/x86/asm/types.h
 
+CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o
+ /home/santourh/abstract-vm-32bits/src/machine/VMState.cpp
+ /usr/include/stdc-predef.h
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o
+ /home/santourh/abstract-vm-32bits/src/machine/memory.cpp
+ /usr/include/stdc-predef.h
+
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o
  /home/santourh/abstract-vm-32bits/src/main.cpp
  /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarBaseListener.h
@@ -5305,6 +5313,8 @@ abstract-vm-16bits
  /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o
  /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o
  /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o
+ /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o
+ /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o
  /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o
  /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o
  /home/santourh/abstract-vm-32bits/CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o

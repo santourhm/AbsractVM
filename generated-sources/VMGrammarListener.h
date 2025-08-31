@@ -35,6 +35,9 @@ public:
   virtual void enterOperand(VMGrammarParser::OperandContext *ctx) = 0;
   virtual void exitOperand(VMGrammarParser::OperandContext *ctx) = 0;
 
+  virtual void enterString_literal(VMGrammarParser::String_literalContext *ctx) = 0;
+  virtual void exitString_literal(VMGrammarParser::String_literalContext *ctx) = 0;
+
   virtual void enterRegister(VMGrammarParser::RegisterContext *ctx) = 0;
   virtual void exitRegister(VMGrammarParser::RegisterContext *ctx) = 0;
 

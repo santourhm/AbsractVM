@@ -54,7 +54,8 @@ void vmgrammarParserInitialize() {
   auto staticData = std::make_unique<VMGrammarParserStaticData>(
     std::vector<std::string>{
       "program", "line", "instruction_line", "label_definition", "instruction", 
-      "opcode", "operand", "register", "memory_address", "immediate", "label"
+      "opcode", "operand", "string_literal", "register", "memory_address", 
+      "immediate", "label"
     },
     std::vector<std::string>{
       "", "'ADD'", "'SUB'", "'WSTR'", "'LOAD'", "'CMP'", "'BEQ'", "'WINT'", 
@@ -67,30 +68,31 @@ void vmgrammarParserInitialize() {
     }
   );
   static const int32_t serializedATNSegment[] = {
-  	4,1,23,82,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
-  	7,7,2,8,7,8,2,9,7,9,2,10,7,10,1,0,5,0,24,8,0,10,0,12,0,27,9,0,1,0,3,0,
-  	30,8,0,1,0,1,0,1,1,1,1,3,1,36,8,1,1,1,4,1,39,8,1,11,1,12,1,40,1,2,1,2,
-  	1,3,1,3,1,3,1,4,1,4,1,4,1,4,3,4,52,8,4,3,4,54,8,4,1,5,1,5,1,6,1,6,1,6,
-  	1,6,1,6,3,6,63,8,6,1,7,1,7,1,8,3,8,68,8,8,1,8,3,8,71,8,8,1,8,1,8,1,8,
-  	1,8,1,9,1,9,1,9,1,10,1,10,1,10,0,0,11,0,2,4,6,8,10,12,14,16,18,20,0,3,
-  	1,0,1,8,1,0,15,17,1,0,19,20,83,0,25,1,0,0,0,2,35,1,0,0,0,4,42,1,0,0,0,
-  	6,44,1,0,0,0,8,47,1,0,0,0,10,55,1,0,0,0,12,62,1,0,0,0,14,64,1,0,0,0,16,
-  	70,1,0,0,0,18,76,1,0,0,0,20,79,1,0,0,0,22,24,3,2,1,0,23,22,1,0,0,0,24,
-  	27,1,0,0,0,25,23,1,0,0,0,25,26,1,0,0,0,26,29,1,0,0,0,27,25,1,0,0,0,28,
-  	30,3,4,2,0,29,28,1,0,0,0,29,30,1,0,0,0,30,31,1,0,0,0,31,32,5,0,0,1,32,
-  	1,1,0,0,0,33,36,3,6,3,0,34,36,3,4,2,0,35,33,1,0,0,0,35,34,1,0,0,0,35,
-  	36,1,0,0,0,36,38,1,0,0,0,37,39,5,23,0,0,38,37,1,0,0,0,39,40,1,0,0,0,40,
-  	38,1,0,0,0,40,41,1,0,0,0,41,3,1,0,0,0,42,43,3,8,4,0,43,5,1,0,0,0,44,45,
-  	5,20,0,0,45,46,5,14,0,0,46,7,1,0,0,0,47,53,3,10,5,0,48,51,3,12,6,0,49,
-  	50,5,9,0,0,50,52,3,12,6,0,51,49,1,0,0,0,51,52,1,0,0,0,52,54,1,0,0,0,53,
-  	48,1,0,0,0,53,54,1,0,0,0,54,9,1,0,0,0,55,56,7,0,0,0,56,11,1,0,0,0,57,
-  	63,3,16,8,0,58,63,3,18,9,0,59,63,3,14,7,0,60,63,5,18,0,0,61,63,3,20,10,
-  	0,62,57,1,0,0,0,62,58,1,0,0,0,62,59,1,0,0,0,62,60,1,0,0,0,62,61,1,0,0,
-  	0,63,13,1,0,0,0,64,65,7,1,0,0,65,15,1,0,0,0,66,68,5,13,0,0,67,66,1,0,
-  	0,0,67,68,1,0,0,0,68,69,1,0,0,0,69,71,5,19,0,0,70,67,1,0,0,0,70,71,1,
-  	0,0,0,71,72,1,0,0,0,72,73,5,10,0,0,73,74,3,14,7,0,74,75,5,11,0,0,75,17,
-  	1,0,0,0,76,77,5,12,0,0,77,78,7,2,0,0,78,19,1,0,0,0,79,80,5,20,0,0,80,
-  	21,1,0,0,0,9,25,29,35,40,51,53,62,67,70
+  	4,1,23,86,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+  	7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,1,0,5,0,26,8,0,10,0,12,0,29,9,
+  	0,1,0,3,0,32,8,0,1,0,1,0,1,1,1,1,3,1,38,8,1,1,1,4,1,41,8,1,11,1,12,1,
+  	42,1,2,1,2,1,3,1,3,1,3,1,4,1,4,1,4,1,4,3,4,54,8,4,3,4,56,8,4,1,5,1,5,
+  	1,6,1,6,1,6,1,6,1,6,3,6,65,8,6,1,7,1,7,1,8,1,8,1,9,3,9,72,8,9,1,9,3,9,
+  	75,8,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,11,1,11,1,11,0,0,12,0,2,4,6,8,
+  	10,12,14,16,18,20,22,0,3,1,0,1,8,1,0,15,17,1,0,19,20,86,0,27,1,0,0,0,
+  	2,37,1,0,0,0,4,44,1,0,0,0,6,46,1,0,0,0,8,49,1,0,0,0,10,57,1,0,0,0,12,
+  	64,1,0,0,0,14,66,1,0,0,0,16,68,1,0,0,0,18,74,1,0,0,0,20,80,1,0,0,0,22,
+  	83,1,0,0,0,24,26,3,2,1,0,25,24,1,0,0,0,26,29,1,0,0,0,27,25,1,0,0,0,27,
+  	28,1,0,0,0,28,31,1,0,0,0,29,27,1,0,0,0,30,32,3,4,2,0,31,30,1,0,0,0,31,
+  	32,1,0,0,0,32,33,1,0,0,0,33,34,5,0,0,1,34,1,1,0,0,0,35,38,3,6,3,0,36,
+  	38,3,4,2,0,37,35,1,0,0,0,37,36,1,0,0,0,37,38,1,0,0,0,38,40,1,0,0,0,39,
+  	41,5,23,0,0,40,39,1,0,0,0,41,42,1,0,0,0,42,40,1,0,0,0,42,43,1,0,0,0,43,
+  	3,1,0,0,0,44,45,3,8,4,0,45,5,1,0,0,0,46,47,5,20,0,0,47,48,5,14,0,0,48,
+  	7,1,0,0,0,49,55,3,10,5,0,50,53,3,12,6,0,51,52,5,9,0,0,52,54,3,12,6,0,
+  	53,51,1,0,0,0,53,54,1,0,0,0,54,56,1,0,0,0,55,50,1,0,0,0,55,56,1,0,0,0,
+  	56,9,1,0,0,0,57,58,7,0,0,0,58,11,1,0,0,0,59,65,3,18,9,0,60,65,3,20,10,
+  	0,61,65,3,16,8,0,62,65,3,14,7,0,63,65,3,22,11,0,64,59,1,0,0,0,64,60,1,
+  	0,0,0,64,61,1,0,0,0,64,62,1,0,0,0,64,63,1,0,0,0,65,13,1,0,0,0,66,67,5,
+  	18,0,0,67,15,1,0,0,0,68,69,7,1,0,0,69,17,1,0,0,0,70,72,5,13,0,0,71,70,
+  	1,0,0,0,71,72,1,0,0,0,72,73,1,0,0,0,73,75,5,19,0,0,74,71,1,0,0,0,74,75,
+  	1,0,0,0,75,76,1,0,0,0,76,77,5,10,0,0,77,78,3,16,8,0,78,79,5,11,0,0,79,
+  	19,1,0,0,0,80,81,5,12,0,0,81,82,7,2,0,0,82,21,1,0,0,0,83,84,5,20,0,0,
+  	84,23,1,0,0,0,9,27,31,37,42,53,55,64,71,74
   };
   staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
 
@@ -201,28 +203,28 @@ VMGrammarParser::ProgramContext* VMGrammarParser::program() {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(25);
+    setState(27);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 0, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
       if (alt == 1) {
-        setState(22);
+        setState(24);
         line(); 
       }
-      setState(27);
+      setState(29);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 0, _ctx);
     }
-    setState(29);
+    setState(31);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 510) != 0)) {
-      setState(28);
+      setState(30);
       instruction_line();
     }
-    setState(31);
+    setState(33);
     match(VMGrammarParser::EOF);
    
   }
@@ -296,11 +298,11 @@ VMGrammarParser::LineContext* VMGrammarParser::line() {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(35);
+    setState(37);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case VMGrammarParser::ID: {
-        setState(33);
+        setState(35);
         label_definition();
         break;
       }
@@ -313,7 +315,7 @@ VMGrammarParser::LineContext* VMGrammarParser::line() {
       case VMGrammarParser::BEQ:
       case VMGrammarParser::WINT:
       case VMGrammarParser::WNL: {
-        setState(34);
+        setState(36);
         instruction_line();
         break;
       }
@@ -325,13 +327,13 @@ VMGrammarParser::LineContext* VMGrammarParser::line() {
     default:
       break;
     }
-    setState(38); 
+    setState(40); 
     _errHandler->sync(this);
     alt = 1;
     do {
       switch (alt) {
         case 1: {
-              setState(37);
+              setState(39);
               match(VMGrammarParser::NEWLINE);
               break;
             }
@@ -339,7 +341,7 @@ VMGrammarParser::LineContext* VMGrammarParser::line() {
       default:
         throw NoViableAltException(this);
       }
-      setState(40); 
+      setState(42); 
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 3, _ctx);
     } while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER);
@@ -402,7 +404,7 @@ VMGrammarParser::Instruction_lineContext* VMGrammarParser::instruction_line() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(42);
+    setState(44);
     instruction();
    
   }
@@ -467,9 +469,9 @@ VMGrammarParser::Label_definitionContext* VMGrammarParser::label_definition() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(44);
+    setState(46);
     match(VMGrammarParser::ID);
-    setState(45);
+    setState(47);
     match(VMGrammarParser::COLON);
    
   }
@@ -543,24 +545,24 @@ VMGrammarParser::InstructionContext* VMGrammarParser::instruction() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(47);
+    setState(49);
     opcode();
-    setState(53);
+    setState(55);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 2077696) != 0)) {
-      setState(48);
+      setState(50);
       operand();
-      setState(51);
+      setState(53);
       _errHandler->sync(this);
 
       _la = _input->LA(1);
       if (_la == VMGrammarParser::COMMA) {
-        setState(49);
+        setState(51);
         match(VMGrammarParser::COMMA);
-        setState(50);
+        setState(52);
         operand();
       }
     }
@@ -652,7 +654,7 @@ VMGrammarParser::OpcodeContext* VMGrammarParser::opcode() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(55);
+    setState(57);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 510) != 0))) {
@@ -691,8 +693,8 @@ VMGrammarParser::RegisterContext* VMGrammarParser::OperandContext::register_() {
   return getRuleContext<VMGrammarParser::RegisterContext>(0);
 }
 
-tree::TerminalNode* VMGrammarParser::OperandContext::STRING_LITERAL() {
-  return getToken(VMGrammarParser::STRING_LITERAL, 0);
+VMGrammarParser::String_literalContext* VMGrammarParser::OperandContext::string_literal() {
+  return getRuleContext<VMGrammarParser::String_literalContext>(0);
 }
 
 VMGrammarParser::LabelContext* VMGrammarParser::OperandContext::label() {
@@ -736,21 +738,21 @@ VMGrammarParser::OperandContext* VMGrammarParser::operand() {
     exitRule();
   });
   try {
-    setState(62);
+    setState(64);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case VMGrammarParser::OPARENT:
       case VMGrammarParser::MINUS:
       case VMGrammarParser::INT: {
         enterOuterAlt(_localctx, 1);
-        setState(57);
+        setState(59);
         memory_address();
         break;
       }
 
       case VMGrammarParser::HASH: {
         enterOuterAlt(_localctx, 2);
-        setState(58);
+        setState(60);
         immediate();
         break;
       }
@@ -759,21 +761,21 @@ VMGrammarParser::OperandContext* VMGrammarParser::operand() {
       case VMGrammarParser::GBREGISTER:
       case VMGrammarParser::LBREGISTER: {
         enterOuterAlt(_localctx, 3);
-        setState(59);
+        setState(61);
         register_();
         break;
       }
 
       case VMGrammarParser::STRING_LITERAL: {
         enterOuterAlt(_localctx, 4);
-        setState(60);
-        match(VMGrammarParser::STRING_LITERAL);
+        setState(62);
+        string_literal();
         break;
       }
 
       case VMGrammarParser::ID: {
         enterOuterAlt(_localctx, 5);
-        setState(61);
+        setState(63);
         label();
         break;
       }
@@ -781,6 +783,67 @@ VMGrammarParser::OperandContext* VMGrammarParser::operand() {
     default:
       throw NoViableAltException(this);
     }
+   
+  }
+  catch (RecognitionException &e) {
+    _errHandler->reportError(this, e);
+    _localctx->exception = std::current_exception();
+    _errHandler->recover(this, _localctx->exception);
+  }
+
+  return _localctx;
+}
+
+//----------------- String_literalContext ------------------------------------------------------------------
+
+VMGrammarParser::String_literalContext::String_literalContext(ParserRuleContext *parent, size_t invokingState)
+  : ParserRuleContext(parent, invokingState) {
+}
+
+tree::TerminalNode* VMGrammarParser::String_literalContext::STRING_LITERAL() {
+  return getToken(VMGrammarParser::STRING_LITERAL, 0);
+}
+
+
+size_t VMGrammarParser::String_literalContext::getRuleIndex() const {
+  return VMGrammarParser::RuleString_literal;
+}
+
+void VMGrammarParser::String_literalContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<VMGrammarListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->enterString_literal(this);
+}
+
+void VMGrammarParser::String_literalContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<VMGrammarListener *>(listener);
+  if (parserListener != nullptr)
+    parserListener->exitString_literal(this);
+}
+
+
+std::any VMGrammarParser::String_literalContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<VMGrammarVisitor*>(visitor))
+    return parserVisitor->visitString_literal(this);
+  else
+    return visitor->visitChildren(this);
+}
+
+VMGrammarParser::String_literalContext* VMGrammarParser::string_literal() {
+  String_literalContext *_localctx = _tracker.createInstance<String_literalContext>(_ctx, getState());
+  enterRule(_localctx, 14, VMGrammarParser::RuleString_literal);
+
+#if __cplusplus > 201703L
+  auto onExit = finally([=, this] {
+#else
+  auto onExit = finally([=] {
+#endif
+    exitRule();
+  });
+  try {
+    enterOuterAlt(_localctx, 1);
+    setState(66);
+    match(VMGrammarParser::STRING_LITERAL);
    
   }
   catch (RecognitionException &e) {
@@ -837,7 +900,7 @@ std::any VMGrammarParser::RegisterContext::accept(tree::ParseTreeVisitor *visito
 
 VMGrammarParser::RegisterContext* VMGrammarParser::register_() {
   RegisterContext *_localctx = _tracker.createInstance<RegisterContext>(_ctx, getState());
-  enterRule(_localctx, 14, VMGrammarParser::RuleRegister);
+  enterRule(_localctx, 16, VMGrammarParser::RuleRegister);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -849,7 +912,7 @@ VMGrammarParser::RegisterContext* VMGrammarParser::register_() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(64);
+    setState(68);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 229376) != 0))) {
@@ -923,7 +986,7 @@ std::any VMGrammarParser::Memory_addressContext::accept(tree::ParseTreeVisitor *
 
 VMGrammarParser::Memory_addressContext* VMGrammarParser::memory_address() {
   Memory_addressContext *_localctx = _tracker.createInstance<Memory_addressContext>(_ctx, getState());
-  enterRule(_localctx, 16, VMGrammarParser::RuleMemory_address);
+  enterRule(_localctx, 18, VMGrammarParser::RuleMemory_address);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -935,29 +998,29 @@ VMGrammarParser::Memory_addressContext* VMGrammarParser::memory_address() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(70);
+    setState(74);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == VMGrammarParser::MINUS
 
     || _la == VMGrammarParser::INT) {
-      setState(67);
+      setState(71);
       _errHandler->sync(this);
 
       _la = _input->LA(1);
       if (_la == VMGrammarParser::MINUS) {
-        setState(66);
+        setState(70);
         match(VMGrammarParser::MINUS);
       }
-      setState(69);
+      setState(73);
       match(VMGrammarParser::INT);
     }
-    setState(72);
+    setState(76);
     match(VMGrammarParser::OPARENT);
-    setState(73);
+    setState(77);
     register_();
-    setState(74);
+    setState(78);
     match(VMGrammarParser::CPARENT);
    
   }
@@ -1015,7 +1078,7 @@ std::any VMGrammarParser::ImmediateContext::accept(tree::ParseTreeVisitor *visit
 
 VMGrammarParser::ImmediateContext* VMGrammarParser::immediate() {
   ImmediateContext *_localctx = _tracker.createInstance<ImmediateContext>(_ctx, getState());
-  enterRule(_localctx, 18, VMGrammarParser::RuleImmediate);
+  enterRule(_localctx, 20, VMGrammarParser::RuleImmediate);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -1027,9 +1090,9 @@ VMGrammarParser::ImmediateContext* VMGrammarParser::immediate() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(76);
+    setState(80);
     match(VMGrammarParser::HASH);
-    setState(77);
+    setState(81);
     _la = _input->LA(1);
     if (!(_la == VMGrammarParser::INT
 
@@ -1088,7 +1151,7 @@ std::any VMGrammarParser::LabelContext::accept(tree::ParseTreeVisitor *visitor) 
 
 VMGrammarParser::LabelContext* VMGrammarParser::label() {
   LabelContext *_localctx = _tracker.createInstance<LabelContext>(_ctx, getState());
-  enterRule(_localctx, 20, VMGrammarParser::RuleLabel);
+  enterRule(_localctx, 22, VMGrammarParser::RuleLabel);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -1099,7 +1162,7 @@ VMGrammarParser::LabelContext* VMGrammarParser::label() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(79);
+    setState(83);
     match(VMGrammarParser::ID);
    
   }

@@ -3872,6 +3872,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: src/instructions/
   /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
   /usr/lib/linux/uapi/x86/asm/types.h
 
+CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o: src/machine/VMState.cpp \
+  /usr/include/stdc-predef.h
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o: src/machine/memory.cpp \
+  /usr/include/stdc-predef.h
+
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: src/main.cpp \
   generated-sources/VMGrammarBaseListener.h \
   generated-sources/VMGrammarLexer.h \
@@ -5286,6 +5292,8 @@ abstract-vm-16bits: /lib/x86_64-linux-gnu/libc.so.6 \
   CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o \
@@ -5298,6 +5306,8 @@ abstract-vm-16bits: /lib/x86_64-linux-gnu/libc.so.6 \
 CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o:
 
@@ -5324,6 +5334,8 @@ src/operands/LabelOperand.cpp:
 include/VM.hpp:
 
 src/main.cpp:
+
+src/machine/VMState.cpp:
 
 src/instructions/WSTR.cpp:
 
@@ -5366,6 +5378,8 @@ src/operands/Memory_AddressOperand.cpp:
 /usr/local/include/antlr4-runtime/tree/pattern/TagChunk.h:
 
 /usr/local/include/antlr4-runtime/tree/pattern/RuleTagToken.h:
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o:
 
 /usr/local/include/antlr4-runtime/tree/TerminalNodeImpl.h:
 
@@ -5502,6 +5516,8 @@ include/ImmediateOperand.hpp:
 /usr/local/include/antlr4-runtime/Token.h:
 
 include/LabelOperand.hpp:
+
+src/machine/memory.cpp:
 
 /usr/local/include/antlr4-runtime/RuntimeMetaData.h:
 

@@ -33,6 +33,8 @@ public:
 
     virtual std::any visitOperand(VMGrammarParser::OperandContext *context) = 0;
 
+    virtual std::any visitString_literal(VMGrammarParser::String_literalContext *context) = 0;
+
     virtual std::any visitRegister(VMGrammarParser::RegisterContext *context) = 0;
 
     virtual std::any visitMemory_address(VMGrammarParser::Memory_addressContext *context) = 0;

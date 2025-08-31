@@ -73,7 +73,16 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "tuple": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "array": "cpp",
+        "compare": "cpp",
+        "span": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__tree": "cpp",
+        "deque": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     },
     
     // Files to include in workspace

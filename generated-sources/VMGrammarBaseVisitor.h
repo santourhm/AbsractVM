@@ -43,6 +43,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual std::any visitString_literal(VMGrammarParser::String_literalContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual std::any visitRegister(VMGrammarParser::RegisterContext *ctx) override {
     return visitChildren(ctx);
   }

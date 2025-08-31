@@ -22,10 +22,14 @@ operand
     : memory_address
     | immediate
     | register        
-    | STRING_LITERAL
+    | string_literal
     | label           
     ;
 
+string_literal
+    : STRING_LITERAL
+    ;
+    
 register
     : RREGISTER | GBREGISTER | LBREGISTER
     ;

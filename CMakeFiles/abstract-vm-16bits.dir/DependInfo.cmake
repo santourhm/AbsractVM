@@ -19,6 +19,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/santourh/abstract-vm-32bits/src/VMListener.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o.d"
   "/home/santourh/abstract-vm-32bits/src/instructions/IInstruction.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o.d"
   "/home/santourh/abstract-vm-32bits/src/instructions/WSTR.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o.d"
+  "/home/santourh/abstract-vm-32bits/src/machine/VMState.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o.d"
+  "/home/santourh/abstract-vm-32bits/src/machine/memory.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o.d"
   "/home/santourh/abstract-vm-32bits/src/main.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o.d"
   "/home/santourh/abstract-vm-32bits/src/operands/ImmediateOperand.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o.d"
   "/home/santourh/abstract-vm-32bits/src/operands/LabelOperand.cpp" "CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o" "gcc" "CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o.d"

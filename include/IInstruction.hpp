@@ -16,9 +16,8 @@ class IInstruction
     
     public:
         
-        void   addOperand(std::unique_ptr<Operand> op);
+        void addOperand(std::unique_ptr<Operand> operand);
         virtual ~IInstruction() = default;
-
         virtual void execute(/* VMState vms */) = 0 ;
 };
 

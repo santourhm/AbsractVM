@@ -17,10 +17,12 @@ class Program
         void            addIntruction(std::unique_ptr<IInstruction> inst);
         int             getNumberofInstructions(void);
 
+        
+        void setInstructions(std::vector<std::unique_ptr<IInstruction>>&& instrs) ;
         const std::vector<std::unique_ptr<IInstruction>>& getInstructions() const ;
            
 
-        //void  executeProgram(VMState vms);
+        void  executeProgram(/* VMState vms */);
 
 };
 

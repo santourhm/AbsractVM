@@ -20,8 +20,8 @@ public:
 
   enum {
     RuleProgram = 0, RuleLine = 1, RuleInstruction_line = 2, RuleLabel_definition = 3, 
-    RuleInstruction = 4, RuleOpcode = 5, RuleOperand = 6, RuleRegister = 7, 
-    RuleMemory_address = 8, RuleImmediate = 9, RuleLabel = 10
+    RuleInstruction = 4, RuleOpcode = 5, RuleOperand = 6, RuleString_literal = 7, 
+    RuleRegister = 8, RuleMemory_address = 9, RuleImmediate = 10, RuleLabel = 11
   };
 
   explicit VMGrammarParser(antlr4::TokenStream *input);
@@ -48,6 +48,7 @@ public:
   class InstructionContext;
   class OpcodeContext;
   class OperandContext;
+  class String_literalContext;
   class RegisterContext;
   class Memory_addressContext;
   class ImmediateContext;
@@ -167,7 +168,7 @@ public:
     Memory_addressContext *memory_address();
     ImmediateContext *immediate();
     RegisterContext *register_();
-    antlr4::tree::TerminalNode *STRING_LITERAL();
+    String_literalContext *string_literal();
     LabelContext *label();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -178,6 +179,21 @@ public:
   };
 
   OperandContext* operand();
+
+  class  String_literalContext : public antlr4::ParserRuleContext {
+  public:
+    String_literalContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *STRING_LITERAL();
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  String_literalContext* string_literal();
 
   class  RegisterContext : public antlr4::ParserRuleContext {
   public:

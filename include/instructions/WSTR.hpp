@@ -9,7 +9,8 @@ class WSTR : public IInstruction
     
     public:
 
-        WSTR(std::vector<std::unique_ptr<Operand>> ops);
+        WSTR() = default;
+        explicit  WSTR(std::vector<std::unique_ptr<Operand>> ops);
         void  execute(/*VMState vms*/)  override;
 };
 

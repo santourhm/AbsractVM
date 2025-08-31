@@ -394,6 +394,54 @@ src/instructions/WSTR.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.s
 .PHONY : src/instructions/WSTR.cpp.s
 
+src/machine/VMState.o: src/machine/VMState.cpp.o
+.PHONY : src/machine/VMState.o
+
+# target to build an object file
+src/machine/VMState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o
+.PHONY : src/machine/VMState.cpp.o
+
+src/machine/VMState.i: src/machine/VMState.cpp.i
+.PHONY : src/machine/VMState.i
+
+# target to preprocess a source file
+src/machine/VMState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.i
+.PHONY : src/machine/VMState.cpp.i
+
+src/machine/VMState.s: src/machine/VMState.cpp.s
+.PHONY : src/machine/VMState.s
+
+# target to generate assembly for a file
+src/machine/VMState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.s
+.PHONY : src/machine/VMState.cpp.s
+
+src/machine/memory.o: src/machine/memory.cpp.o
+.PHONY : src/machine/memory.o
+
+# target to build an object file
+src/machine/memory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o
+.PHONY : src/machine/memory.cpp.o
+
+src/machine/memory.i: src/machine/memory.cpp.i
+.PHONY : src/machine/memory.i
+
+# target to preprocess a source file
+src/machine/memory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.i
+.PHONY : src/machine/memory.cpp.i
+
+src/machine/memory.s: src/machine/memory.cpp.s
+.PHONY : src/machine/memory.s
+
+# target to generate assembly for a file
+src/machine/memory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.s
+.PHONY : src/machine/memory.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -604,6 +652,12 @@ help:
 	@echo "... src/instructions/WSTR.o"
 	@echo "... src/instructions/WSTR.i"
 	@echo "... src/instructions/WSTR.s"
+	@echo "... src/machine/VMState.o"
+	@echo "... src/machine/VMState.i"
+	@echo "... src/machine/VMState.s"
+	@echo "... src/machine/memory.o"
+	@echo "... src/machine/memory.i"
+	@echo "... src/machine/memory.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

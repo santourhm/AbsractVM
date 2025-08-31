@@ -10,6 +10,8 @@ set(OLD_GLOB
   "/home/santourh/abstract-vm-32bits/src/VMListener.cpp"
   "/home/santourh/abstract-vm-32bits/src/instructions/IInstruction.cpp"
   "/home/santourh/abstract-vm-32bits/src/instructions/WSTR.cpp"
+  "/home/santourh/abstract-vm-32bits/src/machine/VMState.cpp"
+  "/home/santourh/abstract-vm-32bits/src/machine/memory.cpp"
   "/home/santourh/abstract-vm-32bits/src/main.cpp"
   "/home/santourh/abstract-vm-32bits/src/operands/ImmediateOperand.cpp"
   "/home/santourh/abstract-vm-32bits/src/operands/LabelOperand.cpp"

@@ -37,6 +37,9 @@ public:
   virtual void enterOperand(VMGrammarParser::OperandContext * /*ctx*/) override { }
   virtual void exitOperand(VMGrammarParser::OperandContext * /*ctx*/) override { }
 
+  virtual void enterString_literal(VMGrammarParser::String_literalContext * /*ctx*/) override { }
+  virtual void exitString_literal(VMGrammarParser::String_literalContext * /*ctx*/) override { }
+
   virtual void enterRegister(VMGrammarParser::RegisterContext * /*ctx*/) override { }
   virtual void exitRegister(VMGrammarParser::RegisterContext * /*ctx*/) override { }
 

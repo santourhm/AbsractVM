@@ -13,35 +13,26 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
     std::cout << "Instruction : " << ctx->getText() << '\n';
 
     size_t numOperands = ctx->operand().size();
-
     std::unique_ptr<IInstruction> inst; 
-    std::vector<std::unique_ptr<Operand>> operands; 
 
     auto opcodeCtx = ctx->opcode();
-    auto operandCtxs = ctx->operand();
     
     try {
         if (opcodeCtx->WSTR()) 
         {
-            if (operandCtxs.size() != 1) 
-            {
+            if (numOperands != 1) 
                 throw std::runtime_error("Error: WSTR needs exactly one operand");
-            }
             
-            operands.push_back(std::make_unique<StringLiteralOperand>(
-                operandCtxs[0]->getText()   
-            ));
-
-            inst = std::make_unique<WSTR>(std::move(operands));
+            inst = std::make_unique<WSTR>();
         }
-       
-        ProgATS->addIntruction(std::move(inst));
     } 
     catch (const std::runtime_error &e) {
         std::cerr << "Semantic Error on line " 
                   << ctx->getStart()->getLine() 
                   << ": " << e.what() << std::endl;
     }
+
+    TmpInst.push_back(std::move(inst));
 }
 
 void VMListener::enterOpcode(VMGrammarParser::OpcodeContext * ctx)
@@ -50,6 +41,30 @@ void VMListener::enterOpcode(VMGrammarParser::OpcodeContext * ctx)
    
 }
 
+
+void VMListener::enterString_literal(VMGrammarParser::String_literalContext * ctx)
+{
+
+    std::cout << "enterString_literal : " << ctx->getText() << '\n';
+    if(ctx->STRING_LITERAL())
+    {
+        IInstruction* lastInstruction = TmpInst.back().get();
+        lastInstruction->addOperand( 
+            std::make_unique<StringLiteralOperand>(ctx->getText())
+        );
+    }
+}
+
+
+void VMListener::enterLabel_definition(VMGrammarParser::Label_definitionContext * ctx)
+{
+    std::cout << "enterLabel_definition : " << ctx->getText() << '\n';
+}
+
+void VMListener::finalizeProgram() 
+{
+    ProgATS->setInstructions(std::move(TmpInst));
+}
 
 void VMListener::enterOperand(VMGrammarParser::OperandContext * ctx)
 {

@@ -1,2 +1,3 @@
-WSTR "Hello world\n"
-WSTR "Hello world hzhaj\n"
+hello_word :
+    WSTR    "Hello world\n"
+    WSTR    "My GirlFriend Is So beautiful"
