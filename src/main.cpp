@@ -6,6 +6,8 @@
 #include "VMGrammarBaseListener.h"
 #include "VM.hpp"
 #include "VMListener.hpp"
+#include "Program.hpp"
+#include <memory>
 
 using namespace antlr4;
 
@@ -30,13 +32,18 @@ int main(int argc, const char* argv[]) {
 
         tree::ParseTree *tree = parser.program();
         
+        
         VMListener listener;
-
         tree::ParseTreeWalker walker;
 
         walker.walk(&listener, tree);
 
-        stream.close();
+        const Program& programAST = listener.getProgramAST();
+        const std::vector<std::unique_ptr<IInstruction>>& insts = programAST.getInstructions();
+        for (const auto& instruction : insts) 
+        {
+            instruction->execute();
+        }
     }
     catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;

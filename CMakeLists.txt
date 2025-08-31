@@ -35,17 +35,21 @@ ANTLR_TARGET(VMGrammar
     OUTPUT_DIRECTORY "${ANTLR_OUTPUT_DIR}"
 )
 
+file(GLOB_RECURSE PROJECT_SOURCES
+    CONFIGURE_DEPENDS
+    src/*.cpp
+)
+
 # Create executable
 add_executable(${PROJECT_NAME}
-    src/main.cpp
-    src/VMListener.cpp
-    src/VM.cpp
+    ${PROJECT_SOURCES}
     ${ANTLR_VMGrammar_CXX_OUTPUTS}   # Now this variable will be defined
 )
 
 # Set include directories
 target_include_directories(${PROJECT_NAME} PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/include"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/instructions"
     "${ANTLR_OUTPUT_DIR}"
     ${ANTLR4_RUNTIME_INCLUDE_DIR}
 )

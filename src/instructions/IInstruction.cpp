@@ -1,3 +1,4 @@
+#include "IInstruction.hpp"
 
 
 
@@ -5,25 +6,8 @@
 
 
 
-class IInstruction
+
+void   IInstruction::addOperand(std::unique_ptr<Operand> op)
 {
-    private:
-        
-        IOperand op1 ;
-        IOperand op2 ;
-        IOperand un_op ;
-
-    public:
-        
-        IInstruction();
-        IInstruction(IOperand op);
-        IInstruction(IOperand op1, IOperand op1);
-        
-        virtual  void execute(VMState vms)  ;
-        
-        ~IInstruction();
-
-
-    };
-
-
+       this->operands.push_back(std::move(op));
+}

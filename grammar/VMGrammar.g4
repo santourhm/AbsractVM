@@ -1,64 +1,76 @@
 grammar VMGrammar;
 
-    // --- Parser Rules ---
+// --- Parser Rules ---
 
-    program: line* (instruction)? EOF;
+program: line* (instruction_line)? EOF;
 
-    line: (instruction)? NEWLINE+;
+line: (label_definition | instruction_line)? NEWLINE+;
 
-    instruction
-        : opcode (operand (COMMA operand)?)?
-        ;
+instruction_line: instruction;
 
-    opcode
-        : ADD | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL
-        ;
+label_definition: ID ':'; 
 
-    operand
-        : memory_address
-        | immediate
-        | REGISTER
-        | STRING_LITERAL
-        | label
-        ;
+instruction
+    : opcode (operand (COMMA operand)?)?
+    ;
 
-    memory_address
-        : (MINUS? INT)? OPARENT (REGISTER | ID) CPARENT
-        ;
+opcode
+    : ADD | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL
+    ;
 
-    immediate
-        : HASH (INT | ID)
-        ;
+operand
+    : memory_address
+    | immediate
+    | register        
+    | STRING_LITERAL
+    | label           
+    ;
 
-    label
-        : ID
-        ;
+register
+    : RREGISTER | GBREGISTER | LBREGISTER
+    ;
+
+memory_address
+    : (MINUS? INT)? OPARENT register CPARENT 
+    ;
+
+immediate
+    : HASH (INT | ID)
+    ;
+
+label
+    : ID
+    ;
 
 
-    // --- Lexer Rules ---
+// --- Lexer Rules ---
 
-    ADD : 'ADD';
-    SUB : 'SUB';
-    WSTR: 'WSTR';
-    LOAD: 'LOAD';
-    CMP : 'CMP';
-    BEQ : 'BEQ';
-    WINT: 'WINT';
-    WNL : 'WNL';
 
-    COMMA  : ',';
-    OPARENT: '(';
-    CPARENT: ')';
-    HASH   : '#';
-    MINUS  : '-';
+ADD : 'ADD';
+SUB : 'SUB';
+WSTR: 'WSTR';
+LOAD: 'LOAD';
+CMP : 'CMP';
+BEQ : 'BEQ';
+WINT: 'WINT';
+WNL : 'WNL';
 
-    REGISTER      : 'R' INT;
-    STRING_LITERAL: '"' ( ~["\\] | '\\' . )* '"';
-    INT           : [0-9]+;
-    ID            : [a-zA-Z_][a-zA-Z_0-9]*;
+COMMA  : ',';
+OPARENT: '(';
+CPARENT: ')';
+HASH   : '#';
+MINUS  : '-';
+COLON  : ':'; 
 
-    COMMENT : ';' ~[\r\n]* -> skip;
+// Operands & Identifiers
+RREGISTER      : 'R' INT;
+GBREGISTER     : 'GB';
+LBREGISTER     : 'LB';
+STRING_LITERAL: '"' ( ~["\\] | '\\' . )* '"';
+INT           : [0-9]+;
+ID            : [a-zA-Z_][a-zA-Z_0-9]*;
 
-    WS      : [ \t]+ -> skip;
 
-    NEWLINE : ('\r'? '\n' | '\r');
+COMMENT : ';' ~[\r\n]* -> skip;
+WS      : [ \t]+ -> skip;
+NEWLINE : ('\r'? '\n' | '\r');

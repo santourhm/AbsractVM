@@ -113,6 +113,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P /home/santourh/abstract-vm-32bits/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -273,6 +274,30 @@ generated-sources/VMGrammarVisitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.s
 .PHONY : generated-sources/VMGrammarVisitor.cpp.s
 
+src/Program.o: src/Program.cpp.o
+.PHONY : src/Program.o
+
+# target to build an object file
+src/Program.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o
+.PHONY : src/Program.cpp.o
+
+src/Program.i: src/Program.cpp.i
+.PHONY : src/Program.i
+
+# target to preprocess a source file
+src/Program.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.i
+.PHONY : src/Program.cpp.i
+
+src/Program.s: src/Program.cpp.s
+.PHONY : src/Program.s
+
+# target to generate assembly for a file
+src/Program.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.s
+.PHONY : src/Program.cpp.s
+
 src/VM.o: src/VM.cpp.o
 .PHONY : src/VM.o
 
@@ -321,6 +346,54 @@ src/VMListener.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.s
 .PHONY : src/VMListener.cpp.s
 
+src/instructions/IInstruction.o: src/instructions/IInstruction.cpp.o
+.PHONY : src/instructions/IInstruction.o
+
+# target to build an object file
+src/instructions/IInstruction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o
+.PHONY : src/instructions/IInstruction.cpp.o
+
+src/instructions/IInstruction.i: src/instructions/IInstruction.cpp.i
+.PHONY : src/instructions/IInstruction.i
+
+# target to preprocess a source file
+src/instructions/IInstruction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.i
+.PHONY : src/instructions/IInstruction.cpp.i
+
+src/instructions/IInstruction.s: src/instructions/IInstruction.cpp.s
+.PHONY : src/instructions/IInstruction.s
+
+# target to generate assembly for a file
+src/instructions/IInstruction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.s
+.PHONY : src/instructions/IInstruction.cpp.s
+
+src/instructions/WSTR.o: src/instructions/WSTR.cpp.o
+.PHONY : src/instructions/WSTR.o
+
+# target to build an object file
+src/instructions/WSTR.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o
+.PHONY : src/instructions/WSTR.cpp.o
+
+src/instructions/WSTR.i: src/instructions/WSTR.cpp.i
+.PHONY : src/instructions/WSTR.i
+
+# target to preprocess a source file
+src/instructions/WSTR.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.i
+.PHONY : src/instructions/WSTR.cpp.i
+
+src/instructions/WSTR.s: src/instructions/WSTR.cpp.s
+.PHONY : src/instructions/WSTR.s
+
+# target to generate assembly for a file
+src/instructions/WSTR.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.s
+.PHONY : src/instructions/WSTR.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -344,6 +417,150 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/operands/ImmediateOperand.o: src/operands/ImmediateOperand.cpp.o
+.PHONY : src/operands/ImmediateOperand.o
+
+# target to build an object file
+src/operands/ImmediateOperand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o
+.PHONY : src/operands/ImmediateOperand.cpp.o
+
+src/operands/ImmediateOperand.i: src/operands/ImmediateOperand.cpp.i
+.PHONY : src/operands/ImmediateOperand.i
+
+# target to preprocess a source file
+src/operands/ImmediateOperand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.i
+.PHONY : src/operands/ImmediateOperand.cpp.i
+
+src/operands/ImmediateOperand.s: src/operands/ImmediateOperand.cpp.s
+.PHONY : src/operands/ImmediateOperand.s
+
+# target to generate assembly for a file
+src/operands/ImmediateOperand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.s
+.PHONY : src/operands/ImmediateOperand.cpp.s
+
+src/operands/LabelOperand.o: src/operands/LabelOperand.cpp.o
+.PHONY : src/operands/LabelOperand.o
+
+# target to build an object file
+src/operands/LabelOperand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o
+.PHONY : src/operands/LabelOperand.cpp.o
+
+src/operands/LabelOperand.i: src/operands/LabelOperand.cpp.i
+.PHONY : src/operands/LabelOperand.i
+
+# target to preprocess a source file
+src/operands/LabelOperand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.i
+.PHONY : src/operands/LabelOperand.cpp.i
+
+src/operands/LabelOperand.s: src/operands/LabelOperand.cpp.s
+.PHONY : src/operands/LabelOperand.s
+
+# target to generate assembly for a file
+src/operands/LabelOperand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.s
+.PHONY : src/operands/LabelOperand.cpp.s
+
+src/operands/Memory_AddressOperand.o: src/operands/Memory_AddressOperand.cpp.o
+.PHONY : src/operands/Memory_AddressOperand.o
+
+# target to build an object file
+src/operands/Memory_AddressOperand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o
+.PHONY : src/operands/Memory_AddressOperand.cpp.o
+
+src/operands/Memory_AddressOperand.i: src/operands/Memory_AddressOperand.cpp.i
+.PHONY : src/operands/Memory_AddressOperand.i
+
+# target to preprocess a source file
+src/operands/Memory_AddressOperand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.i
+.PHONY : src/operands/Memory_AddressOperand.cpp.i
+
+src/operands/Memory_AddressOperand.s: src/operands/Memory_AddressOperand.cpp.s
+.PHONY : src/operands/Memory_AddressOperand.s
+
+# target to generate assembly for a file
+src/operands/Memory_AddressOperand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.s
+.PHONY : src/operands/Memory_AddressOperand.cpp.s
+
+src/operands/Operand.o: src/operands/Operand.cpp.o
+.PHONY : src/operands/Operand.o
+
+# target to build an object file
+src/operands/Operand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o
+.PHONY : src/operands/Operand.cpp.o
+
+src/operands/Operand.i: src/operands/Operand.cpp.i
+.PHONY : src/operands/Operand.i
+
+# target to preprocess a source file
+src/operands/Operand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.i
+.PHONY : src/operands/Operand.cpp.i
+
+src/operands/Operand.s: src/operands/Operand.cpp.s
+.PHONY : src/operands/Operand.s
+
+# target to generate assembly for a file
+src/operands/Operand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.s
+.PHONY : src/operands/Operand.cpp.s
+
+src/operands/RRegOperand.o: src/operands/RRegOperand.cpp.o
+.PHONY : src/operands/RRegOperand.o
+
+# target to build an object file
+src/operands/RRegOperand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o
+.PHONY : src/operands/RRegOperand.cpp.o
+
+src/operands/RRegOperand.i: src/operands/RRegOperand.cpp.i
+.PHONY : src/operands/RRegOperand.i
+
+# target to preprocess a source file
+src/operands/RRegOperand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.i
+.PHONY : src/operands/RRegOperand.cpp.i
+
+src/operands/RRegOperand.s: src/operands/RRegOperand.cpp.s
+.PHONY : src/operands/RRegOperand.s
+
+# target to generate assembly for a file
+src/operands/RRegOperand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.s
+.PHONY : src/operands/RRegOperand.cpp.s
+
+src/operands/StringLiteralOperand.o: src/operands/StringLiteralOperand.cpp.o
+.PHONY : src/operands/StringLiteralOperand.o
+
+# target to build an object file
+src/operands/StringLiteralOperand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o
+.PHONY : src/operands/StringLiteralOperand.cpp.o
+
+src/operands/StringLiteralOperand.i: src/operands/StringLiteralOperand.cpp.i
+.PHONY : src/operands/StringLiteralOperand.i
+
+# target to preprocess a source file
+src/operands/StringLiteralOperand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.i
+.PHONY : src/operands/StringLiteralOperand.cpp.i
+
+src/operands/StringLiteralOperand.s: src/operands/StringLiteralOperand.cpp.s
+.PHONY : src/operands/StringLiteralOperand.s
+
+# target to generate assembly for a file
+src/operands/StringLiteralOperand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.s
+.PHONY : src/operands/StringLiteralOperand.cpp.s
 
 # Help Target
 help:
@@ -372,15 +589,42 @@ help:
 	@echo "... generated-sources/VMGrammarVisitor.o"
 	@echo "... generated-sources/VMGrammarVisitor.i"
 	@echo "... generated-sources/VMGrammarVisitor.s"
+	@echo "... src/Program.o"
+	@echo "... src/Program.i"
+	@echo "... src/Program.s"
 	@echo "... src/VM.o"
 	@echo "... src/VM.i"
 	@echo "... src/VM.s"
 	@echo "... src/VMListener.o"
 	@echo "... src/VMListener.i"
 	@echo "... src/VMListener.s"
+	@echo "... src/instructions/IInstruction.o"
+	@echo "... src/instructions/IInstruction.i"
+	@echo "... src/instructions/IInstruction.s"
+	@echo "... src/instructions/WSTR.o"
+	@echo "... src/instructions/WSTR.i"
+	@echo "... src/instructions/WSTR.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/operands/ImmediateOperand.o"
+	@echo "... src/operands/ImmediateOperand.i"
+	@echo "... src/operands/ImmediateOperand.s"
+	@echo "... src/operands/LabelOperand.o"
+	@echo "... src/operands/LabelOperand.i"
+	@echo "... src/operands/LabelOperand.s"
+	@echo "... src/operands/Memory_AddressOperand.o"
+	@echo "... src/operands/Memory_AddressOperand.i"
+	@echo "... src/operands/Memory_AddressOperand.s"
+	@echo "... src/operands/Operand.o"
+	@echo "... src/operands/Operand.i"
+	@echo "... src/operands/Operand.s"
+	@echo "... src/operands/RRegOperand.o"
+	@echo "... src/operands/RRegOperand.i"
+	@echo "... src/operands/RRegOperand.s"
+	@echo "... src/operands/StringLiteralOperand.o"
+	@echo "... src/operands/StringLiteralOperand.i"
+	@echo "... src/operands/StringLiteralOperand.s"
 .PHONY : help
 
 
@@ -392,6 +636,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /home/santourh/abstract-vm-32bits/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

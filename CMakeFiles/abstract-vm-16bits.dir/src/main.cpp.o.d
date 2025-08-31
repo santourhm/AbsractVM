@@ -397,4 +397,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: \
  /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarBaseListener.h \
  /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarListener.h \
  /home/santourh/abstract-vm-32bits/include/VM.hpp \
- /home/santourh/abstract-vm-32bits/include/VMListener.hpp
+ /home/santourh/abstract-vm-32bits/include/VMListener.hpp \
+ /home/santourh/abstract-vm-32bits/include/Program.hpp \
+ /home/santourh/abstract-vm-32bits/include/IInstruction.hpp \
+ /home/santourh/abstract-vm-32bits/include/Operand.hpp \
+ /home/santourh/abstract-vm-32bits/include/Program.hpp

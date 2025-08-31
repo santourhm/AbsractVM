@@ -22,6 +22,12 @@ public:
   virtual void enterLine(VMGrammarParser::LineContext * /*ctx*/) override { }
   virtual void exitLine(VMGrammarParser::LineContext * /*ctx*/) override { }
 
+  virtual void enterInstruction_line(VMGrammarParser::Instruction_lineContext * /*ctx*/) override { }
+  virtual void exitInstruction_line(VMGrammarParser::Instruction_lineContext * /*ctx*/) override { }
+
+  virtual void enterLabel_definition(VMGrammarParser::Label_definitionContext * /*ctx*/) override { }
+  virtual void exitLabel_definition(VMGrammarParser::Label_definitionContext * /*ctx*/) override { }
+
   virtual void enterInstruction(VMGrammarParser::InstructionContext * /*ctx*/) override { }
   virtual void exitInstruction(VMGrammarParser::InstructionContext * /*ctx*/) override { }
 
@@ -30,6 +36,9 @@ public:
 
   virtual void enterOperand(VMGrammarParser::OperandContext * /*ctx*/) override { }
   virtual void exitOperand(VMGrammarParser::OperandContext * /*ctx*/) override { }
+
+  virtual void enterRegister(VMGrammarParser::RegisterContext * /*ctx*/) override { }
+  virtual void exitRegister(VMGrammarParser::RegisterContext * /*ctx*/) override { }
 
   virtual void enterMemory_address(VMGrammarParser::Memory_addressContext * /*ctx*/) override { }
   virtual void exitMemory_address(VMGrammarParser::Memory_addressContext * /*ctx*/) override { }

@@ -13,13 +13,15 @@ class  VMGrammarParser : public antlr4::Parser {
 public:
   enum {
     ADD = 1, SUB = 2, WSTR = 3, LOAD = 4, CMP = 5, BEQ = 6, WINT = 7, WNL = 8, 
-    COMMA = 9, OPARENT = 10, CPARENT = 11, HASH = 12, MINUS = 13, REGISTER = 14, 
-    STRING_LITERAL = 15, INT = 16, ID = 17, COMMENT = 18, WS = 19, NEWLINE = 20
+    COMMA = 9, OPARENT = 10, CPARENT = 11, HASH = 12, MINUS = 13, COLON = 14, 
+    RREGISTER = 15, GBREGISTER = 16, LBREGISTER = 17, STRING_LITERAL = 18, 
+    INT = 19, ID = 20, COMMENT = 21, WS = 22, NEWLINE = 23
   };
 
   enum {
-    RuleProgram = 0, RuleLine = 1, RuleInstruction = 2, RuleOpcode = 3, 
-    RuleOperand = 4, RuleMemory_address = 5, RuleImmediate = 6, RuleLabel = 7
+    RuleProgram = 0, RuleLine = 1, RuleInstruction_line = 2, RuleLabel_definition = 3, 
+    RuleInstruction = 4, RuleOpcode = 5, RuleOperand = 6, RuleRegister = 7, 
+    RuleMemory_address = 8, RuleImmediate = 9, RuleLabel = 10
   };
 
   explicit VMGrammarParser(antlr4::TokenStream *input);
@@ -41,9 +43,12 @@ public:
 
   class ProgramContext;
   class LineContext;
+  class Instruction_lineContext;
+  class Label_definitionContext;
   class InstructionContext;
   class OpcodeContext;
   class OperandContext;
+  class RegisterContext;
   class Memory_addressContext;
   class ImmediateContext;
   class LabelContext; 
@@ -55,7 +60,7 @@ public:
     antlr4::tree::TerminalNode *EOF();
     std::vector<LineContext *> line();
     LineContext* line(size_t i);
-    InstructionContext *instruction();
+    Instruction_lineContext *instruction_line();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -70,7 +75,8 @@ public:
   public:
     LineContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    InstructionContext *instruction();
+    Label_definitionContext *label_definition();
+    Instruction_lineContext *instruction_line();
     std::vector<antlr4::tree::TerminalNode *> NEWLINE();
     antlr4::tree::TerminalNode* NEWLINE(size_t i);
 
@@ -82,6 +88,37 @@ public:
   };
 
   LineContext* line();
+
+  class  Instruction_lineContext : public antlr4::ParserRuleContext {
+  public:
+    Instruction_lineContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    InstructionContext *instruction();
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  Instruction_lineContext* instruction_line();
+
+  class  Label_definitionContext : public antlr4::ParserRuleContext {
+  public:
+    Label_definitionContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *ID();
+    antlr4::tree::TerminalNode *COLON();
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  Label_definitionContext* label_definition();
 
   class  InstructionContext : public antlr4::ParserRuleContext {
   public:
@@ -129,7 +166,7 @@ public:
     virtual size_t getRuleIndex() const override;
     Memory_addressContext *memory_address();
     ImmediateContext *immediate();
-    antlr4::tree::TerminalNode *REGISTER();
+    RegisterContext *register_();
     antlr4::tree::TerminalNode *STRING_LITERAL();
     LabelContext *label();
 
@@ -142,14 +179,30 @@ public:
 
   OperandContext* operand();
 
+  class  RegisterContext : public antlr4::ParserRuleContext {
+  public:
+    RegisterContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    antlr4::tree::TerminalNode *RREGISTER();
+    antlr4::tree::TerminalNode *GBREGISTER();
+    antlr4::tree::TerminalNode *LBREGISTER();
+
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  RegisterContext* register_();
+
   class  Memory_addressContext : public antlr4::ParserRuleContext {
   public:
     Memory_addressContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *OPARENT();
+    RegisterContext *register_();
     antlr4::tree::TerminalNode *CPARENT();
-    antlr4::tree::TerminalNode *REGISTER();
-    antlr4::tree::TerminalNode *ID();
     antlr4::tree::TerminalNode *INT();
     antlr4::tree::TerminalNode *MINUS();
 

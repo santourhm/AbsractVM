@@ -20,6 +20,12 @@ public:
   virtual void enterLine(VMGrammarParser::LineContext *ctx) = 0;
   virtual void exitLine(VMGrammarParser::LineContext *ctx) = 0;
 
+  virtual void enterInstruction_line(VMGrammarParser::Instruction_lineContext *ctx) = 0;
+  virtual void exitInstruction_line(VMGrammarParser::Instruction_lineContext *ctx) = 0;
+
+  virtual void enterLabel_definition(VMGrammarParser::Label_definitionContext *ctx) = 0;
+  virtual void exitLabel_definition(VMGrammarParser::Label_definitionContext *ctx) = 0;
+
   virtual void enterInstruction(VMGrammarParser::InstructionContext *ctx) = 0;
   virtual void exitInstruction(VMGrammarParser::InstructionContext *ctx) = 0;
 
@@ -28,6 +34,9 @@ public:
 
   virtual void enterOperand(VMGrammarParser::OperandContext *ctx) = 0;
   virtual void exitOperand(VMGrammarParser::OperandContext *ctx) = 0;
+
+  virtual void enterRegister(VMGrammarParser::RegisterContext *ctx) = 0;
+  virtual void exitRegister(VMGrammarParser::RegisterContext *ctx) = 0;
 
   virtual void enterMemory_address(VMGrammarParser::Memory_addressContext *ctx) = 0;
   virtual void exitMemory_address(VMGrammarParser::Memory_addressContext *ctx) = 0;

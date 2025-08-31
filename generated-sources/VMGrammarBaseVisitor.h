@@ -23,6 +23,14 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual std::any visitInstruction_line(VMGrammarParser::Instruction_lineContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitLabel_definition(VMGrammarParser::Label_definitionContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual std::any visitInstruction(VMGrammarParser::InstructionContext *ctx) override {
     return visitChildren(ctx);
   }
@@ -32,6 +40,10 @@ public:
   }
 
   virtual std::any visitOperand(VMGrammarParser::OperandContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitRegister(VMGrammarParser::RegisterContext *ctx) override {
     return visitChildren(ctx);
   }
 

@@ -23,11 +23,17 @@ public:
 
     virtual std::any visitLine(VMGrammarParser::LineContext *context) = 0;
 
+    virtual std::any visitInstruction_line(VMGrammarParser::Instruction_lineContext *context) = 0;
+
+    virtual std::any visitLabel_definition(VMGrammarParser::Label_definitionContext *context) = 0;
+
     virtual std::any visitInstruction(VMGrammarParser::InstructionContext *context) = 0;
 
     virtual std::any visitOpcode(VMGrammarParser::OpcodeContext *context) = 0;
 
     virtual std::any visitOperand(VMGrammarParser::OperandContext *context) = 0;
+
+    virtual std::any visitRegister(VMGrammarParser::RegisterContext *context) = 0;
 
     virtual std::any visitMemory_address(VMGrammarParser::Memory_addressContext *context) = 0;
 

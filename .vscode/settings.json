@@ -2,6 +2,7 @@
     // C++ IntelliSense settings
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/include",
+        "${workspaceFolder}/include/instructions",
         "${workspaceFolder}/src",
         "${workspaceFolder}/generated-sources",
         "/usr/local/include/antlr4-runtime",

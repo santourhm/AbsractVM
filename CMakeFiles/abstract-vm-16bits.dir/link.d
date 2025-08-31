@@ -2,9 +2,18 @@ abstract-vm-16bits: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
-  CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o \
-  CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o \
@@ -47,11 +56,29 @@ abstract-vm-16bits: \
 
 /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
 
-CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o:
+CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o:
 
-CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o:
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o:
 

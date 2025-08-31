@@ -1,3 +1,2 @@
-;hello word program
 WSTR "Hello world\n"
-LOAD R
+WSTR "Hello world hzhaj\n"

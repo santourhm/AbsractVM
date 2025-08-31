@@ -17,15 +17,16 @@ public class VMGrammarParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		ADD=1, SUB=2, WSTR=3, LOAD=4, CMP=5, BEQ=6, WINT=7, WNL=8, COMMA=9, OPARENT=10, 
-		CPARENT=11, HASH=12, MINUS=13, REGISTER=14, STRING_LITERAL=15, INT=16, 
-		ID=17, COMMENT=18, WS=19, NEWLINE=20;
+		CPARENT=11, HASH=12, MINUS=13, COLON=14, RREGISTER=15, GBREGISTER=16, 
+		LBREGISTER=17, STRING_LITERAL=18, INT=19, ID=20, COMMENT=21, WS=22, NEWLINE=23;
 	public static final int
-		RULE_program = 0, RULE_line = 1, RULE_instruction = 2, RULE_opcode = 3, 
-		RULE_operand = 4, RULE_memory_address = 5, RULE_immediate = 6, RULE_label = 7;
+		RULE_program = 0, RULE_line = 1, RULE_instruction_line = 2, RULE_label_definition = 3, 
+		RULE_instruction = 4, RULE_opcode = 5, RULE_operand = 6, RULE_register = 7, 
+		RULE_memory_address = 8, RULE_immediate = 9, RULE_label = 10;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"program", "line", "instruction", "opcode", "operand", "memory_address", 
-			"immediate", "label"
+			"program", "line", "instruction_line", "label_definition", "instruction", 
+			"opcode", "operand", "register", "memory_address", "immediate", "label"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -33,15 +34,15 @@ public class VMGrammarParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'ADD'", "'SUB'", "'WSTR'", "'LOAD'", "'CMP'", "'BEQ'", "'WINT'", 
-			"'WNL'", "','", "'('", "')'", "'#'", "'-'"
+			"'WNL'", "','", "'('", "')'", "'#'", "'-'", "':'", null, "'GB'", "'LB'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, "ADD", "SUB", "WSTR", "LOAD", "CMP", "BEQ", "WINT", "WNL", "COMMA", 
-			"OPARENT", "CPARENT", "HASH", "MINUS", "REGISTER", "STRING_LITERAL", 
-			"INT", "ID", "COMMENT", "WS", "NEWLINE"
+			"OPARENT", "CPARENT", "HASH", "MINUS", "COLON", "RREGISTER", "GBREGISTER", 
+			"LBREGISTER", "STRING_LITERAL", "INT", "ID", "COMMENT", "WS", "NEWLINE"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -104,8 +105,8 @@ public class VMGrammarParser extends Parser {
 		public LineContext line(int i) {
 			return getRuleContext(LineContext.class,i);
 		}
-		public InstructionContext instruction() {
-			return getRuleContext(InstructionContext.class,0);
+		public Instruction_lineContext instruction_line() {
+			return getRuleContext(Instruction_lineContext.class,0);
 		}
 		public ProgramContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -121,33 +122,33 @@ public class VMGrammarParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(19);
+			setState(25);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,0,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(16);
+					setState(22);
 					line();
 					}
 					} 
 				}
-				setState(21);
+				setState(27);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,0,_ctx);
 			}
-			setState(23);
+			setState(29);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 510L) != 0)) {
 				{
-				setState(22);
-				instruction();
+				setState(28);
+				instruction_line();
 				}
 			}
 
-			setState(25);
+			setState(31);
 			match(EOF);
 			}
 		}
@@ -164,8 +165,11 @@ public class VMGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class LineContext extends ParserRuleContext {
-		public InstructionContext instruction() {
-			return getRuleContext(InstructionContext.class,0);
+		public Label_definitionContext label_definition() {
+			return getRuleContext(Label_definitionContext.class,0);
+		}
+		public Instruction_lineContext instruction_line() {
+			return getRuleContext(Instruction_lineContext.class,0);
 		}
 		public List<TerminalNode> NEWLINE() { return getTokens(VMGrammarParser.NEWLINE); }
 		public TerminalNode NEWLINE(int i) {
@@ -180,22 +184,38 @@ public class VMGrammarParser extends Parser {
 	public final LineContext line() throws RecognitionException {
 		LineContext _localctx = new LineContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_line);
-		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(28);
+			setState(35);
 			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 510L) != 0)) {
+			switch (_input.LA(1)) {
+			case ID:
 				{
-				setState(27);
-				instruction();
+				setState(33);
+				label_definition();
 				}
+				break;
+			case ADD:
+			case SUB:
+			case WSTR:
+			case LOAD:
+			case CMP:
+			case BEQ:
+			case WINT:
+			case WNL:
+				{
+				setState(34);
+				instruction_line();
+				}
+				break;
+			case NEWLINE:
+				break;
+			default:
+				break;
 			}
-
-			setState(31); 
+			setState(38); 
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -203,7 +223,7 @@ public class VMGrammarParser extends Parser {
 				case 1:
 					{
 					{
-					setState(30);
+					setState(37);
 					match(NEWLINE);
 					}
 					}
@@ -211,10 +231,75 @@ public class VMGrammarParser extends Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(33); 
+				setState(40); 
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Instruction_lineContext extends ParserRuleContext {
+		public InstructionContext instruction() {
+			return getRuleContext(InstructionContext.class,0);
+		}
+		public Instruction_lineContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_instruction_line; }
+	}
+
+	public final Instruction_lineContext instruction_line() throws RecognitionException {
+		Instruction_lineContext _localctx = new Instruction_lineContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_instruction_line);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(42);
+			instruction();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Label_definitionContext extends ParserRuleContext {
+		public TerminalNode ID() { return getToken(VMGrammarParser.ID, 0); }
+		public TerminalNode COLON() { return getToken(VMGrammarParser.COLON, 0); }
+		public Label_definitionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_label_definition; }
+	}
+
+	public final Label_definitionContext label_definition() throws RecognitionException {
+		Label_definitionContext _localctx = new Label_definitionContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_label_definition);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(44);
+			match(ID);
+			setState(45);
+			match(COLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -248,28 +333,28 @@ public class VMGrammarParser extends Parser {
 
 	public final InstructionContext instruction() throws RecognitionException {
 		InstructionContext _localctx = new InstructionContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_instruction);
+		enterRule(_localctx, 8, RULE_instruction);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(35);
+			setState(47);
 			opcode();
-			setState(41);
+			setState(53);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 259072L) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 2077696L) != 0)) {
 				{
-				setState(36);
+				setState(48);
 				operand();
-				setState(39);
+				setState(51);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==COMMA) {
 					{
-					setState(37);
+					setState(49);
 					match(COMMA);
-					setState(38);
+					setState(50);
 					operand();
 					}
 				}
@@ -308,12 +393,12 @@ public class VMGrammarParser extends Parser {
 
 	public final OpcodeContext opcode() throws RecognitionException {
 		OpcodeContext _localctx = new OpcodeContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_opcode);
+		enterRule(_localctx, 10, RULE_opcode);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(43);
+			setState(55);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 510L) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -344,7 +429,9 @@ public class VMGrammarParser extends Parser {
 		public ImmediateContext immediate() {
 			return getRuleContext(ImmediateContext.class,0);
 		}
-		public TerminalNode REGISTER() { return getToken(VMGrammarParser.REGISTER, 0); }
+		public RegisterContext register() {
+			return getRuleContext(RegisterContext.class,0);
+		}
 		public TerminalNode STRING_LITERAL() { return getToken(VMGrammarParser.STRING_LITERAL, 0); }
 		public LabelContext label() {
 			return getRuleContext(LabelContext.class,0);
@@ -357,9 +444,9 @@ public class VMGrammarParser extends Parser {
 
 	public final OperandContext operand() throws RecognitionException {
 		OperandContext _localctx = new OperandContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_operand);
+		enterRule(_localctx, 12, RULE_operand);
 		try {
-			setState(50);
+			setState(62);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case OPARENT:
@@ -367,35 +454,37 @@ public class VMGrammarParser extends Parser {
 			case INT:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(45);
+				setState(57);
 				memory_address();
 				}
 				break;
 			case HASH:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(46);
+				setState(58);
 				immediate();
 				}
 				break;
-			case REGISTER:
+			case RREGISTER:
+			case GBREGISTER:
+			case LBREGISTER:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(47);
-				match(REGISTER);
+				setState(59);
+				register();
 				}
 				break;
 			case STRING_LITERAL:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(48);
+				setState(60);
 				match(STRING_LITERAL);
 				}
 				break;
 			case ID:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(49);
+				setState(61);
 				label();
 				}
 				break;
@@ -415,11 +504,53 @@ public class VMGrammarParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
+	public static class RegisterContext extends ParserRuleContext {
+		public TerminalNode RREGISTER() { return getToken(VMGrammarParser.RREGISTER, 0); }
+		public TerminalNode GBREGISTER() { return getToken(VMGrammarParser.GBREGISTER, 0); }
+		public TerminalNode LBREGISTER() { return getToken(VMGrammarParser.LBREGISTER, 0); }
+		public RegisterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_register; }
+	}
+
+	public final RegisterContext register() throws RecognitionException {
+		RegisterContext _localctx = new RegisterContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_register);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(64);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 229376L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
 	public static class Memory_addressContext extends ParserRuleContext {
 		public TerminalNode OPARENT() { return getToken(VMGrammarParser.OPARENT, 0); }
+		public RegisterContext register() {
+			return getRuleContext(RegisterContext.class,0);
+		}
 		public TerminalNode CPARENT() { return getToken(VMGrammarParser.CPARENT, 0); }
-		public TerminalNode REGISTER() { return getToken(VMGrammarParser.REGISTER, 0); }
-		public TerminalNode ID() { return getToken(VMGrammarParser.ID, 0); }
 		public TerminalNode INT() { return getToken(VMGrammarParser.INT, 0); }
 		public TerminalNode MINUS() { return getToken(VMGrammarParser.MINUS, 0); }
 		public Memory_addressContext(ParserRuleContext parent, int invokingState) {
@@ -430,44 +561,36 @@ public class VMGrammarParser extends Parser {
 
 	public final Memory_addressContext memory_address() throws RecognitionException {
 		Memory_addressContext _localctx = new Memory_addressContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_memory_address);
+		enterRule(_localctx, 16, RULE_memory_address);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(56);
+			setState(70);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==MINUS || _la==INT) {
 				{
-				setState(53);
+				setState(67);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==MINUS) {
 					{
-					setState(52);
+					setState(66);
 					match(MINUS);
 					}
 				}
 
-				setState(55);
+				setState(69);
 				match(INT);
 				}
 			}
 
-			setState(58);
+			setState(72);
 			match(OPARENT);
-			setState(59);
-			_la = _input.LA(1);
-			if ( !(_la==REGISTER || _la==ID) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
-			}
-			setState(60);
+			setState(73);
+			register();
+			setState(74);
 			match(CPARENT);
 			}
 		}
@@ -495,14 +618,14 @@ public class VMGrammarParser extends Parser {
 
 	public final ImmediateContext immediate() throws RecognitionException {
 		ImmediateContext _localctx = new ImmediateContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_immediate);
+		enterRule(_localctx, 18, RULE_immediate);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(62);
+			setState(76);
 			match(HASH);
-			setState(63);
+			setState(77);
 			_la = _input.LA(1);
 			if ( !(_la==INT || _la==ID) ) {
 			_errHandler.recoverInline(this);
@@ -536,11 +659,11 @@ public class VMGrammarParser extends Parser {
 
 	public final LabelContext label() throws RecognitionException {
 		LabelContext _localctx = new LabelContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_label);
+		enterRule(_localctx, 20, RULE_label);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(65);
+			setState(79);
 			match(ID);
 			}
 		}
@@ -556,49 +679,54 @@ public class VMGrammarParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0014D\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\u0017R\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
-		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0001"+
-		"\u0000\u0005\u0000\u0012\b\u0000\n\u0000\f\u0000\u0015\t\u0000\u0001\u0000"+
-		"\u0003\u0000\u0018\b\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0003\u0001"+
-		"\u001d\b\u0001\u0001\u0001\u0004\u0001 \b\u0001\u000b\u0001\f\u0001!\u0001"+
-		"\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0003\u0002(\b\u0002\u0003"+
-		"\u0002*\b\u0002\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004\u0001"+
-		"\u0004\u0001\u0004\u0001\u0004\u0003\u00043\b\u0004\u0001\u0005\u0003"+
-		"\u00056\b\u0005\u0001\u0005\u0003\u00059\b\u0005\u0001\u0005\u0001\u0005"+
-		"\u0001\u0005\u0001\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0007"+
-		"\u0001\u0007\u0001\u0007\u0000\u0000\b\u0000\u0002\u0004\u0006\b\n\f\u000e"+
-		"\u0000\u0003\u0001\u0000\u0001\b\u0002\u0000\u000e\u000e\u0011\u0011\u0001"+
-		"\u0000\u0010\u0011G\u0000\u0013\u0001\u0000\u0000\u0000\u0002\u001c\u0001"+
-		"\u0000\u0000\u0000\u0004#\u0001\u0000\u0000\u0000\u0006+\u0001\u0000\u0000"+
-		"\u0000\b2\u0001\u0000\u0000\u0000\n8\u0001\u0000\u0000\u0000\f>\u0001"+
-		"\u0000\u0000\u0000\u000eA\u0001\u0000\u0000\u0000\u0010\u0012\u0003\u0002"+
-		"\u0001\u0000\u0011\u0010\u0001\u0000\u0000\u0000\u0012\u0015\u0001\u0000"+
-		"\u0000\u0000\u0013\u0011\u0001\u0000\u0000\u0000\u0013\u0014\u0001\u0000"+
-		"\u0000\u0000\u0014\u0017\u0001\u0000\u0000\u0000\u0015\u0013\u0001\u0000"+
-		"\u0000\u0000\u0016\u0018\u0003\u0004\u0002\u0000\u0017\u0016\u0001\u0000"+
-		"\u0000\u0000\u0017\u0018\u0001\u0000\u0000\u0000\u0018\u0019\u0001\u0000"+
-		"\u0000\u0000\u0019\u001a\u0005\u0000\u0000\u0001\u001a\u0001\u0001\u0000"+
-		"\u0000\u0000\u001b\u001d\u0003\u0004\u0002\u0000\u001c\u001b\u0001\u0000"+
-		"\u0000\u0000\u001c\u001d\u0001\u0000\u0000\u0000\u001d\u001f\u0001\u0000"+
-		"\u0000\u0000\u001e \u0005\u0014\u0000\u0000\u001f\u001e\u0001\u0000\u0000"+
-		"\u0000 !\u0001\u0000\u0000\u0000!\u001f\u0001\u0000\u0000\u0000!\"\u0001"+
-		"\u0000\u0000\u0000\"\u0003\u0001\u0000\u0000\u0000#)\u0003\u0006\u0003"+
-		"\u0000$\'\u0003\b\u0004\u0000%&\u0005\t\u0000\u0000&(\u0003\b\u0004\u0000"+
-		"\'%\u0001\u0000\u0000\u0000\'(\u0001\u0000\u0000\u0000(*\u0001\u0000\u0000"+
-		"\u0000)$\u0001\u0000\u0000\u0000)*\u0001\u0000\u0000\u0000*\u0005\u0001"+
-		"\u0000\u0000\u0000+,\u0007\u0000\u0000\u0000,\u0007\u0001\u0000\u0000"+
-		"\u0000-3\u0003\n\u0005\u0000.3\u0003\f\u0006\u0000/3\u0005\u000e\u0000"+
-		"\u000003\u0005\u000f\u0000\u000013\u0003\u000e\u0007\u00002-\u0001\u0000"+
-		"\u0000\u00002.\u0001\u0000\u0000\u00002/\u0001\u0000\u0000\u000020\u0001"+
-		"\u0000\u0000\u000021\u0001\u0000\u0000\u00003\t\u0001\u0000\u0000\u0000"+
-		"46\u0005\r\u0000\u000054\u0001\u0000\u0000\u000056\u0001\u0000\u0000\u0000"+
-		"67\u0001\u0000\u0000\u000079\u0005\u0010\u0000\u000085\u0001\u0000\u0000"+
-		"\u000089\u0001\u0000\u0000\u00009:\u0001\u0000\u0000\u0000:;\u0005\n\u0000"+
-		"\u0000;<\u0007\u0001\u0000\u0000<=\u0005\u000b\u0000\u0000=\u000b\u0001"+
-		"\u0000\u0000\u0000>?\u0005\f\u0000\u0000?@\u0007\u0002\u0000\u0000@\r"+
-		"\u0001\u0000\u0000\u0000AB\u0005\u0011\u0000\u0000B\u000f\u0001\u0000"+
-		"\u0000\u0000\t\u0013\u0017\u001c!\')258";
+		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
+		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0001\u0000\u0005\u0000\u0018"+
+		"\b\u0000\n\u0000\f\u0000\u001b\t\u0000\u0001\u0000\u0003\u0000\u001e\b"+
+		"\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0003\u0001$\b"+
+		"\u0001\u0001\u0001\u0004\u0001\'\b\u0001\u000b\u0001\f\u0001(\u0001\u0002"+
+		"\u0001\u0002\u0001\u0003\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004"+
+		"\u0001\u0004\u0001\u0004\u0003\u00044\b\u0004\u0003\u00046\b\u0004\u0001"+
+		"\u0005\u0001\u0005\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0006\u0001"+
+		"\u0006\u0003\u0006?\b\u0006\u0001\u0007\u0001\u0007\u0001\b\u0003\bD\b"+
+		"\b\u0001\b\u0003\bG\b\b\u0001\b\u0001\b\u0001\b\u0001\b\u0001\t\u0001"+
+		"\t\u0001\t\u0001\n\u0001\n\u0001\n\u0000\u0000\u000b\u0000\u0002\u0004"+
+		"\u0006\b\n\f\u000e\u0010\u0012\u0014\u0000\u0003\u0001\u0000\u0001\b\u0001"+
+		"\u0000\u000f\u0011\u0001\u0000\u0013\u0014S\u0000\u0019\u0001\u0000\u0000"+
+		"\u0000\u0002#\u0001\u0000\u0000\u0000\u0004*\u0001\u0000\u0000\u0000\u0006"+
+		",\u0001\u0000\u0000\u0000\b/\u0001\u0000\u0000\u0000\n7\u0001\u0000\u0000"+
+		"\u0000\f>\u0001\u0000\u0000\u0000\u000e@\u0001\u0000\u0000\u0000\u0010"+
+		"F\u0001\u0000\u0000\u0000\u0012L\u0001\u0000\u0000\u0000\u0014O\u0001"+
+		"\u0000\u0000\u0000\u0016\u0018\u0003\u0002\u0001\u0000\u0017\u0016\u0001"+
+		"\u0000\u0000\u0000\u0018\u001b\u0001\u0000\u0000\u0000\u0019\u0017\u0001"+
+		"\u0000\u0000\u0000\u0019\u001a\u0001\u0000\u0000\u0000\u001a\u001d\u0001"+
+		"\u0000\u0000\u0000\u001b\u0019\u0001\u0000\u0000\u0000\u001c\u001e\u0003"+
+		"\u0004\u0002\u0000\u001d\u001c\u0001\u0000\u0000\u0000\u001d\u001e\u0001"+
+		"\u0000\u0000\u0000\u001e\u001f\u0001\u0000\u0000\u0000\u001f \u0005\u0000"+
+		"\u0000\u0001 \u0001\u0001\u0000\u0000\u0000!$\u0003\u0006\u0003\u0000"+
+		"\"$\u0003\u0004\u0002\u0000#!\u0001\u0000\u0000\u0000#\"\u0001\u0000\u0000"+
+		"\u0000#$\u0001\u0000\u0000\u0000$&\u0001\u0000\u0000\u0000%\'\u0005\u0017"+
+		"\u0000\u0000&%\u0001\u0000\u0000\u0000\'(\u0001\u0000\u0000\u0000(&\u0001"+
+		"\u0000\u0000\u0000()\u0001\u0000\u0000\u0000)\u0003\u0001\u0000\u0000"+
+		"\u0000*+\u0003\b\u0004\u0000+\u0005\u0001\u0000\u0000\u0000,-\u0005\u0014"+
+		"\u0000\u0000-.\u0005\u000e\u0000\u0000.\u0007\u0001\u0000\u0000\u0000"+
+		"/5\u0003\n\u0005\u000003\u0003\f\u0006\u000012\u0005\t\u0000\u000024\u0003"+
+		"\f\u0006\u000031\u0001\u0000\u0000\u000034\u0001\u0000\u0000\u000046\u0001"+
+		"\u0000\u0000\u000050\u0001\u0000\u0000\u000056\u0001\u0000\u0000\u0000"+
+		"6\t\u0001\u0000\u0000\u000078\u0007\u0000\u0000\u00008\u000b\u0001\u0000"+
+		"\u0000\u00009?\u0003\u0010\b\u0000:?\u0003\u0012\t\u0000;?\u0003\u000e"+
+		"\u0007\u0000<?\u0005\u0012\u0000\u0000=?\u0003\u0014\n\u0000>9\u0001\u0000"+
+		"\u0000\u0000>:\u0001\u0000\u0000\u0000>;\u0001\u0000\u0000\u0000><\u0001"+
+		"\u0000\u0000\u0000>=\u0001\u0000\u0000\u0000?\r\u0001\u0000\u0000\u0000"+
+		"@A\u0007\u0001\u0000\u0000A\u000f\u0001\u0000\u0000\u0000BD\u0005\r\u0000"+
+		"\u0000CB\u0001\u0000\u0000\u0000CD\u0001\u0000\u0000\u0000DE\u0001\u0000"+
+		"\u0000\u0000EG\u0005\u0013\u0000\u0000FC\u0001\u0000\u0000\u0000FG\u0001"+
+		"\u0000\u0000\u0000GH\u0001\u0000\u0000\u0000HI\u0005\n\u0000\u0000IJ\u0003"+
+		"\u000e\u0007\u0000JK\u0005\u000b\u0000\u0000K\u0011\u0001\u0000\u0000"+
+		"\u0000LM\u0005\f\u0000\u0000MN\u0007\u0002\u0000\u0000N\u0013\u0001\u0000"+
+		"\u0000\u0000OP\u0005\u0014\u0000\u0000P\u0015\u0001\u0000\u0000\u0000"+
+		"\t\u0019\u001d#(35>CF";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

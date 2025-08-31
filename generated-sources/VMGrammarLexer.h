@@ -13,8 +13,9 @@ class  VMGrammarLexer : public antlr4::Lexer {
 public:
   enum {
     ADD = 1, SUB = 2, WSTR = 3, LOAD = 4, CMP = 5, BEQ = 6, WINT = 7, WNL = 8, 
-    COMMA = 9, OPARENT = 10, CPARENT = 11, HASH = 12, MINUS = 13, REGISTER = 14, 
-    STRING_LITERAL = 15, INT = 16, ID = 17, COMMENT = 18, WS = 19, NEWLINE = 20
+    COMMA = 9, OPARENT = 10, CPARENT = 11, HASH = 12, MINUS = 13, COLON = 14, 
+    RREGISTER = 15, GBREGISTER = 16, LBREGISTER = 17, STRING_LITERAL = 18, 
+    INT = 19, ID = 20, COMMENT = 21, WS = 22, NEWLINE = 23
   };
 
   explicit VMGrammarLexer(antlr4::CharStream *input);

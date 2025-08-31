@@ -1,0 +1,25 @@
+# Build system files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Executables / binaries
+AbstractVM
+abstract-vm-16bits
+
+# IDE/editor settings
+.vscode/
+*.swp
+*.swo
+*.DS_Store
+
+# Generated sources from ANTLR or other tools
+generated-sources/
+
+# Logs or temporary files
+*.log
+*.tmp
+
+# OS files
+Thumbs.db
