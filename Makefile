@@ -418,6 +418,126 @@ src/instructions/LOAD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.s
 .PHONY : src/instructions/LOAD.cpp.s
 
+src/instructions/MUL.o: src/instructions/MUL.cpp.o
+.PHONY : src/instructions/MUL.o
+
+# target to build an object file
+src/instructions/MUL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o
+.PHONY : src/instructions/MUL.cpp.o
+
+src/instructions/MUL.i: src/instructions/MUL.cpp.i
+.PHONY : src/instructions/MUL.i
+
+# target to preprocess a source file
+src/instructions/MUL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.i
+.PHONY : src/instructions/MUL.cpp.i
+
+src/instructions/MUL.s: src/instructions/MUL.cpp.s
+.PHONY : src/instructions/MUL.s
+
+# target to generate assembly for a file
+src/instructions/MUL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.s
+.PHONY : src/instructions/MUL.cpp.s
+
+src/instructions/OPP.o: src/instructions/OPP.cpp.o
+.PHONY : src/instructions/OPP.o
+
+# target to build an object file
+src/instructions/OPP.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o
+.PHONY : src/instructions/OPP.cpp.o
+
+src/instructions/OPP.i: src/instructions/OPP.cpp.i
+.PHONY : src/instructions/OPP.i
+
+# target to preprocess a source file
+src/instructions/OPP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.i
+.PHONY : src/instructions/OPP.cpp.i
+
+src/instructions/OPP.s: src/instructions/OPP.cpp.s
+.PHONY : src/instructions/OPP.s
+
+# target to generate assembly for a file
+src/instructions/OPP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.s
+.PHONY : src/instructions/OPP.cpp.s
+
+src/instructions/QUO.o: src/instructions/QUO.cpp.o
+.PHONY : src/instructions/QUO.o
+
+# target to build an object file
+src/instructions/QUO.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o
+.PHONY : src/instructions/QUO.cpp.o
+
+src/instructions/QUO.i: src/instructions/QUO.cpp.i
+.PHONY : src/instructions/QUO.i
+
+# target to preprocess a source file
+src/instructions/QUO.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.i
+.PHONY : src/instructions/QUO.cpp.i
+
+src/instructions/QUO.s: src/instructions/QUO.cpp.s
+.PHONY : src/instructions/QUO.s
+
+# target to generate assembly for a file
+src/instructions/QUO.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.s
+.PHONY : src/instructions/QUO.cpp.s
+
+src/instructions/REM.o: src/instructions/REM.cpp.o
+.PHONY : src/instructions/REM.o
+
+# target to build an object file
+src/instructions/REM.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o
+.PHONY : src/instructions/REM.cpp.o
+
+src/instructions/REM.i: src/instructions/REM.cpp.i
+.PHONY : src/instructions/REM.i
+
+# target to preprocess a source file
+src/instructions/REM.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.i
+.PHONY : src/instructions/REM.cpp.i
+
+src/instructions/REM.s: src/instructions/REM.cpp.s
+.PHONY : src/instructions/REM.s
+
+# target to generate assembly for a file
+src/instructions/REM.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.s
+.PHONY : src/instructions/REM.cpp.s
+
+src/instructions/SUB.o: src/instructions/SUB.cpp.o
+.PHONY : src/instructions/SUB.o
+
+# target to build an object file
+src/instructions/SUB.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o
+.PHONY : src/instructions/SUB.cpp.o
+
+src/instructions/SUB.i: src/instructions/SUB.cpp.i
+.PHONY : src/instructions/SUB.i
+
+# target to preprocess a source file
+src/instructions/SUB.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.i
+.PHONY : src/instructions/SUB.cpp.i
+
+src/instructions/SUB.s: src/instructions/SUB.cpp.s
+.PHONY : src/instructions/SUB.s
+
+# target to generate assembly for a file
+src/instructions/SUB.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.s
+.PHONY : src/instructions/SUB.cpp.s
+
 src/instructions/WINT.o: src/instructions/WINT.cpp.o
 .PHONY : src/instructions/WINT.o
 
@@ -799,6 +919,21 @@ help:
 	@echo "... src/instructions/LOAD.o"
 	@echo "... src/instructions/LOAD.i"
 	@echo "... src/instructions/LOAD.s"
+	@echo "... src/instructions/MUL.o"
+	@echo "... src/instructions/MUL.i"
+	@echo "... src/instructions/MUL.s"
+	@echo "... src/instructions/OPP.o"
+	@echo "... src/instructions/OPP.i"
+	@echo "... src/instructions/OPP.s"
+	@echo "... src/instructions/QUO.o"
+	@echo "... src/instructions/QUO.i"
+	@echo "... src/instructions/QUO.s"
+	@echo "... src/instructions/REM.o"
+	@echo "... src/instructions/REM.i"
+	@echo "... src/instructions/REM.s"
+	@echo "... src/instructions/SUB.o"
+	@echo "... src/instructions/SUB.i"
+	@echo "... src/instructions/SUB.s"
 	@echo "... src/instructions/WINT.o"
 	@echo "... src/instructions/WINT.i"
 	@echo "... src/instructions/WINT.s"

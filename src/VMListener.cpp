@@ -4,6 +4,11 @@
 #include "LOAD.hpp"
 #include "WINT.hpp"
 #include "ADD.hpp"
+#include "MUL.hpp"
+#include "OPP.hpp"
+#include "REM.hpp"
+#include "QUO.hpp"
+#include "SUB.hpp"
 #include <memory>
 #include "StringLiteralOperand.hpp"
 #include "VMGrammarParser.h"
@@ -108,6 +113,36 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
         if(opcodeCtx->ADD())
         {
             inst = std::make_unique<ADD>();
+            createDval_RmInstruction(inst.get(),ops,line);
+        }
+
+        if(opcodeCtx->SUB())
+        {
+            inst = std::make_unique<SUB>();
+            createDval_RmInstruction(inst.get(),ops,line);
+        }
+
+        if(opcodeCtx->QUO())
+        {
+            inst = std::make_unique<QUO>();
+            createDval_RmInstruction(inst.get(),ops,line);
+        }
+        
+        if(opcodeCtx->OPP())
+        {
+            inst = std::make_unique<OPP>();
+            createDval_RmInstruction(inst.get(),ops,line);
+        }
+
+        if(opcodeCtx->REM())
+        {
+            inst = std::make_unique<REM>();
+            createDval_RmInstruction(inst.get(),ops,line);
+        }
+
+        if(opcodeCtx->MUL())
+        {
+            inst = std::make_unique<MUL>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
     } 

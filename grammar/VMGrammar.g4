@@ -15,7 +15,7 @@ instruction
     ;
 
 opcode
-    : ADD | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL
+    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL
     ;
 
 operand
@@ -49,9 +49,12 @@ label
 
 // --- Lexer Rules ---
 
-
+OPP : 'OPP';
+MUL : 'MUL';
+QUO : 'QUO';
 ADD : 'ADD';
 SUB : 'SUB';
+REM : 'REM' ; 
 WSTR: 'WSTR';
 LOAD: 'LOAD';
 CMP : 'CMP';

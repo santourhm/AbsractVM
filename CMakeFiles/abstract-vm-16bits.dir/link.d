@@ -8,6 +8,11 @@ abstract-vm-16bits: \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o \
@@ -75,6 +80,16 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o:
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o:
 

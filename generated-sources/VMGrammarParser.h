@@ -12,10 +12,11 @@
 class  VMGrammarParser : public antlr4::Parser {
 public:
   enum {
-    ADD = 1, SUB = 2, WSTR = 3, LOAD = 4, CMP = 5, BEQ = 6, WINT = 7, WNL = 8, 
-    COMMA = 9, OPARENT = 10, CPARENT = 11, HASH = 12, MINUS = 13, COLON = 14, 
-    RREGISTER = 15, GBREGISTER = 16, LBREGISTER = 17, STRING_LITERAL = 18, 
-    INT = 19, ID = 20, COMMENT = 21, WS = 22, NEWLINE = 23
+    OPP = 1, MUL = 2, QUO = 3, ADD = 4, SUB = 5, REM = 6, WSTR = 7, LOAD = 8, 
+    CMP = 9, BEQ = 10, WINT = 11, WNL = 12, COMMA = 13, OPARENT = 14, CPARENT = 15, 
+    HASH = 16, MINUS = 17, COLON = 18, RREGISTER = 19, GBREGISTER = 20, 
+    LBREGISTER = 21, STRING_LITERAL = 22, INT = 23, ID = 24, COMMENT = 25, 
+    WS = 26, NEWLINE = 27
   };
 
   enum {
@@ -144,6 +145,10 @@ public:
     OpcodeContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *ADD();
+    antlr4::tree::TerminalNode *MUL();
+    antlr4::tree::TerminalNode *QUO();
+    antlr4::tree::TerminalNode *OPP();
+    antlr4::tree::TerminalNode *REM();
     antlr4::tree::TerminalNode *SUB();
     antlr4::tree::TerminalNode *WSTR();
     antlr4::tree::TerminalNode *LOAD();

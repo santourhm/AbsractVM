@@ -1,15 +1,12 @@
-    LOAD #1, R0
-    WINT
-    LOAD #2, R2
-    LOAD #3, R2
-    LOAD R2, R3
-    LOAD R3, R0 
-    WINT
-    
-    LOAD #2, R2
-    LOAD R2, R0
-    WINT 
-    ADD R2, R3
-    LOAD R3, R0
-    WINT
-
+; Programme principal : Lecture d'un entier positif, impression de sa factorielle
+; Rem : il faudrait tester le debordement de pile
+WSTR "n = "
+RINT
+PUSH R1
+BSR fact.
+SUBSP #1
+WSTR "fact = "
+LOAD R0, R1
+WINT
+WNL
+HALT

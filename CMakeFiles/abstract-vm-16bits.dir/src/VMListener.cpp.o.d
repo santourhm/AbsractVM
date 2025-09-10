@@ -414,6 +414,11 @@ CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o: \
  /home/santourh/abstract-vm-32bits/include/instructions/LOAD.hpp \
  /home/santourh/abstract-vm-32bits/include/instructions/WINT.hpp \
  /home/santourh/abstract-vm-32bits/include/instructions/ADD.hpp \
+ /home/santourh/abstract-vm-32bits/include/instructions/MUL.hpp \
+ /home/santourh/abstract-vm-32bits/include/instructions/OPP.hpp \
+ /home/santourh/abstract-vm-32bits/include/instructions/REM.hpp \
+ /home/santourh/abstract-vm-32bits/include/instructions/QUO.hpp \
+ /home/santourh/abstract-vm-32bits/include/instructions/SUB.hpp \
  /home/santourh/abstract-vm-32bits/include/machine/Register.hpp \
  /home/santourh/abstract-vm-32bits/include/ImmediateOperand.hpp \
  /home/santourh/abstract-vm-32bits/include/RRegOperand.hpp \
