@@ -13,7 +13,7 @@ LabelOperand::LabelOperand(std::string label) : label(label)  {};
 LabelOperand::~LabelOperand()   {};
 
 
-std::string LabelOperand::getLabelValue(void) const 
+VOp_t LabelOperand::getOperandValue() const
 {
     return this->label;
 }

@@ -118,4 +118,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o: \
  /usr/include/c++/14/bits/basic_string.tcc \
  /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
  /usr/include/c++/14/bits/uses_allocator.h \
- /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple
+ /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
+ /usr/include/c++/14/variant \
+ /usr/include/c++/14/bits/enable_special_members.h \
+ /usr/include/c++/14/bits/parse_numbers.h \
+ /usr/include/c++/14/ext/aligned_buffer.h

@@ -8,6 +8,7 @@
 #include "VMListener.hpp"
 #include "Program.hpp"
 #include <memory>
+#include "VMState.hpp"
 
 using namespace antlr4;
 
@@ -32,14 +33,17 @@ int main(int argc, const char* argv[]) {
 
         tree::ParseTree *tree = parser.program();
         
-        
-        VMListener listener;
+        auto vms  = std::make_unique<VMState>() ;
+        VMListener listener(vms.get());
         tree::ParseTreeWalker walker;
         walker.walk(&listener, tree);
         
         listener.finalizeProgram();
         Program& programAST = listener.getProgramAST();
-        programAST.executeProgram();
+
+        
+
+        programAST.executeProgram(vms.get());
         
         
     }

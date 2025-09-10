@@ -3,6 +3,7 @@
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/include",
         "${workspaceFolder}/include/instructions",
+        "${workspaceFolder}/include/machine",
         "${workspaceFolder}/src",
         "${workspaceFolder}/generated-sources",
         "/usr/local/include/antlr4-runtime",
@@ -82,7 +83,19 @@
         "__tree": "cpp",
         "deque": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "variant": "cpp",
+        "system_error": "cpp",
+        "charconv": "cpp",
+        "format": "cpp",
+        "__bit_reference": "cpp",
+        "__functional_base": "cpp",
+        "__node_handle": "cpp",
+        "__memory": "cpp",
+        "filesystem": "cpp",
+        "locale": "cpp",
+        "ios": "cpp",
+        "stream_ref": "cpp"
     },
     
     // Files to include in workspace

@@ -3,7 +3,7 @@
 
 #include "Operand.hpp"
 #include <string>
-
+#include <RRegister.hpp>
 
 
 
@@ -13,15 +13,13 @@ class RRegOperand : public Operand
 {
     private:
 
-        int RegIndex;
+        Register* reg; 
     
     public:
 
-        RRegOperand();
-        RRegOperand(int RegIndex);    
-        ~RRegOperand();
-
-        int     getRegisterIndex()   const  ;
+        RRegOperand(Register* r);
+        Register* getRegister() const;
+        VOp_t getOperandValue() const override;
 };
 
 #endif

@@ -10,7 +10,7 @@ ImmediateOperand::ImmediateOperand(int value)
 }
 
 
-int ImmediateOperand::getImmediateValue() const 
+VOp_t ImmediateOperand::getOperandValue()  const 
 {
     return this->value;
 }

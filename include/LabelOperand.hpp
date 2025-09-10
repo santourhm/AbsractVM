@@ -19,7 +19,7 @@ class LabelOperand  :  public Operand
         LabelOperand(std::string) ;
         ~LabelOperand();
 
-        std::string getLabelValue() const ;
+        VOp_t getOperandValue() const override;
 
 };
 

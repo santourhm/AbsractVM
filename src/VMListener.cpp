@@ -1,18 +1,77 @@
 #include "VMListener.hpp"
 #include "IInstruction.hpp"
 #include "WSTR.hpp"
+#include "LOAD.hpp"
+#include "WINT.hpp"
+#include "ADD.hpp"
 #include <memory>
 #include "StringLiteralOperand.hpp"
+#include "VMGrammarParser.h"
+#include "Register.hpp"
+#include "ImmediateOperand.hpp"
+#include "RRegOperand.hpp"
+
+VMListener::VMListener(VMState * vms)  : ProgATS(std::make_unique<Program>()), vms(vms) {}
+
+std::unique_ptr<RRegOperand> static parseRm_Operand(VMGrammarParser::OperandContext *operand, VMState * vs) {
+    if (!operand->register_()) {
+        throw std::runtime_error("Error: expected RREGISTER operand");
+    }
+
+    std::string regText = operand->register_()->RREGISTER()->getText();
+    int regIndex = -1;
+    if (!regText.empty() && regText[0] == 'R') {
+        try {
+            regIndex = std::stoi(regText.substr(1));
+        } catch (const std::exception &) {
+            throw std::runtime_error("Error: invalid register number in " + regText);
+        }
+    } else {
+        throw std::runtime_error("Error: invalid register format in " + regText);
+    }
+
+    RRegister *reg = vs->getEnv_Registers()->getR(regIndex);
+    return std::make_unique<RRegOperand>(reg);
+}
+
+std::unique_ptr<ImmediateOperand> static parseImm_Operand(VMGrammarParser::OperandContext *operand, VMState * vs) {
+    if (!operand->immediate()) {
+        throw std::runtime_error("Error: expected immediate operand");
+    }
+
+    std::string imm = operand->immediate()->getText();
+    int Vimm = -1 ;
+    
+    if(!imm.empty() && imm[0] == '#')
+    {
+        Vimm = std::stoi(imm.substr(1));
+    } 
+
+    return std::make_unique<ImmediateOperand>(Vimm);
+}
 
 
-VMListener::VMListener()  : ProgATS(std::make_unique<Program>()) {}
+static std::variant<std::unique_ptr<RRegOperand>, std::unique_ptr<ImmediateOperand>> parseDval_Operand(VMGrammarParser::OperandContext *operand, VMState *vs) {
+    if (operand->register_() && operand->register_()->RREGISTER()) 
+    {
+        return parseRm_Operand(operand, vs);
+    } else if (operand->immediate()) 
+    {
+        return parseImm_Operand(operand, vs);
+    } else {
+        throw std::runtime_error("Error: unsupported operand type");
+    }
+}
+
 
 
 void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx) 
 {
     std::cout << "Instruction : " << ctx->getText() << '\n';
 
+    auto ops = ctx->operand();
     size_t numOperands = ctx->operand().size();
+    size_t line = ctx->getStart()->getLine();
     std::unique_ptr<IInstruction> inst; 
 
     auto opcodeCtx = ctx->opcode();
@@ -24,6 +83,32 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                 throw std::runtime_error("Error: WSTR needs exactly one operand");
             
             inst = std::make_unique<WSTR>();
+            
+        }
+
+        if (opcodeCtx->LOAD()) 
+        {
+            if (numOperands != 2) 
+                throw std::runtime_error("Error: LOAD needs exactly 2 operands");
+            
+            inst = std::make_unique<LOAD>();
+            createDval_RmInstruction(inst.get(),ops,line);
+
+        }
+        if (opcodeCtx->WINT()) 
+        {
+
+            if (numOperands != 0) 
+                throw std::runtime_error("Error: WINT is an unary instruction");
+            
+            inst = std::make_unique<WINT>();
+            
+        }
+
+        if(opcodeCtx->ADD())
+        {
+            inst = std::make_unique<ADD>();
+            createDval_RmInstruction(inst.get(),ops,line);
         }
     } 
     catch (const std::runtime_error &e) {
@@ -31,14 +116,14 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                   << ctx->getStart()->getLine() 
                   << ": " << e.what() << std::endl;
     }
-
+    
     TmpInst.push_back(std::move(inst));
 }
 
 void VMListener::enterOpcode(VMGrammarParser::OpcodeContext * ctx)
 {
     std::cout << "Opcode :  " << ctx->getText() << '\n';
-   
+    
 }
 
 
@@ -68,7 +153,14 @@ void VMListener::finalizeProgram()
 
 void VMListener::enterOperand(VMGrammarParser::OperandContext * ctx)
 {
-    std::cout << "Operand :  " << ctx->getText() << '\n';
+    // std::cout << "Operand :  " << ctx->getText() << '\n';
+    // std::cout << "Operand :  " << ctx->getText() << '\n';
+    // IInstruction* lastInstruction = TmpInst.back().get();
+
+    //  if (auto loadInst = dynamic_cast<LOAD*>(lastInstruction)) 
+    //  {
+    //    
+    //  } 
 }
 
 
@@ -94,6 +186,25 @@ void VMListener::visitErrorNode(antlr4::tree::ErrorNode *node) {
               << node->getText() << std::endl;
 }
 
+
+
+// OPCODE dval, Rm
+
+void VMListener::createDval_RmInstruction(IInstruction * inst ,const std::vector<VMGrammarParser::OperandContext *> &operands, size_t line) 
+{
+    if (operands.size() != 2) {
+        throw std::runtime_error("Error: ADD requires exactly 2 operands");
+    }
+    
+    auto operand1 = parseDval_Operand(operands[0], vms);
+    
+
+    std::visit([&inst](auto &&op) {
+        inst->addOperand(std::move(op));
+    }, operand1);
+
+    inst->addOperand(parseRm_Operand(operands[1],vms));
+}
 
 
 

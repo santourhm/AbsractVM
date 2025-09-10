@@ -401,4 +401,13 @@ CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: \
  /home/santourh/abstract-vm-32bits/include/Program.hpp \
  /home/santourh/abstract-vm-32bits/include/IInstruction.hpp \
  /home/santourh/abstract-vm-32bits/include/Operand.hpp \
+ /usr/include/c++/14/variant \
+ /home/santourh/abstract-vm-32bits/include/machine/VMState.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/EnvRegisters.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/Register.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/VMtypes.hpp \
+ /home/santourh/abstract-vm-32bits/include/Operand.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/RRegister.hpp \
+ /home/santourh/abstract-vm-32bits/include/includes.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/VMtypes.hpp \
  /home/santourh/abstract-vm-32bits/include/Program.hpp

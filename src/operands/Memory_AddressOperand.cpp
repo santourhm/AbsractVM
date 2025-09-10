@@ -21,3 +21,8 @@ int Memory_AddressOperand::getOffsetRegister(void)  const
 {
     return this->offset;
 }
+
+VOp_t Memory_AddressOperand::getOperandValue() const
+{
+    return 0;
+}

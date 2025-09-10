@@ -39,11 +39,11 @@ memory_address
     ;
 
 immediate
-    : HASH (INT | ID)
+    : HASH INT
     ;
 
 label
-    : ID
+    : ID 
     ;
 
 
@@ -72,7 +72,7 @@ GBREGISTER     : 'GB';
 LBREGISTER     : 'LB';
 STRING_LITERAL: '"' ( ~["\\] | '\\' . )* '"';
 INT           : [0-9]+;
-ID            : [a-zA-Z_][a-zA-Z_0-9]*;
+ID            : [a-zA-Z_] [a-zA-Z0-9_.]*;
 
 
 COMMENT : ';' ~[\r\n]* -> skip;

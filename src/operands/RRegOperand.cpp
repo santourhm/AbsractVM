@@ -3,17 +3,16 @@
 
 
 
-RRegOperand::RRegOperand() {}
-RRegOperand::~RRegOperand()  {}
 
+RRegOperand::RRegOperand(Register* r) : reg(r) {}
 
-RRegOperand::RRegOperand(int RegIndex)
+VOp_t RRegOperand::getOperandValue() const
 {
-    this->RegIndex   = RegIndex;
+    return reg->RegisterGetValue();
 }
 
 
-int RRegOperand::getRegisterIndex(void)  const
+Register* RRegOperand::getRegister() const
 {
-    return this->RegIndex;
+    return reg;
 }

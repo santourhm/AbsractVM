@@ -17,7 +17,7 @@ class StringLiteralOperand : public Operand
         StringLiteralOperand(std::string  value);
         ~StringLiteralOperand();
 
-        std::string getStringValue(void)  const ;  
+        VOp_t getOperandValue() const  ;  
 };
 
 

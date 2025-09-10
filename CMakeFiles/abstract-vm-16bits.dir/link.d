@@ -5,10 +5,16 @@ abstract-vm-16bits: \
   CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o \
-  CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o \
@@ -64,13 +70,25 @@ CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o:
 
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o:
+
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o:
 
-CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o:
+CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o:
 
-CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o:
+CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o:
 

@@ -121,7 +121,11 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: \
  /usr/include/c++/14/bits/charconv.h \
  /usr/include/c++/14/bits/basic_string.tcc \
  /home/santourh/abstract-vm-32bits/include/Operand.hpp \
- /usr/include/c++/14/memory /usr/include/c++/14/bits/stl_tempbuf.h \
+ /usr/include/c++/14/variant \
+ /usr/include/c++/14/bits/enable_special_members.h \
+ /usr/include/c++/14/bits/parse_numbers.h \
+ /usr/include/c++/14/ext/aligned_buffer.h /usr/include/c++/14/memory \
+ /usr/include/c++/14/bits/stl_tempbuf.h \
  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
  /usr/include/c++/14/bits/align.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h /usr/include/stdint.h \
@@ -131,7 +135,6 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: \
  /usr/include/c++/14/bits/shared_ptr.h \
  /usr/include/c++/14/bits/shared_ptr_base.h /usr/include/c++/14/typeinfo \
  /usr/include/c++/14/bits/allocated_ptr.h \
- /usr/include/c++/14/ext/aligned_buffer.h \
  /usr/include/c++/14/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
@@ -166,6 +169,14 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: \
  /usr/include/c++/14/backward/auto_ptr.h \
  /usr/include/c++/14/pstl/glue_memory_defs.h \
  /usr/include/c++/14/pstl/execution_defs.h \
+ /home/santourh/abstract-vm-32bits/include/machine/VMState.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/EnvRegisters.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/Register.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/VMtypes.hpp \
+ /home/santourh/abstract-vm-32bits/include/Operand.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/RRegister.hpp \
+ /home/santourh/abstract-vm-32bits/include/includes.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/VMtypes.hpp \
  /home/santourh/abstract-vm-32bits/include/StringLiteralOperand.hpp \
  /usr/include/c++/14/iostream /usr/include/c++/14/ostream \
  /usr/include/c++/14/ios /usr/include/c++/14/bits/ios_base.h \

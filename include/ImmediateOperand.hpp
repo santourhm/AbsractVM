@@ -20,7 +20,7 @@ class ImmediateOperand  :  public Operand
         ImmediateOperand(int value) ;
         ~ImmediateOperand();
 
-        int getImmediateValue() const ;
+        VOp_t getOperandValue()  const override; 
 
 };
 

@@ -1,5 +1,5 @@
 #include "Program.hpp"
-
+#include <iostream>
 
 
 
@@ -25,11 +25,14 @@ void    Program::setInstructions(std::vector<std::unique_ptr<IInstruction>>&& in
         instructions = std::move(instrs);
 }
 
-
-void    Program::executeProgram(/* VMState vms */)
+void Program::executeProgram(VMState* vms)
 {
-        for (const auto&  insts : instructions) 
-        {
-                insts->execute();
-        }
+
+    int i = 0;
+    EnvRegisters * envReg = vms->getEnv_Registers();
+    Register     * PC     = envReg->getPC();
+    for (const auto& inst : instructions) {
+        inst->execute(vms);
+        PC->RegisterSetValue(i++);
+    }   
 }

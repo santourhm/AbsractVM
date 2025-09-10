@@ -346,6 +346,30 @@ src/VMListener.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.s
 .PHONY : src/VMListener.cpp.s
 
+src/instructions/ADD.o: src/instructions/ADD.cpp.o
+.PHONY : src/instructions/ADD.o
+
+# target to build an object file
+src/instructions/ADD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o
+.PHONY : src/instructions/ADD.cpp.o
+
+src/instructions/ADD.i: src/instructions/ADD.cpp.i
+.PHONY : src/instructions/ADD.i
+
+# target to preprocess a source file
+src/instructions/ADD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.i
+.PHONY : src/instructions/ADD.cpp.i
+
+src/instructions/ADD.s: src/instructions/ADD.cpp.s
+.PHONY : src/instructions/ADD.s
+
+# target to generate assembly for a file
+src/instructions/ADD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.s
+.PHONY : src/instructions/ADD.cpp.s
+
 src/instructions/IInstruction.o: src/instructions/IInstruction.cpp.o
 .PHONY : src/instructions/IInstruction.o
 
@@ -369,6 +393,54 @@ src/instructions/IInstruction.s: src/instructions/IInstruction.cpp.s
 src/instructions/IInstruction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.s
 .PHONY : src/instructions/IInstruction.cpp.s
+
+src/instructions/LOAD.o: src/instructions/LOAD.cpp.o
+.PHONY : src/instructions/LOAD.o
+
+# target to build an object file
+src/instructions/LOAD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o
+.PHONY : src/instructions/LOAD.cpp.o
+
+src/instructions/LOAD.i: src/instructions/LOAD.cpp.i
+.PHONY : src/instructions/LOAD.i
+
+# target to preprocess a source file
+src/instructions/LOAD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.i
+.PHONY : src/instructions/LOAD.cpp.i
+
+src/instructions/LOAD.s: src/instructions/LOAD.cpp.s
+.PHONY : src/instructions/LOAD.s
+
+# target to generate assembly for a file
+src/instructions/LOAD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.s
+.PHONY : src/instructions/LOAD.cpp.s
+
+src/instructions/WINT.o: src/instructions/WINT.cpp.o
+.PHONY : src/instructions/WINT.o
+
+# target to build an object file
+src/instructions/WINT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o
+.PHONY : src/instructions/WINT.cpp.o
+
+src/instructions/WINT.i: src/instructions/WINT.cpp.i
+.PHONY : src/instructions/WINT.i
+
+# target to preprocess a source file
+src/instructions/WINT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.i
+.PHONY : src/instructions/WINT.cpp.i
+
+src/instructions/WINT.s: src/instructions/WINT.cpp.s
+.PHONY : src/instructions/WINT.s
+
+# target to generate assembly for a file
+src/instructions/WINT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.s
+.PHONY : src/instructions/WINT.cpp.s
 
 src/instructions/WSTR.o: src/instructions/WSTR.cpp.o
 .PHONY : src/instructions/WSTR.o
@@ -394,6 +466,102 @@ src/instructions/WSTR.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.s
 .PHONY : src/instructions/WSTR.cpp.s
 
+src/machine/EnvRegisters.o: src/machine/EnvRegisters.cpp.o
+.PHONY : src/machine/EnvRegisters.o
+
+# target to build an object file
+src/machine/EnvRegisters.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o
+.PHONY : src/machine/EnvRegisters.cpp.o
+
+src/machine/EnvRegisters.i: src/machine/EnvRegisters.cpp.i
+.PHONY : src/machine/EnvRegisters.i
+
+# target to preprocess a source file
+src/machine/EnvRegisters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.i
+.PHONY : src/machine/EnvRegisters.cpp.i
+
+src/machine/EnvRegisters.s: src/machine/EnvRegisters.cpp.s
+.PHONY : src/machine/EnvRegisters.s
+
+# target to generate assembly for a file
+src/machine/EnvRegisters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.s
+.PHONY : src/machine/EnvRegisters.cpp.s
+
+src/machine/Memory.o: src/machine/Memory.cpp.o
+.PHONY : src/machine/Memory.o
+
+# target to build an object file
+src/machine/Memory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o
+.PHONY : src/machine/Memory.cpp.o
+
+src/machine/Memory.i: src/machine/Memory.cpp.i
+.PHONY : src/machine/Memory.i
+
+# target to preprocess a source file
+src/machine/Memory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.i
+.PHONY : src/machine/Memory.cpp.i
+
+src/machine/Memory.s: src/machine/Memory.cpp.s
+.PHONY : src/machine/Memory.s
+
+# target to generate assembly for a file
+src/machine/Memory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.s
+.PHONY : src/machine/Memory.cpp.s
+
+src/machine/RRegister.o: src/machine/RRegister.cpp.o
+.PHONY : src/machine/RRegister.o
+
+# target to build an object file
+src/machine/RRegister.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o
+.PHONY : src/machine/RRegister.cpp.o
+
+src/machine/RRegister.i: src/machine/RRegister.cpp.i
+.PHONY : src/machine/RRegister.i
+
+# target to preprocess a source file
+src/machine/RRegister.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.i
+.PHONY : src/machine/RRegister.cpp.i
+
+src/machine/RRegister.s: src/machine/RRegister.cpp.s
+.PHONY : src/machine/RRegister.s
+
+# target to generate assembly for a file
+src/machine/RRegister.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.s
+.PHONY : src/machine/RRegister.cpp.s
+
+src/machine/Register.o: src/machine/Register.cpp.o
+.PHONY : src/machine/Register.o
+
+# target to build an object file
+src/machine/Register.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o
+.PHONY : src/machine/Register.cpp.o
+
+src/machine/Register.i: src/machine/Register.cpp.i
+.PHONY : src/machine/Register.i
+
+# target to preprocess a source file
+src/machine/Register.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.i
+.PHONY : src/machine/Register.cpp.i
+
+src/machine/Register.s: src/machine/Register.cpp.s
+.PHONY : src/machine/Register.s
+
+# target to generate assembly for a file
+src/machine/Register.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.s
+.PHONY : src/machine/Register.cpp.s
+
 src/machine/VMState.o: src/machine/VMState.cpp.o
 .PHONY : src/machine/VMState.o
 
@@ -417,30 +585,6 @@ src/machine/VMState.s: src/machine/VMState.cpp.s
 src/machine/VMState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.s
 .PHONY : src/machine/VMState.cpp.s
-
-src/machine/memory.o: src/machine/memory.cpp.o
-.PHONY : src/machine/memory.o
-
-# target to build an object file
-src/machine/memory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.o
-.PHONY : src/machine/memory.cpp.o
-
-src/machine/memory.i: src/machine/memory.cpp.i
-.PHONY : src/machine/memory.i
-
-# target to preprocess a source file
-src/machine/memory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.i
-.PHONY : src/machine/memory.cpp.i
-
-src/machine/memory.s: src/machine/memory.cpp.s
-.PHONY : src/machine/memory.s
-
-# target to generate assembly for a file
-src/machine/memory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/memory.cpp.s
-.PHONY : src/machine/memory.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -646,18 +790,36 @@ help:
 	@echo "... src/VMListener.o"
 	@echo "... src/VMListener.i"
 	@echo "... src/VMListener.s"
+	@echo "... src/instructions/ADD.o"
+	@echo "... src/instructions/ADD.i"
+	@echo "... src/instructions/ADD.s"
 	@echo "... src/instructions/IInstruction.o"
 	@echo "... src/instructions/IInstruction.i"
 	@echo "... src/instructions/IInstruction.s"
+	@echo "... src/instructions/LOAD.o"
+	@echo "... src/instructions/LOAD.i"
+	@echo "... src/instructions/LOAD.s"
+	@echo "... src/instructions/WINT.o"
+	@echo "... src/instructions/WINT.i"
+	@echo "... src/instructions/WINT.s"
 	@echo "... src/instructions/WSTR.o"
 	@echo "... src/instructions/WSTR.i"
 	@echo "... src/instructions/WSTR.s"
+	@echo "... src/machine/EnvRegisters.o"
+	@echo "... src/machine/EnvRegisters.i"
+	@echo "... src/machine/EnvRegisters.s"
+	@echo "... src/machine/Memory.o"
+	@echo "... src/machine/Memory.i"
+	@echo "... src/machine/Memory.s"
+	@echo "... src/machine/RRegister.o"
+	@echo "... src/machine/RRegister.i"
+	@echo "... src/machine/RRegister.s"
+	@echo "... src/machine/Register.o"
+	@echo "... src/machine/Register.i"
+	@echo "... src/machine/Register.s"
 	@echo "... src/machine/VMState.o"
 	@echo "... src/machine/VMState.i"
 	@echo "... src/machine/VMState.s"
-	@echo "... src/machine/memory.o"
-	@echo "... src/machine/memory.i"
-	@echo "... src/machine/memory.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

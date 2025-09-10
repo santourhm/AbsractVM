@@ -1,0 +1,36 @@
+#ifndef     ENVREGISTERS_HPP
+#define     ENVREGISTERS_HPP
+#include "Register.hpp"
+#include "RRegister.hpp"
+
+#define  NUMBER_MAX_GENPORPSE_REG  (15)
+
+
+class EnvRegisters
+{
+    private:
+
+        std::vector<std::unique_ptr<RRegister>> RRegisters;
+        std::unique_ptr<Register> GB ;   
+        std::unique_ptr<Register> LB ;   
+        std::unique_ptr<Register> SP ;   
+        std::unique_ptr<Register> PC ;   
+
+    public:
+
+        EnvRegisters();
+        ~EnvRegisters();
+
+
+        RRegister *  getR(int i)  ;
+        Register *  getGB(void)  ;
+        Register *  getLB()  ;
+        Register *  getSP()  ;
+        Register *  getPC()  ;
+
+};
+
+
+
+
+#endif

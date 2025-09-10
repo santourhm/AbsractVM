@@ -4,13 +4,21 @@
 
 
 
+#include "EnvRegisters.hpp"
+#include "Register.hpp"
+#include "includes.hpp"
+
 class VMState
 {
-    private:
-        /* data */
+    std::unique_ptr<EnvRegisters> Env_Registers ;
+
     public:
-        VMState(/* args */);
-        ~VMState();
+        
+        VMState() ;
+        ~VMState() = default;
+
+        EnvRegisters * getEnv_Registers() ;
+
 };
 
 

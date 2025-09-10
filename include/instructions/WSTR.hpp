@@ -3,6 +3,7 @@
 
 #include "IInstruction.hpp"
 #include "StringLiteralOperand.hpp"
+#include "VMState.hpp"
 
 class WSTR : public IInstruction
 {
@@ -11,7 +12,7 @@ class WSTR : public IInstruction
 
         WSTR() = default;
         explicit  WSTR(std::vector<std::unique_ptr<Operand>> ops);
-        void  execute(/*VMState vms*/)  override;
+        void  execute(VMState * vms)  override;
 };
 
 

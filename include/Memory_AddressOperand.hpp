@@ -23,6 +23,7 @@ class Memory_AddressOperand : public Operand
 
         Operand&    getRegisterOperand() const;
         int getOffsetRegister(void)  const ;
+        VOp_t getOperandValue() const override;
 };
 
 

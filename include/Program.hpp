@@ -4,6 +4,7 @@
 #include "IInstruction.hpp"
 #include <memory>
 #include <vector>
+#include "VMState.hpp"
 
 class Program
 {
@@ -22,7 +23,7 @@ class Program
         const std::vector<std::unique_ptr<IInstruction>>& getInstructions() const ;
            
 
-        void  executeProgram(/* VMState vms */);
+        void executeProgram(VMState* vms);
 
 };
 

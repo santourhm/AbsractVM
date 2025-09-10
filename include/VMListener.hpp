@@ -4,18 +4,20 @@
 #include "Program.hpp"
 #include "VMGrammarBaseListener.h"
 #include <memory>
+#include "VMState.hpp"
 
 
 class VMListener : public VMGrammarBaseListener 
 {
     private : 
         
+        VMState *vms;
         std::unique_ptr<Program> ProgATS;
         std::vector<std::unique_ptr<IInstruction>> TmpInst;
 
     public:
 
-        VMListener() ;
+        VMListener(VMState *vms) ;
         ~VMListener() {};
 
         void enterInstruction(VMGrammarParser::InstructionContext * ctx) override ; 
@@ -28,6 +30,9 @@ class VMListener : public VMGrammarBaseListener
         void enterString_literal(VMGrammarParser::String_literalContext * ctx) override;
         void enterLabel_definition(VMGrammarParser::Label_definitionContext * /*ctx*/) override ;
 
+
+
+        void createDval_RmInstruction(IInstruction * inst ,const std::vector<VMGrammarParser::OperandContext *> &operands, size_t line) ;
 
         void finalizeProgram() ;
         Program& getProgramAST() const {

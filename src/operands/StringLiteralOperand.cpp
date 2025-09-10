@@ -12,7 +12,7 @@ StringLiteralOperand::StringLiteralOperand(std::string value)
     this->value   = value;
 }
 
-std::string   StringLiteralOperand::getStringValue(void)   const
+VOp_t   StringLiteralOperand:: getOperandValue(void)   const
 {
     return this->value;
 }
