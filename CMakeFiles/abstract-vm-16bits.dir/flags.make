@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/generated-sources -I/usr/local/include/antlr4-runtime
+CXX_INCLUDES = -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/generated-sources -I/usr/local/include/antlr4-runtime
 
 CXX_FLAGS = -std=c++17 -g
 

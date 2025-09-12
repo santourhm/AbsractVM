@@ -15,7 +15,7 @@ instruction
     ;
 
 opcode
-    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL
+    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL | WFLOAT
     ;
 
 operand
@@ -39,7 +39,7 @@ memory_address
     ;
 
 immediate
-    : HASH INT
+    : HASH (INT | FLOAT)
     ;
 
 label
@@ -61,6 +61,7 @@ CMP : 'CMP';
 BEQ : 'BEQ';
 WINT: 'WINT';
 WNL : 'WNL';
+WFLOAT : 'WFLOAT';
 
 COMMA  : ',';
 OPARENT: '(';
@@ -76,7 +77,7 @@ LBREGISTER     : 'LB';
 STRING_LITERAL: '"' ( ~["\\] | '\\' . )* '"';
 INT           : [0-9]+;
 ID            : [a-zA-Z_] [a-zA-Z0-9_.]*;
-
+FLOAT         : INT '.' INT ;
 
 COMMENT : ';' ~[\r\n]* -> skip;
 WS      : [ \t]+ -> skip;

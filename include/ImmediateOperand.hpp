@@ -1,26 +1,28 @@
 #ifndef     IMMEDIATEOPERAND_HPP
 #define     IMMEDIATEOPERAND_HPP
 
-#include "Operand.hpp"
+#include "IOperand.hpp"
+#include "Value.hpp"
 
 
 
 
 
 
-
-class ImmediateOperand  :  public Operand
+class ImmediateOperand  :  public IOperand
 {
     private :
-    
-        int    value;
+
+         Value val;
     
     public:
 
-        ImmediateOperand(int value) ;
+        ImmediateOperand(Value value) ;
         ~ImmediateOperand();
 
-        VOp_t getOperandValue()  const override; 
+
+        Value read(const VMState& vms) const override;
+        void  write(VMState& vms, const Value& value) const override;
 
 };
 

@@ -51,6 +51,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/include"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/instructions"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/machine"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/machine/arithmitics"
     "${ANTLR_OUTPUT_DIR}"
     ${ANTLR4_RUNTIME_INCLUDE_DIR}
 )

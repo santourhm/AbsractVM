@@ -538,6 +538,30 @@ src/instructions/SUB.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.s
 .PHONY : src/instructions/SUB.cpp.s
 
+src/instructions/WFLOAT.o: src/instructions/WFLOAT.cpp.o
+.PHONY : src/instructions/WFLOAT.o
+
+# target to build an object file
+src/instructions/WFLOAT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o
+.PHONY : src/instructions/WFLOAT.cpp.o
+
+src/instructions/WFLOAT.i: src/instructions/WFLOAT.cpp.i
+.PHONY : src/instructions/WFLOAT.i
+
+# target to preprocess a source file
+src/instructions/WFLOAT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.i
+.PHONY : src/instructions/WFLOAT.cpp.i
+
+src/instructions/WFLOAT.s: src/instructions/WFLOAT.cpp.s
+.PHONY : src/instructions/WFLOAT.s
+
+# target to generate assembly for a file
+src/instructions/WFLOAT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.s
+.PHONY : src/instructions/WFLOAT.cpp.s
+
 src/instructions/WINT.o: src/instructions/WINT.cpp.o
 .PHONY : src/instructions/WINT.o
 
@@ -706,6 +730,30 @@ src/machine/VMState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.s
 .PHONY : src/machine/VMState.cpp.s
 
+src/machine/arithmitics/Value.o: src/machine/arithmitics/Value.cpp.o
+.PHONY : src/machine/arithmitics/Value.o
+
+# target to build an object file
+src/machine/arithmitics/Value.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o
+.PHONY : src/machine/arithmitics/Value.cpp.o
+
+src/machine/arithmitics/Value.i: src/machine/arithmitics/Value.cpp.i
+.PHONY : src/machine/arithmitics/Value.i
+
+# target to preprocess a source file
+src/machine/arithmitics/Value.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.i
+.PHONY : src/machine/arithmitics/Value.cpp.i
+
+src/machine/arithmitics/Value.s: src/machine/arithmitics/Value.cpp.s
+.PHONY : src/machine/arithmitics/Value.s
+
+# target to generate assembly for a file
+src/machine/arithmitics/Value.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.s
+.PHONY : src/machine/arithmitics/Value.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -729,6 +777,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/operands/IOperand.o: src/operands/IOperand.cpp.o
+.PHONY : src/operands/IOperand.o
+
+# target to build an object file
+src/operands/IOperand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o
+.PHONY : src/operands/IOperand.cpp.o
+
+src/operands/IOperand.i: src/operands/IOperand.cpp.i
+.PHONY : src/operands/IOperand.i
+
+# target to preprocess a source file
+src/operands/IOperand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.i
+.PHONY : src/operands/IOperand.cpp.i
+
+src/operands/IOperand.s: src/operands/IOperand.cpp.s
+.PHONY : src/operands/IOperand.s
+
+# target to generate assembly for a file
+src/operands/IOperand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.s
+.PHONY : src/operands/IOperand.cpp.s
 
 src/operands/ImmediateOperand.o: src/operands/ImmediateOperand.cpp.o
 .PHONY : src/operands/ImmediateOperand.o
@@ -801,30 +873,6 @@ src/operands/Memory_AddressOperand.s: src/operands/Memory_AddressOperand.cpp.s
 src/operands/Memory_AddressOperand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.s
 .PHONY : src/operands/Memory_AddressOperand.cpp.s
-
-src/operands/Operand.o: src/operands/Operand.cpp.o
-.PHONY : src/operands/Operand.o
-
-# target to build an object file
-src/operands/Operand.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o
-.PHONY : src/operands/Operand.cpp.o
-
-src/operands/Operand.i: src/operands/Operand.cpp.i
-.PHONY : src/operands/Operand.i
-
-# target to preprocess a source file
-src/operands/Operand.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.i
-.PHONY : src/operands/Operand.cpp.i
-
-src/operands/Operand.s: src/operands/Operand.cpp.s
-.PHONY : src/operands/Operand.s
-
-# target to generate assembly for a file
-src/operands/Operand.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.s
-.PHONY : src/operands/Operand.cpp.s
 
 src/operands/RRegOperand.o: src/operands/RRegOperand.cpp.o
 .PHONY : src/operands/RRegOperand.o
@@ -934,6 +982,9 @@ help:
 	@echo "... src/instructions/SUB.o"
 	@echo "... src/instructions/SUB.i"
 	@echo "... src/instructions/SUB.s"
+	@echo "... src/instructions/WFLOAT.o"
+	@echo "... src/instructions/WFLOAT.i"
+	@echo "... src/instructions/WFLOAT.s"
 	@echo "... src/instructions/WINT.o"
 	@echo "... src/instructions/WINT.i"
 	@echo "... src/instructions/WINT.s"
@@ -955,9 +1006,15 @@ help:
 	@echo "... src/machine/VMState.o"
 	@echo "... src/machine/VMState.i"
 	@echo "... src/machine/VMState.s"
+	@echo "... src/machine/arithmitics/Value.o"
+	@echo "... src/machine/arithmitics/Value.i"
+	@echo "... src/machine/arithmitics/Value.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/operands/IOperand.o"
+	@echo "... src/operands/IOperand.i"
+	@echo "... src/operands/IOperand.s"
 	@echo "... src/operands/ImmediateOperand.o"
 	@echo "... src/operands/ImmediateOperand.i"
 	@echo "... src/operands/ImmediateOperand.s"
@@ -967,9 +1024,6 @@ help:
 	@echo "... src/operands/Memory_AddressOperand.o"
 	@echo "... src/operands/Memory_AddressOperand.i"
 	@echo "... src/operands/Memory_AddressOperand.s"
-	@echo "... src/operands/Operand.o"
-	@echo "... src/operands/Operand.i"
-	@echo "... src/operands/Operand.s"
 	@echo "... src/operands/RRegOperand.o"
 	@echo "... src/operands/RRegOperand.i"
 	@echo "... src/operands/RRegOperand.s"

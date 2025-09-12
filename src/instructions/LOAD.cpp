@@ -2,13 +2,8 @@
 #include "ImmediateOperand.hpp"
 #include "RRegOperand.hpp"
 #include <iostream>
+#include "Value.hpp"
 
-
-
-LOAD::LOAD(std::vector<std::unique_ptr<Operand>> ops)
-{
-    operands = std::move(ops);
-}
 
 
 void LOAD::execute(VMState * vms)
@@ -25,13 +20,10 @@ void LOAD::execute(VMState * vms)
         auto& src = operands[0];
         auto& dst = operands[1];
 
-        RRegOperand * dstRegOperand = dynamic_cast<RRegOperand*>(dst.get()); 
+        Value srcValue = src.get()->read(*vms);
+        Value dstValue = dst.get()->read(*vms);
 
-        RRegister   * DstReg        =  static_cast<RRegister*>(dstRegOperand->getRegister());
-
-        VOp_t Vsrc = src.get()->getOperandValue(); 
-
-        DstReg->RegisterSetValue(Vsrc);
+        dst.get()->write(*vms,srcValue);
 
     }
     catch(const std::runtime_error& e)

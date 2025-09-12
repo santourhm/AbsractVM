@@ -9,16 +9,16 @@
 
 
 
-Register::Register(const std::string& n, VOp_t v ) : name(n) , value(v) { } ;
+Register::Register(const std::string& n, Value v ) : name(n) , value(v) { } ;
 
 
-void   Register::RegisterSetValue(VOp_t v)            
+void   Register::RegisterSetValue(Value v)            
 {
        value = v;
 }
 
 
-VOp_t   Register::RegisterGetValue() const
+Value   Register::RegisterGetValue() const
 {
         return value;
 }

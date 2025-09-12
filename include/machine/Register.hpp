@@ -5,26 +5,25 @@
 #include <vector>
 #include <variant>
 #include "VMtypes.hpp"
-#include "Operand.hpp"
-
+#include "IOperand.hpp"
+#include "Value.hpp"
 
 
 class Register  
 {
     private:
         
-        std::string     name    ;
-        VOp_t   value   ;
+        std::string     name;
+        Value   value       ;
 
     public:
 
-        Register(const std::string& n, VOp_t v = 0);
+        Register(const std::string& n, Value v);
         ~Register() = default ;
 
-        void    RegisterSetValue(VOp_t v)         ;
-        VOp_t   RegisterGetValue()        const   ;
+        void    RegisterSetValue(Value v)         ;
+        Value   RegisterGetValue()        const   ;
         
-
 };
 
 

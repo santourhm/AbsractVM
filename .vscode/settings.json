@@ -4,6 +4,7 @@
         "${workspaceFolder}/include",
         "${workspaceFolder}/include/instructions",
         "${workspaceFolder}/include/machine",
+        "${workspaceFolder}/include/machine/arithmitics",
         "${workspaceFolder}/src",
         "${workspaceFolder}/generated-sources",
         "/usr/local/include/antlr4-runtime",
@@ -95,7 +96,9 @@
         "filesystem": "cpp",
         "locale": "cpp",
         "ios": "cpp",
-        "stream_ref": "cpp"
+        "stream_ref": "cpp",
+        "cmath": "cpp",
+        "version": "cpp"
     },
     
     // Files to include in workspace

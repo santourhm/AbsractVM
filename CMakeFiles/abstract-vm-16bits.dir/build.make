@@ -269,10 +269,24 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/instructions/SUB.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.s
 
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o: src/instructions/WFLOAT.cpp
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WFLOAT.cpp
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santourh/abstract-vm-32bits/src/instructions/WFLOAT.cpp > CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.i
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/instructions/WFLOAT.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.s
+
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o: src/instructions/WINT.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WINT.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.i: cmake_force
@@ -286,7 +300,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: src/instructions/WSTR.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WSTR.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.i: cmake_force
@@ -300,7 +314,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o: src/machine/EnvRegisters.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/EnvRegisters.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.i: cmake_force
@@ -314,7 +328,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o: src/machine/Memory.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/Memory.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.i: cmake_force
@@ -328,7 +342,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o: src/machine/RRegister.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/RRegister.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.i: cmake_force
@@ -342,7 +356,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o: src/machine/Register.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/Register.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.i: cmake_force
@@ -356,7 +370,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o: src/machine/VMState.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/VMState.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.i: cmake_force
@@ -367,10 +381,24 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/machine/VMState.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.s
 
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o: src/machine/arithmitics/Value.cpp
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/arithmitics/Value.cpp
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santourh/abstract-vm-32bits/src/machine/arithmitics/Value.cpp > CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.i
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/machine/arithmitics/Value.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.s
+
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o -c /home/santourh/abstract-vm-32bits/src/main.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.i: cmake_force
@@ -381,10 +409,24 @@ CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/main.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.s
 
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o: src/operands/IOperand.cpp
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/IOperand.cpp
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santourh/abstract-vm-32bits/src/operands/IOperand.cpp > CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.i
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/operands/IOperand.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.s
+
 CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o: src/operands/ImmediateOperand.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/ImmediateOperand.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.i: cmake_force
@@ -398,7 +440,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.s: cmake_for
 CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o: src/operands/LabelOperand.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/LabelOperand.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.i: cmake_force
@@ -412,7 +454,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: src/operands/Memory_AddressOperand.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/Memory_AddressOperand.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.i: cmake_force
@@ -423,24 +465,10 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.s: cmak
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/operands/Memory_AddressOperand.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.s
 
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Operand.cpp
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/Operand.cpp
-
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/santourh/abstract-vm-32bits/src/operands/Operand.cpp > CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.i
-
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/santourh/abstract-vm-32bits/src/operands/Operand.cpp -o CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.s
-
 CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o: src/operands/RRegOperand.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/RRegOperand.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.i: cmake_force
@@ -454,7 +482,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.s: cmake_force
 CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/operands/StringLiteralOperand.cpp
 CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/StringLiteralOperand.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.i: cmake_force
@@ -468,7 +496,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.s: cmake
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o: generated-sources/VMGrammarLexer.cpp
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o -c /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarLexer.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.i: cmake_force
@@ -482,7 +510,7 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.s: cmake_
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o: generated-sources/VMGrammarParser.cpp
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o -c /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarParser.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.i: cmake_force
@@ -496,7 +524,7 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.s: cmake
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o: generated-sources/VMGrammarBaseListener.cpp
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o -c /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarBaseListener.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.i: cmake_force
@@ -510,7 +538,7 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.s:
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o: generated-sources/VMGrammarListener.cpp
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o -c /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarListener.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.i: cmake_force
@@ -524,7 +552,7 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.s: cma
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o: generated-sources/VMGrammarBaseVisitor.cpp
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o -c /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarBaseVisitor.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.i: cmake_force
@@ -538,7 +566,7 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.s: 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o: CMakeFiles/abstract-vm-16bits.dir/flags.make
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o: generated-sources/VMGrammarVisitor.cpp
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o -MF CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o.d -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o -c /home/santourh/abstract-vm-32bits/generated-sources/VMGrammarVisitor.cpp
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.i: cmake_force
@@ -562,6 +590,7 @@ abstract__vm__16bits_OBJECTS = \
 "CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o" \
+"CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o" \
@@ -569,11 +598,12 @@ abstract__vm__16bits_OBJECTS = \
 "CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o" \
+"CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o" \
+"CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o" \
-"CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o" \
 "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o" \
@@ -597,6 +627,7 @@ abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o
+abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o
@@ -604,11 +635,12 @@ abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o
+abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o
+abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o
-abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o
@@ -621,7 +653,7 @@ abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/build.make
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/compiler_depend.ts
 abstract-vm-16bits: /usr/local/lib/libantlr4-runtime.so
 abstract-vm-16bits: CMakeFiles/abstract-vm-16bits.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable abstract-vm-16bits"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/santourh/abstract-vm-32bits/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking CXX executable abstract-vm-16bits"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/abstract-vm-16bits.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

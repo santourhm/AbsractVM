@@ -2,28 +2,27 @@
 #define     MEMORY_ADDRESSOPRAND_HPP
 
 
-#include "Operand.hpp"
+#include "IOperand.hpp"
 #include <memory>
 
 
 
 
 
-class Memory_AddressOperand : public Operand
+class Memory_AddressOperand : public IOperand
 {
     private:
 
         int       offset;
-        std::unique_ptr<Operand>  RegOperand ;   
+        std::unique_ptr<IOperand>  RegOperand ;   
 
     public:
 
-        Memory_AddressOperand(int offset ,std::unique_ptr<Operand>  RegOperand);
+        Memory_AddressOperand(int offset ,std::unique_ptr<IOperand>  RegOperand);
         ~Memory_AddressOperand();
 
-        Operand&    getRegisterOperand() const;
-        int getOffsetRegister(void)  const ;
-        VOp_t getOperandValue() const override;
+        Value read(const VMState& vms) const override        ;
+        void  write(VMState& vms, const Value& value) const override;
 };
 
 

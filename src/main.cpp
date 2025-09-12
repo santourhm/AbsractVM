@@ -34,14 +34,16 @@ int main(int argc, const char* argv[]) {
         tree::ParseTree *tree = parser.program();
         
         auto vms  = std::make_unique<VMState>() ;
+
         VMListener listener(vms.get());
+        
         tree::ParseTreeWalker walker;
+        
         walker.walk(&listener, tree);
         
         listener.finalizeProgram();
-        Program& programAST = listener.getProgramAST();
-
         
+        Program& programAST = listener.getProgramAST();
 
         programAST.executeProgram(vms.get());
         

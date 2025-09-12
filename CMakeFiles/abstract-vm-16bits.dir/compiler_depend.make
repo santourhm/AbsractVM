@@ -2765,14 +2765,10 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o: gene
 
 CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o: src/Program.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/Program.hpp \
-  include/includes.hpp \
-  include/machine/EnvRegisters.hpp \
-  include/machine/RRegister.hpp \
-  include/machine/Register.hpp \
   include/machine/VMState.hpp \
-  include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -2859,6 +2855,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o: src/Program.cpp \
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -3009,13 +3006,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o: src/VMListener.cpp \
   generated-sources/VMGrammarListener.h \
   generated-sources/VMGrammarParser.h \
   include/IInstruction.hpp \
+  include/IOperand.hpp \
   include/ImmediateOperand.hpp \
-  include/Operand.hpp \
   include/Program.hpp \
   include/RRegOperand.hpp \
   include/StringLiteralOperand.hpp \
   include/VMListener.hpp \
-  include/includes.hpp \
   include/instructions/ADD.hpp \
   include/instructions/LOAD.hpp \
   include/instructions/MUL.hpp \
@@ -3030,6 +3026,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o: src/VMListener.cpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -3490,15 +3487,15 @@ CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o: src/VMListener.cpp \
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o: src/instructions/ADD.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/RRegOperand.hpp \
-  include/includes.hpp \
   include/instructions/ADD.hpp \
-  include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Op_Results.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -3585,6 +3582,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o: src/instructions/A
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -3729,13 +3727,9 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o: src/instructions/A
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o: src/instructions/IInstruction.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
-  include/includes.hpp \
-  include/machine/EnvRegisters.hpp \
-  include/machine/RRegister.hpp \
-  include/machine/Register.hpp \
+  include/IOperand.hpp \
   include/machine/VMState.hpp \
-  include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -3811,6 +3805,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o: src/instr
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -3942,16 +3937,15 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o: src/instr
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o: src/instructions/LOAD.cpp \
   include/IInstruction.hpp \
+  include/IOperand.hpp \
   include/ImmediateOperand.hpp \
-  include/Operand.hpp \
   include/RRegOperand.hpp \
-  include/includes.hpp \
   include/instructions/LOAD.hpp \
-  include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -4038,6 +4032,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o: src/instructions/
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -4182,15 +4177,15 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o: src/instructions/
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o: src/instructions/MUL.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/RRegOperand.hpp \
-  include/includes.hpp \
   include/instructions/MUL.hpp \
-  include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Op_Results.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -4277,6 +4272,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o: src/instructions/M
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -4421,15 +4417,15 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o: src/instructions/M
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o: src/instructions/OPP.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/RRegOperand.hpp \
-  include/includes.hpp \
   include/instructions/OPP.hpp \
-  include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Op_Results.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -4516,6 +4512,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o: src/instructions/O
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -4660,15 +4657,15 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o: src/instructions/O
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o: src/instructions/QUO.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/RRegOperand.hpp \
-  include/includes.hpp \
   include/instructions/QUO.hpp \
-  include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Op_Results.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -4755,6 +4752,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o: src/instructions/Q
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -4899,15 +4897,15 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o: src/instructions/Q
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o: src/instructions/REM.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/RRegOperand.hpp \
-  include/includes.hpp \
   include/instructions/REM.hpp \
-  include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Op_Results.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -4994,6 +4992,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o: src/instructions/R
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -5138,15 +5137,15 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o: src/instructions/R
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o: src/instructions/SUB.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/RRegOperand.hpp \
-  include/includes.hpp \
   include/instructions/SUB.hpp \
-  include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Op_Results.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -5233,6 +5232,246 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o: src/instructions/S
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
+  /usr/include/c++/14/cstdio \
+  /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/cwchar \
+  /usr/include/c++/14/cwctype \
+  /usr/include/c++/14/debug/assertions.h \
+  /usr/include/c++/14/debug/debug.h \
+  /usr/include/c++/14/exception \
+  /usr/include/c++/14/ext/aligned_buffer.h \
+  /usr/include/c++/14/ext/alloc_traits.h \
+  /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/concurrence.h \
+  /usr/include/c++/14/ext/numeric_traits.h \
+  /usr/include/c++/14/ext/string_conversions.h \
+  /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/ios \
+  /usr/include/c++/14/iosfwd \
+  /usr/include/c++/14/iostream \
+  /usr/include/c++/14/istream \
+  /usr/include/c++/14/memory \
+  /usr/include/c++/14/new \
+  /usr/include/c++/14/ostream \
+  /usr/include/c++/14/pstl/execution_defs.h \
+  /usr/include/c++/14/pstl/glue_memory_defs.h \
+  /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/stdexcept \
+  /usr/include/c++/14/streambuf \
+  /usr/include/c++/14/string \
+  /usr/include/c++/14/string_view \
+  /usr/include/c++/14/system_error \
+  /usr/include/c++/14/tuple \
+  /usr/include/c++/14/type_traits \
+  /usr/include/c++/14/typeinfo \
+  /usr/include/c++/14/variant \
+  /usr/include/c++/14/vector \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h \
+  /usr/lib/linux/uapi/x86/asm/bitsperlong.h \
+  /usr/lib/linux/uapi/x86/asm/errno.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
+  /usr/lib/linux/uapi/x86/asm/types.h
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o: src/instructions/WFLOAT.cpp \
+  include/IInstruction.hpp \
+  include/IOperand.hpp \
+  include/instructions/WFLOAT.hpp \
+  include/machine/EnvRegisters.hpp \
+  include/machine/RRegister.hpp \
+  include/machine/Register.hpp \
+  include/machine/VMState.hpp \
+  include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/c++/14/backward/auto_ptr.h \
+  /usr/include/c++/14/backward/binders.h \
+  /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/align.h \
+  /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocated_ptr.h \
+  /usr/include/c++/14/bits/allocator.h \
+  /usr/include/c++/14/bits/atomic_base.h \
+  /usr/include/c++/14/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/14/bits/basic_ios.h \
+  /usr/include/c++/14/bits/basic_ios.tcc \
+  /usr/include/c++/14/bits/basic_string.h \
+  /usr/include/c++/14/bits/basic_string.tcc \
+  /usr/include/c++/14/bits/char_traits.h \
+  /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/concept_check.h \
+  /usr/include/c++/14/bits/cpp_type_traits.h \
+  /usr/include/c++/14/bits/cxxabi_forced.h \
+  /usr/include/c++/14/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14/bits/enable_special_members.h \
+  /usr/include/c++/14/bits/exception.h \
+  /usr/include/c++/14/bits/exception_defines.h \
+  /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/functexcept.h \
+  /usr/include/c++/14/bits/functional_hash.h \
+  /usr/include/c++/14/bits/hash_bytes.h \
+  /usr/include/c++/14/bits/invoke.h \
+  /usr/include/c++/14/bits/ios_base.h \
+  /usr/include/c++/14/bits/istream.tcc \
+  /usr/include/c++/14/bits/locale_classes.h \
+  /usr/include/c++/14/bits/locale_classes.tcc \
+  /usr/include/c++/14/bits/locale_facets.h \
+  /usr/include/c++/14/bits/locale_facets.tcc \
+  /usr/include/c++/14/bits/localefwd.h \
+  /usr/include/c++/14/bits/memory_resource.h \
+  /usr/include/c++/14/bits/memoryfwd.h \
+  /usr/include/c++/14/bits/move.h \
+  /usr/include/c++/14/bits/nested_exception.h \
+  /usr/include/c++/14/bits/new_allocator.h \
+  /usr/include/c++/14/bits/ostream.tcc \
+  /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
+  /usr/include/c++/14/bits/postypes.h \
+  /usr/include/c++/14/bits/predefined_ops.h \
+  /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/range_access.h \
+  /usr/include/c++/14/bits/refwrap.h \
+  /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/shared_ptr.h \
+  /usr/include/c++/14/bits/shared_ptr_atomic.h \
+  /usr/include/c++/14/bits/shared_ptr_base.h \
+  /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_bvector.h \
+  /usr/include/c++/14/bits/stl_construct.h \
+  /usr/include/c++/14/bits/stl_function.h \
+  /usr/include/c++/14/bits/stl_iterator.h \
+  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/14/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/14/bits/stl_tempbuf.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
+  /usr/include/c++/14/bits/stl_vector.h \
+  /usr/include/c++/14/bits/streambuf.tcc \
+  /usr/include/c++/14/bits/streambuf_iterator.h \
+  /usr/include/c++/14/bits/string_view.tcc \
+  /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
+  /usr/include/c++/14/bits/uses_allocator.h \
+  /usr/include/c++/14/bits/uses_allocator_args.h \
+  /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/vector.tcc \
+  /usr/include/c++/14/bits/version.h \
+  /usr/include/c++/14/cctype \
+  /usr/include/c++/14/cerrno \
+  /usr/include/c++/14/clocale \
+  /usr/include/c++/14/concepts \
+  /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -5377,14 +5616,14 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o: src/instructions/S
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o: src/instructions/WINT.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
-  include/includes.hpp \
+  include/IOperand.hpp \
   include/instructions/WINT.hpp \
   include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -5471,6 +5710,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o: src/instructions/
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -5615,15 +5855,11 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o: src/instructions/
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: src/instructions/WSTR.cpp \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/StringLiteralOperand.hpp \
-  include/includes.hpp \
   include/instructions/WSTR.hpp \
-  include/machine/EnvRegisters.hpp \
-  include/machine/RRegister.hpp \
-  include/machine/Register.hpp \
   include/machine/VMState.hpp \
-  include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -5710,6 +5946,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: src/instructions/
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -5853,11 +6090,13 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o: src/instructions/
   /usr/lib/linux/uapi/x86/asm/types.h
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o: src/machine/EnvRegisters.cpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
+  include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -5933,6 +6172,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o: src/machine/En
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -6064,6 +6304,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o: src/machine/En
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o: src/machine/Memory.cpp \
   include/machine/Memory.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -6141,6 +6382,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o: src/machine/Memory.c
   /usr/include/c++/14/compare \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -6272,10 +6514,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o: src/machine/Memory.c
   /usr/lib/linux/uapi/x86/asm/types.h
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o: src/machine/RRegister.cpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
+  include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -6351,6 +6595,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o: src/machine/RRegi
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -6481,9 +6726,11 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o: src/machine/RRegi
   /usr/lib/linux/uapi/x86/asm/types.h
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o: src/machine/Register.cpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/machine/Register.hpp \
+  include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -6559,6 +6806,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o: src/machine/Regist
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -6689,13 +6937,13 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o: src/machine/Regist
   /usr/lib/linux/uapi/x86/asm/types.h
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o: src/machine/VMState.cpp \
-  include/Operand.hpp \
-  include/includes.hpp \
+  include/IOperand.hpp \
   include/machine/EnvRegisters.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
   include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -6771,6 +7019,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o: src/machine/VMState
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -6900,22 +7149,256 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o: src/machine/VMState
   /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
   /usr/lib/linux/uapi/x86/asm/types.h
 
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o: src/machine/arithmitics/Value.cpp \
+  include/machine/arithmitics/Op_Results.hpp \
+  include/machine/arithmitics/Value.hpp \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/c++/14/backward/binders.h \
+  /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocator.h \
+  /usr/include/c++/14/bits/basic_ios.h \
+  /usr/include/c++/14/bits/basic_ios.tcc \
+  /usr/include/c++/14/bits/basic_string.h \
+  /usr/include/c++/14/bits/basic_string.tcc \
+  /usr/include/c++/14/bits/char_traits.h \
+  /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/concept_check.h \
+  /usr/include/c++/14/bits/cpp_type_traits.h \
+  /usr/include/c++/14/bits/cxxabi_forced.h \
+  /usr/include/c++/14/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14/bits/enable_special_members.h \
+  /usr/include/c++/14/bits/exception.h \
+  /usr/include/c++/14/bits/exception_defines.h \
+  /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/functexcept.h \
+  /usr/include/c++/14/bits/functional_hash.h \
+  /usr/include/c++/14/bits/hash_bytes.h \
+  /usr/include/c++/14/bits/invoke.h \
+  /usr/include/c++/14/bits/ios_base.h \
+  /usr/include/c++/14/bits/istream.tcc \
+  /usr/include/c++/14/bits/locale_classes.h \
+  /usr/include/c++/14/bits/locale_classes.tcc \
+  /usr/include/c++/14/bits/locale_facets.h \
+  /usr/include/c++/14/bits/locale_facets.tcc \
+  /usr/include/c++/14/bits/localefwd.h \
+  /usr/include/c++/14/bits/memory_resource.h \
+  /usr/include/c++/14/bits/memoryfwd.h \
+  /usr/include/c++/14/bits/move.h \
+  /usr/include/c++/14/bits/nested_exception.h \
+  /usr/include/c++/14/bits/new_allocator.h \
+  /usr/include/c++/14/bits/ostream.tcc \
+  /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
+  /usr/include/c++/14/bits/postypes.h \
+  /usr/include/c++/14/bits/predefined_ops.h \
+  /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/range_access.h \
+  /usr/include/c++/14/bits/refwrap.h \
+  /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/specfun.h \
+  /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_construct.h \
+  /usr/include/c++/14/bits/stl_function.h \
+  /usr/include/c++/14/bits/stl_iterator.h \
+  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/14/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/streambuf.tcc \
+  /usr/include/c++/14/bits/streambuf_iterator.h \
+  /usr/include/c++/14/bits/string_view.tcc \
+  /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/uses_allocator.h \
+  /usr/include/c++/14/bits/uses_allocator_args.h \
+  /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/version.h \
+  /usr/include/c++/14/cctype \
+  /usr/include/c++/14/cerrno \
+  /usr/include/c++/14/clocale \
+  /usr/include/c++/14/cmath \
+  /usr/include/c++/14/concepts \
+  /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
+  /usr/include/c++/14/cstdio \
+  /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/cwchar \
+  /usr/include/c++/14/cwctype \
+  /usr/include/c++/14/debug/assertions.h \
+  /usr/include/c++/14/debug/debug.h \
+  /usr/include/c++/14/exception \
+  /usr/include/c++/14/ext/aligned_buffer.h \
+  /usr/include/c++/14/ext/alloc_traits.h \
+  /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/numeric_traits.h \
+  /usr/include/c++/14/ext/string_conversions.h \
+  /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/ios \
+  /usr/include/c++/14/iosfwd \
+  /usr/include/c++/14/iostream \
+  /usr/include/c++/14/istream \
+  /usr/include/c++/14/limits \
+  /usr/include/c++/14/new \
+  /usr/include/c++/14/ostream \
+  /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/stdexcept \
+  /usr/include/c++/14/streambuf \
+  /usr/include/c++/14/string \
+  /usr/include/c++/14/string_view \
+  /usr/include/c++/14/system_error \
+  /usr/include/c++/14/tr1/bessel_function.tcc \
+  /usr/include/c++/14/tr1/beta_function.tcc \
+  /usr/include/c++/14/tr1/ell_integral.tcc \
+  /usr/include/c++/14/tr1/exp_integral.tcc \
+  /usr/include/c++/14/tr1/gamma.tcc \
+  /usr/include/c++/14/tr1/hypergeometric.tcc \
+  /usr/include/c++/14/tr1/legendre_function.tcc \
+  /usr/include/c++/14/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/14/tr1/poly_hermite.tcc \
+  /usr/include/c++/14/tr1/poly_laguerre.tcc \
+  /usr/include/c++/14/tr1/riemann_zeta.tcc \
+  /usr/include/c++/14/tr1/special_function_util.h \
+  /usr/include/c++/14/tuple \
+  /usr/include/c++/14/type_traits \
+  /usr/include/c++/14/typeinfo \
+  /usr/include/c++/14/variant \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/math.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_inline.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h \
+  /usr/lib/linux/uapi/x86/asm/bitsperlong.h \
+  /usr/lib/linux/uapi/x86/asm/errno.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
+  /usr/lib/linux/uapi/x86/asm/types.h
+
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: src/main.cpp \
   generated-sources/VMGrammarBaseListener.h \
   generated-sources/VMGrammarLexer.h \
   generated-sources/VMGrammarListener.h \
   generated-sources/VMGrammarParser.h \
   include/IInstruction.hpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/Program.hpp \
   include/VM.hpp \
   include/VMListener.hpp \
-  include/includes.hpp \
-  include/machine/EnvRegisters.hpp \
-  include/machine/RRegister.hpp \
-  include/machine/Register.hpp \
   include/machine/VMState.hpp \
-  include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -7374,305 +7857,10 @@ CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o: src/main.cpp \
   /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.h \
   /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardElement.h
 
-CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o: src/operands/ImmediateOperand.cpp \
-  include/ImmediateOperand.hpp \
-  include/Operand.hpp \
-  /usr/include/alloca.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/c++/14/backward/binders.h \
-  /usr/include/c++/14/bit \
-  /usr/include/c++/14/bits/alloc_traits.h \
-  /usr/include/c++/14/bits/allocator.h \
-  /usr/include/c++/14/bits/basic_string.h \
-  /usr/include/c++/14/bits/basic_string.tcc \
-  /usr/include/c++/14/bits/char_traits.h \
-  /usr/include/c++/14/bits/charconv.h \
-  /usr/include/c++/14/bits/concept_check.h \
-  /usr/include/c++/14/bits/cpp_type_traits.h \
-  /usr/include/c++/14/bits/cxxabi_forced.h \
-  /usr/include/c++/14/bits/enable_special_members.h \
-  /usr/include/c++/14/bits/exception.h \
-  /usr/include/c++/14/bits/exception_defines.h \
-  /usr/include/c++/14/bits/functexcept.h \
-  /usr/include/c++/14/bits/functional_hash.h \
-  /usr/include/c++/14/bits/hash_bytes.h \
-  /usr/include/c++/14/bits/invoke.h \
-  /usr/include/c++/14/bits/localefwd.h \
-  /usr/include/c++/14/bits/memory_resource.h \
-  /usr/include/c++/14/bits/memoryfwd.h \
-  /usr/include/c++/14/bits/move.h \
-  /usr/include/c++/14/bits/new_allocator.h \
-  /usr/include/c++/14/bits/ostream_insert.h \
-  /usr/include/c++/14/bits/parse_numbers.h \
-  /usr/include/c++/14/bits/postypes.h \
-  /usr/include/c++/14/bits/predefined_ops.h \
-  /usr/include/c++/14/bits/ptr_traits.h \
-  /usr/include/c++/14/bits/range_access.h \
-  /usr/include/c++/14/bits/refwrap.h \
-  /usr/include/c++/14/bits/requires_hosted.h \
-  /usr/include/c++/14/bits/std_abs.h \
-  /usr/include/c++/14/bits/stl_algobase.h \
-  /usr/include/c++/14/bits/stl_construct.h \
-  /usr/include/c++/14/bits/stl_function.h \
-  /usr/include/c++/14/bits/stl_iterator.h \
-  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/14/bits/stl_iterator_base_types.h \
-  /usr/include/c++/14/bits/stl_pair.h \
-  /usr/include/c++/14/bits/string_view.tcc \
-  /usr/include/c++/14/bits/stringfwd.h \
-  /usr/include/c++/14/bits/uses_allocator.h \
-  /usr/include/c++/14/bits/uses_allocator_args.h \
-  /usr/include/c++/14/bits/utility.h \
-  /usr/include/c++/14/bits/version.h \
-  /usr/include/c++/14/cctype \
-  /usr/include/c++/14/cerrno \
-  /usr/include/c++/14/clocale \
-  /usr/include/c++/14/concepts \
-  /usr/include/c++/14/cstddef \
-  /usr/include/c++/14/cstdio \
-  /usr/include/c++/14/cstdlib \
-  /usr/include/c++/14/cwchar \
-  /usr/include/c++/14/debug/assertions.h \
-  /usr/include/c++/14/debug/debug.h \
-  /usr/include/c++/14/ext/aligned_buffer.h \
-  /usr/include/c++/14/ext/alloc_traits.h \
-  /usr/include/c++/14/ext/numeric_traits.h \
-  /usr/include/c++/14/ext/string_conversions.h \
-  /usr/include/c++/14/ext/type_traits.h \
-  /usr/include/c++/14/initializer_list \
-  /usr/include/c++/14/iosfwd \
-  /usr/include/c++/14/new \
-  /usr/include/c++/14/pstl/pstl_config.h \
-  /usr/include/c++/14/string \
-  /usr/include/c++/14/string_view \
-  /usr/include/c++/14/tuple \
-  /usr/include/c++/14/type_traits \
-  /usr/include/c++/14/variant \
-  /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/errno.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/linux/errno.h \
-  /usr/include/locale.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
-  /usr/lib/linux/uapi/x86/asm/errno.h
-
-CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o: src/operands/LabelOperand.cpp \
-  include/LabelOperand.hpp \
-  include/Operand.hpp \
-  /usr/include/alloca.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/c++/14/backward/binders.h \
-  /usr/include/c++/14/bit \
-  /usr/include/c++/14/bits/alloc_traits.h \
-  /usr/include/c++/14/bits/allocator.h \
-  /usr/include/c++/14/bits/basic_string.h \
-  /usr/include/c++/14/bits/basic_string.tcc \
-  /usr/include/c++/14/bits/char_traits.h \
-  /usr/include/c++/14/bits/charconv.h \
-  /usr/include/c++/14/bits/concept_check.h \
-  /usr/include/c++/14/bits/cpp_type_traits.h \
-  /usr/include/c++/14/bits/cxxabi_forced.h \
-  /usr/include/c++/14/bits/enable_special_members.h \
-  /usr/include/c++/14/bits/exception.h \
-  /usr/include/c++/14/bits/exception_defines.h \
-  /usr/include/c++/14/bits/functexcept.h \
-  /usr/include/c++/14/bits/functional_hash.h \
-  /usr/include/c++/14/bits/hash_bytes.h \
-  /usr/include/c++/14/bits/invoke.h \
-  /usr/include/c++/14/bits/localefwd.h \
-  /usr/include/c++/14/bits/memory_resource.h \
-  /usr/include/c++/14/bits/memoryfwd.h \
-  /usr/include/c++/14/bits/move.h \
-  /usr/include/c++/14/bits/new_allocator.h \
-  /usr/include/c++/14/bits/ostream_insert.h \
-  /usr/include/c++/14/bits/parse_numbers.h \
-  /usr/include/c++/14/bits/postypes.h \
-  /usr/include/c++/14/bits/predefined_ops.h \
-  /usr/include/c++/14/bits/ptr_traits.h \
-  /usr/include/c++/14/bits/range_access.h \
-  /usr/include/c++/14/bits/refwrap.h \
-  /usr/include/c++/14/bits/requires_hosted.h \
-  /usr/include/c++/14/bits/std_abs.h \
-  /usr/include/c++/14/bits/stl_algobase.h \
-  /usr/include/c++/14/bits/stl_construct.h \
-  /usr/include/c++/14/bits/stl_function.h \
-  /usr/include/c++/14/bits/stl_iterator.h \
-  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/14/bits/stl_iterator_base_types.h \
-  /usr/include/c++/14/bits/stl_pair.h \
-  /usr/include/c++/14/bits/string_view.tcc \
-  /usr/include/c++/14/bits/stringfwd.h \
-  /usr/include/c++/14/bits/uses_allocator.h \
-  /usr/include/c++/14/bits/uses_allocator_args.h \
-  /usr/include/c++/14/bits/utility.h \
-  /usr/include/c++/14/bits/version.h \
-  /usr/include/c++/14/cctype \
-  /usr/include/c++/14/cerrno \
-  /usr/include/c++/14/clocale \
-  /usr/include/c++/14/concepts \
-  /usr/include/c++/14/cstddef \
-  /usr/include/c++/14/cstdio \
-  /usr/include/c++/14/cstdlib \
-  /usr/include/c++/14/cwchar \
-  /usr/include/c++/14/debug/assertions.h \
-  /usr/include/c++/14/debug/debug.h \
-  /usr/include/c++/14/ext/aligned_buffer.h \
-  /usr/include/c++/14/ext/alloc_traits.h \
-  /usr/include/c++/14/ext/numeric_traits.h \
-  /usr/include/c++/14/ext/string_conversions.h \
-  /usr/include/c++/14/ext/type_traits.h \
-  /usr/include/c++/14/initializer_list \
-  /usr/include/c++/14/iosfwd \
-  /usr/include/c++/14/new \
-  /usr/include/c++/14/pstl/pstl_config.h \
-  /usr/include/c++/14/string \
-  /usr/include/c++/14/string_view \
-  /usr/include/c++/14/tuple \
-  /usr/include/c++/14/type_traits \
-  /usr/include/c++/14/variant \
-  /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/errno.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/linux/errno.h \
-  /usr/include/locale.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
-  /usr/lib/linux/uapi/x86/asm/errno.h
-
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: src/operands/Memory_AddressOperand.cpp \
-  include/Memory_AddressOperand.hpp \
-  include/Operand.hpp \
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o: src/operands/IOperand.cpp \
+  include/IOperand.hpp \
+  include/machine/VMState.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -7745,6 +7933,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: src/
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -7873,15 +8062,27 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: src/
   /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
   /usr/lib/linux/uapi/x86/asm/types.h
 
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Operand.cpp \
-  include/Operand.hpp \
+CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o: src/operands/ImmediateOperand.cpp \
+  include/IOperand.hpp \
+  include/ImmediateOperand.hpp \
+  include/machine/VMState.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/c++/14/backward/auto_ptr.h \
   /usr/include/c++/14/backward/binders.h \
   /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/align.h \
   /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocated_ptr.h \
   /usr/include/c++/14/bits/allocator.h \
+  /usr/include/c++/14/bits/atomic_base.h \
+  /usr/include/c++/14/bits/atomic_lockfree_defines.h \
   /usr/include/c++/14/bits/basic_string.h \
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
@@ -7889,9 +8090,11 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
+  /usr/include/c++/14/bits/cxxabi_init_exception.h \
   /usr/include/c++/14/bits/enable_special_members.h \
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
+  /usr/include/c++/14/bits/exception_ptr.h \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
   /usr/include/c++/14/bits/hash_bytes.h \
@@ -7900,6 +8103,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/c++/14/bits/memory_resource.h \
   /usr/include/c++/14/bits/memoryfwd.h \
   /usr/include/c++/14/bits/move.h \
+  /usr/include/c++/14/bits/nested_exception.h \
   /usr/include/c++/14/bits/new_allocator.h \
   /usr/include/c++/14/bits/ostream_insert.h \
   /usr/include/c++/14/bits/parse_numbers.h \
@@ -7909,6 +8113,9 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/c++/14/bits/range_access.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/shared_ptr.h \
+  /usr/include/c++/14/bits/shared_ptr_atomic.h \
+  /usr/include/c++/14/bits/shared_ptr_base.h \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -7917,8 +8124,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14/bits/stl_iterator_base_types.h \
   /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/14/bits/stl_tempbuf.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -7928,24 +8139,32 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/debug/assertions.h \
   /usr/include/c++/14/debug/debug.h \
+  /usr/include/c++/14/exception \
   /usr/include/c++/14/ext/aligned_buffer.h \
   /usr/include/c++/14/ext/alloc_traits.h \
+  /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/concurrence.h \
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
   /usr/include/c++/14/initializer_list \
   /usr/include/c++/14/iosfwd \
+  /usr/include/c++/14/memory \
   /usr/include/c++/14/new \
+  /usr/include/c++/14/pstl/execution_defs.h \
+  /usr/include/c++/14/pstl/glue_memory_defs.h \
   /usr/include/c++/14/pstl/pstl_config.h \
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
+  /usr/include/c++/14/typeinfo \
   /usr/include/c++/14/variant \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -7953,13 +8172,22 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
   /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -7968,17 +8196,24 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
@@ -7995,8 +8230,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -8006,26 +8245,449 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o: src/operands/Opera
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
-  /usr/lib/linux/uapi/x86/asm/errno.h
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h \
+  /usr/lib/linux/uapi/x86/asm/bitsperlong.h \
+  /usr/lib/linux/uapi/x86/asm/errno.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
+  /usr/lib/linux/uapi/x86/asm/types.h
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o: src/operands/LabelOperand.cpp \
+  include/IOperand.hpp \
+  include/LabelOperand.hpp \
+  include/machine/VMState.hpp \
+  include/machine/arithmitics/Value.hpp \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/c++/14/backward/auto_ptr.h \
+  /usr/include/c++/14/backward/binders.h \
+  /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/align.h \
+  /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocated_ptr.h \
+  /usr/include/c++/14/bits/allocator.h \
+  /usr/include/c++/14/bits/atomic_base.h \
+  /usr/include/c++/14/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/14/bits/basic_string.h \
+  /usr/include/c++/14/bits/basic_string.tcc \
+  /usr/include/c++/14/bits/char_traits.h \
+  /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/concept_check.h \
+  /usr/include/c++/14/bits/cpp_type_traits.h \
+  /usr/include/c++/14/bits/cxxabi_forced.h \
+  /usr/include/c++/14/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14/bits/enable_special_members.h \
+  /usr/include/c++/14/bits/exception.h \
+  /usr/include/c++/14/bits/exception_defines.h \
+  /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/functexcept.h \
+  /usr/include/c++/14/bits/functional_hash.h \
+  /usr/include/c++/14/bits/hash_bytes.h \
+  /usr/include/c++/14/bits/invoke.h \
+  /usr/include/c++/14/bits/localefwd.h \
+  /usr/include/c++/14/bits/memory_resource.h \
+  /usr/include/c++/14/bits/memoryfwd.h \
+  /usr/include/c++/14/bits/move.h \
+  /usr/include/c++/14/bits/nested_exception.h \
+  /usr/include/c++/14/bits/new_allocator.h \
+  /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
+  /usr/include/c++/14/bits/postypes.h \
+  /usr/include/c++/14/bits/predefined_ops.h \
+  /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/range_access.h \
+  /usr/include/c++/14/bits/refwrap.h \
+  /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/shared_ptr.h \
+  /usr/include/c++/14/bits/shared_ptr_atomic.h \
+  /usr/include/c++/14/bits/shared_ptr_base.h \
+  /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_construct.h \
+  /usr/include/c++/14/bits/stl_function.h \
+  /usr/include/c++/14/bits/stl_iterator.h \
+  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/14/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/14/bits/stl_tempbuf.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
+  /usr/include/c++/14/bits/string_view.tcc \
+  /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
+  /usr/include/c++/14/bits/uses_allocator.h \
+  /usr/include/c++/14/bits/uses_allocator_args.h \
+  /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/version.h \
+  /usr/include/c++/14/cctype \
+  /usr/include/c++/14/cerrno \
+  /usr/include/c++/14/clocale \
+  /usr/include/c++/14/concepts \
+  /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
+  /usr/include/c++/14/cstdio \
+  /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/cwchar \
+  /usr/include/c++/14/debug/assertions.h \
+  /usr/include/c++/14/debug/debug.h \
+  /usr/include/c++/14/exception \
+  /usr/include/c++/14/ext/aligned_buffer.h \
+  /usr/include/c++/14/ext/alloc_traits.h \
+  /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/concurrence.h \
+  /usr/include/c++/14/ext/numeric_traits.h \
+  /usr/include/c++/14/ext/string_conversions.h \
+  /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/iosfwd \
+  /usr/include/c++/14/memory \
+  /usr/include/c++/14/new \
+  /usr/include/c++/14/pstl/execution_defs.h \
+  /usr/include/c++/14/pstl/glue_memory_defs.h \
+  /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/string \
+  /usr/include/c++/14/string_view \
+  /usr/include/c++/14/tuple \
+  /usr/include/c++/14/type_traits \
+  /usr/include/c++/14/typeinfo \
+  /usr/include/c++/14/variant \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h \
+  /usr/lib/linux/uapi/x86/asm/bitsperlong.h \
+  /usr/lib/linux/uapi/x86/asm/errno.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
+  /usr/lib/linux/uapi/x86/asm/types.h
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: src/operands/Memory_AddressOperand.cpp \
+  include/IOperand.hpp \
+  include/Memory_AddressOperand.hpp \
+  include/machine/VMState.hpp \
+  include/machine/arithmitics/Value.hpp \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/c++/14/backward/auto_ptr.h \
+  /usr/include/c++/14/backward/binders.h \
+  /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/align.h \
+  /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocated_ptr.h \
+  /usr/include/c++/14/bits/allocator.h \
+  /usr/include/c++/14/bits/atomic_base.h \
+  /usr/include/c++/14/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/14/bits/basic_string.h \
+  /usr/include/c++/14/bits/basic_string.tcc \
+  /usr/include/c++/14/bits/char_traits.h \
+  /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/concept_check.h \
+  /usr/include/c++/14/bits/cpp_type_traits.h \
+  /usr/include/c++/14/bits/cxxabi_forced.h \
+  /usr/include/c++/14/bits/cxxabi_init_exception.h \
+  /usr/include/c++/14/bits/enable_special_members.h \
+  /usr/include/c++/14/bits/exception.h \
+  /usr/include/c++/14/bits/exception_defines.h \
+  /usr/include/c++/14/bits/exception_ptr.h \
+  /usr/include/c++/14/bits/functexcept.h \
+  /usr/include/c++/14/bits/functional_hash.h \
+  /usr/include/c++/14/bits/hash_bytes.h \
+  /usr/include/c++/14/bits/invoke.h \
+  /usr/include/c++/14/bits/localefwd.h \
+  /usr/include/c++/14/bits/memory_resource.h \
+  /usr/include/c++/14/bits/memoryfwd.h \
+  /usr/include/c++/14/bits/move.h \
+  /usr/include/c++/14/bits/nested_exception.h \
+  /usr/include/c++/14/bits/new_allocator.h \
+  /usr/include/c++/14/bits/ostream_insert.h \
+  /usr/include/c++/14/bits/parse_numbers.h \
+  /usr/include/c++/14/bits/postypes.h \
+  /usr/include/c++/14/bits/predefined_ops.h \
+  /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/range_access.h \
+  /usr/include/c++/14/bits/refwrap.h \
+  /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/shared_ptr.h \
+  /usr/include/c++/14/bits/shared_ptr_atomic.h \
+  /usr/include/c++/14/bits/shared_ptr_base.h \
+  /usr/include/c++/14/bits/std_abs.h \
+  /usr/include/c++/14/bits/stl_algobase.h \
+  /usr/include/c++/14/bits/stl_construct.h \
+  /usr/include/c++/14/bits/stl_function.h \
+  /usr/include/c++/14/bits/stl_iterator.h \
+  /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/14/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/14/bits/stl_tempbuf.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
+  /usr/include/c++/14/bits/string_view.tcc \
+  /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
+  /usr/include/c++/14/bits/uses_allocator.h \
+  /usr/include/c++/14/bits/uses_allocator_args.h \
+  /usr/include/c++/14/bits/utility.h \
+  /usr/include/c++/14/bits/version.h \
+  /usr/include/c++/14/cctype \
+  /usr/include/c++/14/cerrno \
+  /usr/include/c++/14/clocale \
+  /usr/include/c++/14/concepts \
+  /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
+  /usr/include/c++/14/cstdio \
+  /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/cwchar \
+  /usr/include/c++/14/debug/assertions.h \
+  /usr/include/c++/14/debug/debug.h \
+  /usr/include/c++/14/exception \
+  /usr/include/c++/14/ext/aligned_buffer.h \
+  /usr/include/c++/14/ext/alloc_traits.h \
+  /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/concurrence.h \
+  /usr/include/c++/14/ext/numeric_traits.h \
+  /usr/include/c++/14/ext/string_conversions.h \
+  /usr/include/c++/14/ext/type_traits.h \
+  /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/iosfwd \
+  /usr/include/c++/14/memory \
+  /usr/include/c++/14/new \
+  /usr/include/c++/14/pstl/execution_defs.h \
+  /usr/include/c++/14/pstl/glue_memory_defs.h \
+  /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/string \
+  /usr/include/c++/14/string_view \
+  /usr/include/c++/14/tuple \
+  /usr/include/c++/14/type_traits \
+  /usr/include/c++/14/typeinfo \
+  /usr/include/c++/14/variant \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h \
+  /usr/lib/linux/uapi/x86/asm/bitsperlong.h \
+  /usr/lib/linux/uapi/x86/asm/errno.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
+  /usr/lib/linux/uapi/x86/asm/types.h
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o: src/operands/RRegOperand.cpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/RRegOperand.hpp \
   include/machine/RRegister.hpp \
   include/machine/Register.hpp \
+  include/machine/VMState.hpp \
   include/machine/VMtypes.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -8101,6 +8763,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o: src/operands/R
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
@@ -8231,15 +8894,26 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o: src/operands/R
   /usr/lib/linux/uapi/x86/asm/types.h
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/operands/StringLiteralOperand.cpp \
-  include/Operand.hpp \
+  include/IOperand.hpp \
   include/StringLiteralOperand.hpp \
+  include/machine/VMState.hpp \
+  include/machine/arithmitics/Value.hpp \
   /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/c++/14/backward/auto_ptr.h \
   /usr/include/c++/14/backward/binders.h \
   /usr/include/c++/14/bit \
+  /usr/include/c++/14/bits/align.h \
   /usr/include/c++/14/bits/alloc_traits.h \
+  /usr/include/c++/14/bits/allocated_ptr.h \
   /usr/include/c++/14/bits/allocator.h \
+  /usr/include/c++/14/bits/atomic_base.h \
+  /usr/include/c++/14/bits/atomic_lockfree_defines.h \
   /usr/include/c++/14/bits/basic_string.h \
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
@@ -8247,9 +8921,11 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
+  /usr/include/c++/14/bits/cxxabi_init_exception.h \
   /usr/include/c++/14/bits/enable_special_members.h \
   /usr/include/c++/14/bits/exception.h \
   /usr/include/c++/14/bits/exception_defines.h \
+  /usr/include/c++/14/bits/exception_ptr.h \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
   /usr/include/c++/14/bits/hash_bytes.h \
@@ -8258,6 +8934,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/c++/14/bits/memory_resource.h \
   /usr/include/c++/14/bits/memoryfwd.h \
   /usr/include/c++/14/bits/move.h \
+  /usr/include/c++/14/bits/nested_exception.h \
   /usr/include/c++/14/bits/new_allocator.h \
   /usr/include/c++/14/bits/ostream_insert.h \
   /usr/include/c++/14/bits/parse_numbers.h \
@@ -8267,6 +8944,9 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/c++/14/bits/range_access.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/shared_ptr.h \
+  /usr/include/c++/14/bits/shared_ptr_atomic.h \
+  /usr/include/c++/14/bits/shared_ptr_base.h \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -8275,8 +8955,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14/bits/stl_iterator_base_types.h \
   /usr/include/c++/14/bits/stl_pair.h \
+  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/14/bits/stl_tempbuf.h \
+  /usr/include/c++/14/bits/stl_uninitialized.h \
   /usr/include/c++/14/bits/string_view.tcc \
   /usr/include/c++/14/bits/stringfwd.h \
+  /usr/include/c++/14/bits/unique_ptr.h \
   /usr/include/c++/14/bits/uses_allocator.h \
   /usr/include/c++/14/bits/uses_allocator_args.h \
   /usr/include/c++/14/bits/utility.h \
@@ -8286,24 +8970,32 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/c++/14/clocale \
   /usr/include/c++/14/concepts \
   /usr/include/c++/14/cstddef \
+  /usr/include/c++/14/cstdint \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/debug/assertions.h \
   /usr/include/c++/14/debug/debug.h \
+  /usr/include/c++/14/exception \
   /usr/include/c++/14/ext/aligned_buffer.h \
   /usr/include/c++/14/ext/alloc_traits.h \
+  /usr/include/c++/14/ext/atomicity.h \
+  /usr/include/c++/14/ext/concurrence.h \
   /usr/include/c++/14/ext/numeric_traits.h \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
   /usr/include/c++/14/initializer_list \
   /usr/include/c++/14/iosfwd \
+  /usr/include/c++/14/memory \
   /usr/include/c++/14/new \
+  /usr/include/c++/14/pstl/execution_defs.h \
+  /usr/include/c++/14/pstl/glue_memory_defs.h \
   /usr/include/c++/14/pstl/pstl_config.h \
   /usr/include/c++/14/string \
   /usr/include/c++/14/string_view \
   /usr/include/c++/14/tuple \
   /usr/include/c++/14/type_traits \
+  /usr/include/c++/14/typeinfo \
   /usr/include/c++/14/variant \
   /usr/include/ctype.h \
   /usr/include/endian.h \
@@ -8311,13 +9003,22 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/sched/types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
   /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
   /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -8326,17 +9027,24 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
@@ -8353,8 +9061,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -8364,19 +9076,28 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o: src/o
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h \
-  /usr/lib/linux/uapi/x86/asm/errno.h
+  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdint.h \
+  /usr/lib/linux/uapi/x86/asm/bitsperlong.h \
+  /usr/lib/linux/uapi/x86/asm/errno.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types.h \
+  /usr/lib/linux/uapi/x86/asm/posix_types_64.h \
+  /usr/lib/linux/uapi/x86/asm/types.h
 
 abstract-vm-16bits: /lib/x86_64-linux-gnu/libc.so.6 \
   /lib/x86_64-linux-gnu/libm.so.6 \
@@ -8412,6 +9133,7 @@ abstract-vm-16bits: /lib/x86_64-linux-gnu/libc.so.6 \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o \
@@ -8419,28 +9141,31 @@ abstract-vm-16bits: /lib/x86_64-linux-gnu/libc.so.6 \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o \
-  CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o
 
 
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o:
-
 CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o:
 
-CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o:
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o:
 
-CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o:
+CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o:
 
@@ -8457,6 +9182,40 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o:
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o:
+
+/usr/local/lib/libantlr4-runtime.so:
+
+/usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so:
+
+/usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a:
+
+/usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o:
+
+/usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
+
+/usr/lib/x86_64-linux-gnu/libm.so:
+
+/lib/x86_64-linux-gnu/libm.so.6:
+
+/lib/x86_64-linux-gnu/libc.so.6:
+
+src/operands/StringLiteralOperand.cpp:
+
+/usr/lib/x86_64-linux-gnu/crtn.o:
+
+src/operands/RRegOperand.cpp:
+
+include/Memory_AddressOperand.hpp:
+
+src/operands/LabelOperand.cpp:
+
+src/operands/IOperand.cpp:
+
+include/VM.hpp:
+
+src/main.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -8482,8 +9241,6 @@ CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o:
 
 generated-sources/VMGrammarListener.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
 /usr/local/include/antlr4-runtime/internal/Synchronization.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -8495,8 +9252,6 @@ generated-sources/VMGrammarListener.cpp:
 /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h:
 
 /usr/local/include/antlr4-runtime/support/Any.h:
-
-/usr/local/lib/libantlr4-runtime.so:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -8546,8 +9301,6 @@ src/instructions/OPP.cpp:
 
 /usr/include/locale.h:
 
-include/Memory_AddressOperand.hpp:
-
 /usr/include/linux/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
@@ -8560,6 +9313,14 @@ include/Memory_AddressOperand.hpp:
 
 /usr/include/c++/14/typeinfo:
 
+src/operands/Memory_AddressOperand.cpp:
+
+src/instructions/LOAD.cpp:
+
+/lib64/ld-linux-x86-64.so.2:
+
+/usr/include/c++/14/type_traits:
+
 /usr/include/c++/14/stack:
 
 /usr/include/c++/14/sstream:
@@ -8569,6 +9330,8 @@ include/Memory_AddressOperand.hpp:
 /usr/include/c++/14/bits/stl_algo.h:
 
 /usr/local/include/antlr4-runtime/FlatHashSet.h:
+
+/usr/include/c++/14/cmath:
 
 /usr/local/include/antlr4-runtime/atn/ParseInfo.h:
 
@@ -8590,8 +9353,6 @@ include/Memory_AddressOperand.hpp:
 
 /usr/include/c++/14/iosfwd:
 
-/lib/x86_64-linux-gnu/libm.so.6:
-
 CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o:
 
 /usr/include/c++/14/fstream:
@@ -8607,6 +9368,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o:
 /usr/local/include/antlr4-runtime/tree/ErrorNode.h:
 
 /usr/include/c++/14/ext/concurrence.h:
+
+src/instructions/WFLOAT.cpp:
 
 /usr/include/c++/14/map:
 
@@ -8648,11 +9411,19 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o:
 
 /usr/include/c++/14/debug/debug.h:
 
+/usr/include/c++/14/tr1/hypergeometric.tcc:
+
 /usr/include/asm-generic/bitsperlong.h:
 
 /usr/include/c++/14/cwctype:
 
 /usr/local/include/antlr4-runtime/tree/ParseTreeListener.h:
+
+/lib/x86_64-linux-gnu/libmvec.so.1:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/c++/14/ctime:
 
 /usr/include/c++/14/ext/numeric_traits.h:
 
@@ -8704,15 +9475,19 @@ include/machine/Memory.hpp:
 
 /usr/include/c++/14/bits/basic_string.h:
 
+/usr/lib/x86_64-linux-gnu/crti.o:
+
+/usr/include/c++/14/bits/locale_facets.h:
+
 /usr/local/include/antlr4-runtime/atn/ATNConfigSet.h:
 
 /usr/include/asm-generic/int-ll64.h:
 
 /usr/include/c++/14/ios:
 
-/usr/lib/x86_64-linux-gnu/libm.so:
+/usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 
-/usr/include/c++/14/concepts:
+/usr/include/c++/14/cstddef:
 
 /usr/include/c++/14/bits/istream.tcc:
 
@@ -8738,10 +9513,6 @@ generated-sources/VMGrammarBaseListener.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-src/operands/RRegOperand.cpp:
-
-/usr/lib/x86_64-linux-gnu/crtn.o:
-
 /usr/include/c++/14/bits/exception.h:
 
 /usr/local/include/antlr4-runtime/BailErrorStrategy.h:
@@ -8754,19 +9525,11 @@ src/operands/RRegOperand.cpp:
 
 /usr/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/c++/14/ctime:
-
-/lib/x86_64-linux-gnu/libmvec.so.1:
-
 /usr/include/c++/14/istream:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/14/algorithm:
-
-/usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so:
 
 /usr/include/c++/14/bits/ostream_insert.h:
 
@@ -8784,9 +9547,11 @@ src/instructions/ADD.cpp:
 
 src/machine/EnvRegisters.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
 /usr/local/include/antlr4-runtime/atn/SemanticContext.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/math.h:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o:
 
@@ -8832,6 +9597,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o:
 
 /usr/include/c++/14/ostream:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 generated-sources/VMGrammarLexer.h:
@@ -8854,8 +9621,6 @@ generated-sources/VMGrammarLexer.h:
 
 /usr/include/c++/14/pstl/glue_memory_defs.h:
 
-/lib/x86_64-linux-gnu/libc.so.6:
-
 /usr/include/c++/14/bits/basic_ios.tcc:
 
 /usr/include/c++/14/bits/charconv.h:
@@ -8869,6 +9634,8 @@ src/instructions/QUO.cpp:
 /usr/local/include/antlr4-runtime/Lexer.h:
 
 /usr/local/include/antlr4-runtime/atn/LexerIndexedCustomAction.h:
+
+/usr/include/c++/14/tr1/ell_integral.tcc:
 
 /usr/local/include/antlr4-runtime/RuleContext.h:
 
@@ -8887,6 +9654,8 @@ src/instructions/QUO.cpp:
 /usr/include/c++/14/bits/string_view.tcc:
 
 /usr/include/c++/14/cstdint:
+
+include/instructions/WFLOAT.hpp:
 
 /usr/include/c++/14/bit:
 
@@ -8908,8 +9677,6 @@ src/instructions/QUO.cpp:
 
 /usr/include/c++/14/deque:
 
-/usr/include/c++/14/bits/stl_deque.h:
-
 /usr/include/c++/14/iterator:
 
 /usr/include/c++/14/bits/unique_ptr.h:
@@ -8917,10 +9684,6 @@ src/instructions/QUO.cpp:
 /usr/local/include/antlr4-runtime/UnbufferedTokenStream.h:
 
 /usr/include/c++/14/bits/stl_stack.h:
-
-/usr/include/c++/14/bits/locale_facets.h:
-
-/usr/lib/x86_64-linux-gnu/crti.o:
 
 /usr/include/c++/14/bits/alloc_traits.h:
 
@@ -8938,6 +9701,10 @@ src/instructions/QUO.cpp:
 
 /usr/include/c++/14/bits/allocated_ptr.h:
 
+/usr/include/c++/14/bits/stl_deque.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
 generated-sources/VMGrammarParser.h:
 
 /usr/local/include/antlr4-runtime/tree/pattern/ParseTreeMatch.h:
@@ -8949,6 +9716,8 @@ generated-sources/VMGrammarParser.h:
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/c++/14/bits/atomic_base.h:
+
+include/machine/arithmitics/Value.hpp:
 
 /usr/include/c++/14/bits/nested_exception.h:
 
@@ -8963,6 +9732,14 @@ CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o:
 /usr/include/c++/14/bits/stl_vector.h:
 
 /usr/include/c++/14/clocale:
+
+/usr/lib/x86_64-linux-gnu/libc.so:
+
+/usr/lib/x86_64-linux-gnu/Scrt1.o:
+
+/usr/include/c++/14/bits/stl_uninitialized.h:
+
+/usr/include/c++/14/bits/locale_classes.h:
 
 /usr/include/sched.h:
 
@@ -9000,6 +9777,10 @@ generated-sources/VMGrammarParser.cpp:
 
 /usr/include/c++/14/pstl/pstl_config.h:
 
+src/operands/ImmediateOperand.cpp:
+
+/usr/local/include/antlr4-runtime/Recognizer.h:
+
 /usr/local/include/antlr4-runtime/atn/ATNStateType.h:
 
 /usr/include/c++/14/bits/stl_multimap.h:
@@ -9015,6 +9796,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o:
 /usr/include/c++/14/bits/stl_algobase.h:
 
 /usr/include/c++/14/bits/stl_iterator.h:
+
+/usr/include/c++/14/tr1/gamma.tcc:
 
 /usr/local/include/antlr4-runtime/tree/ParseTreeVisitor.h:
 
@@ -9035,8 +9818,6 @@ src/machine/Register.cpp:
 /usr/local/include/antlr4-runtime/tree/ErrorNodeImpl.h:
 
 /usr/include/c++/14/bits/fstream.tcc:
-
-/usr/include/c++/14/bits/stl_map.h:
 
 /usr/include/c++/14/pstl/glue_algorithm_defs.h:
 
@@ -9080,6 +9861,8 @@ generated-sources/VMGrammarListener.h:
 
 /usr/include/c++/14/bits/shared_ptr_base.h:
 
+/usr/include/c++/14/tr1/beta_function.tcc:
+
 /usr/include/c++/14/debug/assertions.h:
 
 /usr/local/include/antlr4-runtime/atn/PredicateEvalInfo.h:
@@ -9110,6 +9893,8 @@ include/Program.hpp:
 
 /usr/local/include/antlr4-runtime/TokenStreamRewriter.h:
 
+/usr/include/c++/14/tr1/special_function_util.h:
+
 src/VMListener.cpp:
 
 /usr/include/c++/14/cstring:
@@ -9123,10 +9908,6 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/local/include/antlr4-runtime/Recognizer.h:
-
-src/operands/ImmediateOperand.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -9145,6 +9926,8 @@ src/operands/ImmediateOperand.cpp:
 /usr/lib/linux/uapi/x86/asm/types.h:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
 
@@ -9165,8 +9948,6 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o:
 /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h:
 
@@ -9224,6 +10005,12 @@ generated-sources/VMGrammarLexer.cpp:
 
 /usr/local/include/antlr4-runtime/BufferedTokenStream.h:
 
+/usr/lib/x86_64-linux-gnu/libgcc_s.so.1:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/local/include/antlr4-runtime/CharStream.h:
+
 /usr/local/include/antlr4-runtime/atn/LexerATNConfig.h:
 
 /usr/include/features.h:
@@ -9244,17 +10031,11 @@ generated-sources/VMGrammarLexer.cpp:
 
 /usr/local/include/antlr4-runtime/ListTokenSource.h:
 
-/usr/include/c++/14/cstddef:
-
-/usr/lib/x86_64-linux-gnu/libc_nonshared.a:
-
 /usr/local/include/antlr4-runtime/NoViableAltException.h:
 
 /usr/local/include/antlr4-runtime/ParserRuleContext.h:
 
 /usr/local/include/antlr4-runtime/ProxyErrorListener.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
 
 /usr/include/c++/14/cassert:
 
@@ -9322,6 +10103,10 @@ include/ImmediateOperand.hpp:
 
 /usr/local/include/antlr4-runtime/atn/LL1Analyzer.h:
 
+/usr/include/c++/14/concepts:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
 /usr/local/include/antlr4-runtime/atn/LexerActionExecutor.h:
 
 /usr/local/include/antlr4-runtime/atn/LexerActionType.h:
@@ -9332,6 +10117,8 @@ include/ImmediateOperand.hpp:
 
 generated-sources/VMGrammarBaseVisitor.h:
 
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/local/include/antlr4-runtime/atn/LexerModeAction.h:
@@ -9341,6 +10128,8 @@ generated-sources/VMGrammarBaseVisitor.h:
 /usr/local/include/antlr4-runtime/atn/LexerMoreAction.h:
 
 /usr/local/include/antlr4-runtime/atn/SerializedATNView.h:
+
+/usr/include/c++/14/bits/specfun.h:
 
 /usr/local/include/antlr4-runtime/atn/LexerPopModeAction.h:
 
@@ -9372,12 +10161,6 @@ include/instructions/WINT.hpp:
 
 /usr/local/include/antlr4-runtime/atn/SetTransition.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/local/include/antlr4-runtime/CharStream.h:
-
-/usr/lib/x86_64-linux-gnu/libgcc_s.so.1:
-
 /usr/local/include/antlr4-runtime/atn/StarBlockStartState.h:
 
 /usr/local/include/antlr4-runtime/atn/StarLoopEntryState.h:
@@ -9390,9 +10173,9 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o:
 
 /usr/local/include/antlr4-runtime/atn/Transition.h:
 
-/usr/include/c++/14/bits/hash_bytes.h:
-
 include/LabelOperand.hpp:
+
+/usr/include/c++/14/bits/hash_bytes.h:
 
 /usr/local/include/antlr4-runtime/tree/xpath/XPathTokenAnywhereElement.h:
 
@@ -9448,8 +10231,6 @@ include/LabelOperand.hpp:
 
 /usr/local/include/antlr4-runtime/tree/xpath/XPathElement.h:
 
-/usr/local/include/antlr4-runtime/tree/xpath/XPathLexerErrorListener.h:
-
 /usr/local/include/antlr4-runtime/tree/xpath/XPathRuleElement.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
@@ -9459,10 +10240,6 @@ include/LabelOperand.hpp:
 /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.h:
 
 /usr/local/include/antlr4-runtime/tree/xpath/XPathWildcardElement.h:
-
-src/instructions/LOAD.cpp:
-
-src/operands/Memory_AddressOperand.cpp:
 
 generated-sources/VMGrammarBaseVisitor.cpp:
 
@@ -9482,21 +10259,11 @@ src/Program.cpp:
 
 include/IInstruction.hpp:
 
-include/Operand.hpp:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-macros.h:
 
-include/includes.hpp:
-
-/usr/local/include/antlr4-runtime/atn/PredictionContextCache.h:
-
-include/machine/EnvRegisters.hpp:
+include/IOperand.hpp:
 
 include/machine/VMState.hpp:
-
-src/operands/Operand.cpp:
-
-/usr/include/c++/14/vector:
-
-include/machine/VMtypes.hpp:
 
 include/RRegOperand.hpp:
 
@@ -9517,6 +10284,18 @@ include/instructions/QUO.hpp:
 include/instructions/SUB.hpp:
 
 include/instructions/WSTR.hpp:
+
+/usr/local/include/antlr4-runtime/atn/PredictionContextCache.h:
+
+include/machine/EnvRegisters.hpp:
+
+/usr/include/c++/14/vector:
+
+include/machine/VMtypes.hpp:
+
+/usr/include/c++/14/tr1/poly_laguerre.tcc:
+
+include/machine/arithmitics/Op_Results.hpp:
 
 src/instructions/IInstruction.cpp:
 
@@ -9546,26 +10325,32 @@ src/machine/RRegister.cpp:
 
 src/machine/VMState.cpp:
 
-src/main.cpp:
+src/machine/arithmitics/Value.cpp:
 
-include/VM.hpp:
+/usr/include/c++/14/tr1/bessel_function.tcc:
 
-src/operands/LabelOperand.cpp:
+/usr/include/c++/14/tr1/exp_integral.tcc:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a:
+/usr/include/c++/14/tr1/legendre_function.tcc:
 
-src/operands/StringLiteralOperand.cpp:
+/usr/include/c++/14/tr1/modified_bessel_func.tcc:
 
-/usr/include/c++/14/type_traits:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/lib64/ld-linux-x86-64.so.2:
+/usr/include/c++/14/tr1/poly_hermite.tcc:
 
-/usr/lib/x86_64-linux-gnu/Scrt1.o:
+/usr/include/c++/14/bits/stl_map.h:
 
-/usr/include/c++/14/bits/stl_uninitialized.h:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/c++/14/bits/locale_classes.h:
+/usr/include/c++/14/tr1/riemann_zeta.tcc:
 
-/usr/lib/x86_64-linux-gnu/libc.so:
+/usr/local/include/antlr4-runtime/tree/xpath/XPathLexerErrorListener.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:

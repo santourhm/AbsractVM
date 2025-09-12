@@ -4,14 +4,19 @@
 
 ImmediateOperand::~ImmediateOperand() {};
 
-ImmediateOperand::ImmediateOperand(int value)
+ImmediateOperand::ImmediateOperand(Value value)
 {
-    this->value  = value ;
+    this->val  = value ;
 }
 
 
-VOp_t ImmediateOperand::getOperandValue()  const 
+
+Value ImmediateOperand::read([[maybe_unused]] const VMState& vms) const    
 {
-    return this->value;
+     return val;
 }
 
+void  ImmediateOperand::write([[maybe_unused]]  VMState& vms,[[maybe_unused]]  const Value& value) const 
+{
+
+}

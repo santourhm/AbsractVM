@@ -3,10 +3,11 @@
 
 
 
+#include <memory>
 
-#include "EnvRegisters.hpp"
-#include "Register.hpp"
-#include "includes.hpp"
+//#include "EnvRegisters.hpp"
+
+class EnvRegisters;
 
 class VMState
 {
@@ -15,7 +16,7 @@ class VMState
     public:
         
         VMState() ;
-        ~VMState() = default;
+        ~VMState() ;
 
         EnvRegisters * getEnv_Registers() ;
 

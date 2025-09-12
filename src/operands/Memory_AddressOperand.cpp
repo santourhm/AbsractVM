@@ -7,22 +7,19 @@ Memory_AddressOperand::~Memory_AddressOperand() {};
 
 
 
-Memory_AddressOperand::Memory_AddressOperand(int offset ,std::unique_ptr<Operand>  RegOperand)
+Memory_AddressOperand::Memory_AddressOperand(int offset ,std::unique_ptr<IOperand>  RegOperand)
 {
     this->offset = offset;
     this->RegOperand = std::move(RegOperand);
 }
 
-Operand& Memory_AddressOperand::getRegisterOperand() const {
-    return *RegOperand;
-}
-        
-int Memory_AddressOperand::getOffsetRegister(void)  const 
+
+Value Memory_AddressOperand::read([[maybe_unused]] const VMState& vms) const    
 {
-    return this->offset;
+     return Value(0);
 }
 
-VOp_t Memory_AddressOperand::getOperandValue() const
+void  Memory_AddressOperand::write([[maybe_unused]]  VMState& vms,[[maybe_unused]]  const Value& value) const 
 {
-    return 0;
+
 }

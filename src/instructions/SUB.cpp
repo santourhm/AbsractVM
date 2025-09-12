@@ -2,24 +2,30 @@
 #include "SUB.hpp"
 #include "RRegOperand.hpp"
 #include <iostream>
-
+#include "Op_Results.hpp"
 
 
 void SUB::execute(VMState * vms) 
 {
+    try
+    {
         if (operands.size() < 2) {
-            throw std::runtime_error(" : SUB requires 2 operands but got " + std::to_string(operands.size()));
+            throw std::runtime_error(" : REM requires 2 operands but got " + std::to_string(operands.size()));
         }
 
         auto& src = operands[0];
         auto& dst = operands[1];
 
-        RRegOperand * dstRegOperand = dynamic_cast<RRegOperand*>(dst.get()); 
+        Value srcValue = src.get()->read(*vms);
+        Value dstValue = dst.get()->read(*vms);
 
-        RRegister   * DstReg        =  static_cast<RRegister*>(dstRegOperand->getRegister());
+        Op_Results results = srcValue - dstValue ;
 
-        VOp_t Vsrc = src.get()->getOperandValue(); 
-        VOp_t Vdst = dst.get()->getOperandValue(); 
+        dst.get()->write(*vms,results.val);
 
-        DstReg->RegisterSetValue(std::get<int>(Vdst) - std::get<int>(Vsrc) );
+    }
+    catch(const std::runtime_error& e)
+    {
+        std::cerr << "Error" << e.what() << '\n';
+    }
 }

@@ -6,10 +6,10 @@
 EnvRegisters::EnvRegisters()
 {
 
-    GB = std::make_unique<Register>("GB");
-    LB = std::make_unique<Register>("LB");
-    SP = std::make_unique<Register>("SP");
-    PC = std::make_unique<Register>("PC");
+    GB = std::make_unique<Register>("GB",Value(0));
+    LB = std::make_unique<Register>("LB",Value(0));
+    SP = std::make_unique<Register>("SP",Value(0));
+    PC = std::make_unique<Register>("PC",Value(0));
     
     for(int i = 0 ; i < NUMBER_MAX_GENPORPSE_REG ; i++)
     {

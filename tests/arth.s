@@ -13,4 +13,3 @@ OPP R1, R1
 QUO #1, R1
 WINT
 HALT
-

@@ -7,22 +7,20 @@
 //#include   "includes.hpp"
 #include   <variant>
 #include <memory>
-
-using Vmem_t = std::variant<int8_t,int16_t,int32_t, float, std::string >;
+#include "Value.hpp"
 
 class Memory
 {
     private:
 
         size_t   _size                           ;
-        std::vector<std::unique_ptr<Vmem_t>> mem ;
+        std::vector<std::unique_ptr<Value>> mem ;
 
     public:
         
         Memory(size_t   _size) ;
         ~Memory() = default;
-
-        //virtual int allocate(size_t size) = 0 ; 
+        
 };
 
 

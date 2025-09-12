@@ -2,24 +2,26 @@
 #define LABELOPERAND_HPP
 
 #include <string>
-#include "Operand.hpp"
+#include "IOperand.hpp"
 
 
 
 
 
-class LabelOperand  :  public Operand
+class LabelOperand  :  public IOperand
 {
     private : 
         
-        std::string    label;
+        Value    label;
 
     public:
 
-        LabelOperand(std::string) ;
+        LabelOperand(Value  v) ;
         ~LabelOperand();
 
-        VOp_t getOperandValue() const override;
+
+        Value read(const VMState& vms) const override        ;
+        void write(VMState& vms, const Value& value) const override;
 
 };
 

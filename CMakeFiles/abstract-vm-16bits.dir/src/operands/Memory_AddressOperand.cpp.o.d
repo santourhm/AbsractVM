@@ -2,7 +2,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: \
  /home/santourh/abstract-vm-32bits/src/operands/Memory_AddressOperand.cpp \
  /usr/include/stdc-predef.h \
  /home/santourh/abstract-vm-32bits/include/Memory_AddressOperand.hpp \
- /home/santourh/abstract-vm-32bits/include/Operand.hpp \
+ /home/santourh/abstract-vm-32bits/include/IOperand.hpp \
  /usr/include/c++/14/string /usr/include/c++/14/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
@@ -119,11 +119,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: \
  /usr/include/c++/14/bits/memory_resource.h /usr/include/c++/14/cstddef \
  /usr/include/c++/14/bits/uses_allocator.h \
  /usr/include/c++/14/bits/uses_allocator_args.h /usr/include/c++/14/tuple \
- /usr/include/c++/14/variant \
- /usr/include/c++/14/bits/enable_special_members.h \
- /usr/include/c++/14/bits/parse_numbers.h \
- /usr/include/c++/14/ext/aligned_buffer.h /usr/include/c++/14/memory \
- /usr/include/c++/14/bits/stl_tempbuf.h \
+ /home/santourh/abstract-vm-32bits/include/machine/VMState.hpp \
+ /usr/include/c++/14/memory /usr/include/c++/14/bits/stl_tempbuf.h \
  /usr/include/c++/14/bits/stl_uninitialized.h \
  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
  /usr/include/c++/14/bits/align.h \
@@ -134,6 +131,7 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: \
  /usr/include/c++/14/bits/shared_ptr.h \
  /usr/include/c++/14/bits/shared_ptr_base.h /usr/include/c++/14/typeinfo \
  /usr/include/c++/14/bits/allocated_ptr.h \
+ /usr/include/c++/14/ext/aligned_buffer.h \
  /usr/include/c++/14/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
@@ -167,4 +165,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o: \
  /usr/include/c++/14/bits/atomic_lockfree_defines.h \
  /usr/include/c++/14/backward/auto_ptr.h \
  /usr/include/c++/14/pstl/glue_memory_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h
+ /usr/include/c++/14/pstl/execution_defs.h \
+ /home/santourh/abstract-vm-32bits/include/machine/arithmitics/Value.hpp \
+ /usr/include/c++/14/cstdint /usr/include/c++/14/variant \
+ /usr/include/c++/14/bits/enable_special_members.h \
+ /usr/include/c++/14/bits/parse_numbers.h

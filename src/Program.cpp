@@ -30,9 +30,7 @@ void Program::executeProgram(VMState* vms)
 
     int i = 0;
     EnvRegisters * envReg = vms->getEnv_Registers();
-    Register     * PC     = envReg->getPC();
     for (const auto& inst : instructions) {
         inst->execute(vms);
-        PC->RegisterSetValue(i++);
     }   
 }

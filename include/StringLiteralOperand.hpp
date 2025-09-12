@@ -2,22 +2,23 @@
 #define STRINGLITERALOPERAND_HPP
 
 
-#include "Operand.hpp"
+#include "IOperand.hpp"
+#include "Value.hpp"
 
 
-
-class StringLiteralOperand : public Operand
+class StringLiteralOperand : public IOperand
 {
     private:
 
-        std::string  value ;
+        std::string v ;
     
     public:
     
         StringLiteralOperand(std::string  value);
         ~StringLiteralOperand();
 
-        VOp_t getOperandValue() const  ;  
+        Value read(const VMState& vms) const override        ;
+        void write(VMState& vms, const Value& value) const override;
 };
 
 

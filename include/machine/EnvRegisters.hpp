@@ -1,7 +1,9 @@
 #ifndef     ENVREGISTERS_HPP
 #define     ENVREGISTERS_HPP
+
 #include "Register.hpp"
 #include "RRegister.hpp"
+#include <memory>
 
 #define  NUMBER_MAX_GENPORPSE_REG  (15)
 

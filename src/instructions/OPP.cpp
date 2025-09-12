@@ -2,23 +2,29 @@
 #include "OPP.hpp"
 #include "RRegOperand.hpp"
 #include <iostream>
-
+#include "Op_Results.hpp"
 
 
 void OPP::execute(VMState * vms) 
 {
+    try
+    {
         if (operands.size() < 2) {
-            throw std::runtime_error(" : OPP requires 2 operands but got " + std::to_string(operands.size()));
+            throw std::runtime_error(" : MUL requires 2 operands but got " + std::to_string(operands.size()));
         }
 
         auto& src = operands[0];
         auto& dst = operands[1];
 
-        RRegOperand * dstRegOperand = dynamic_cast<RRegOperand*>(dst.get()); 
+        Value srcValue = src.get()->read(*vms);
 
-        RRegister   * DstReg        =  static_cast<RRegister*>(dstRegOperand->getRegister());
+        Op_Results results = srcValue*Value(-1) ;
 
-        VOp_t Vsrc = src.get()->getOperandValue(); 
+        dst.get()->write(*vms,results.val);
 
-        DstReg->RegisterSetValue(-std::get<int>(Vsrc));
+    }
+    catch(const std::runtime_error& e)
+    {
+        std::cerr << "Error" << e.what() << '\n';
+    }
 }

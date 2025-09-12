@@ -13,6 +13,7 @@ abstract-vm-16bits: \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o \
@@ -20,11 +21,12 @@ abstract-vm-16bits: \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o \
-  CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o \
@@ -91,6 +93,8 @@ CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o:
 
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o:
+
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o:
@@ -105,15 +109,17 @@ CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o:
 
+CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o:
+
 CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o:
-
-CMakeFiles/abstract-vm-16bits.dir/src/operands/Operand.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o:
 

@@ -9,12 +9,15 @@
 #include "REM.hpp"
 #include "QUO.hpp"
 #include "SUB.hpp"
+#include "WFLOAT.hpp"
 #include <memory>
 #include "StringLiteralOperand.hpp"
 #include "VMGrammarParser.h"
 #include "Register.hpp"
 #include "ImmediateOperand.hpp"
 #include "RRegOperand.hpp"
+#include "Value.hpp"
+#include "machine/EnvRegisters.hpp"
 
 VMListener::VMListener(VMState * vms)  : ProgATS(std::make_unique<Program>()), vms(vms) {}
 
@@ -45,14 +48,27 @@ std::unique_ptr<ImmediateOperand> static parseImm_Operand(VMGrammarParser::Opera
     }
 
     std::string imm = operand->immediate()->getText();
-    int Vimm = -1 ;
-    
+    Value v ;
+
     if(!imm.empty() && imm[0] == '#')
     {
-        Vimm = std::stoi(imm.substr(1));
+        if(operand->immediate()->FLOAT())
+        {
+            float f =  std::stof(imm.substr(1));
+            v = Value(f);
+        }
+        else if (operand->immediate()->INT())
+        {
+            int32_t i = std::stoi(imm.substr(1));
+            v = Value(i);
+        }
+        else
+        {
+            throw std::runtime_error("Undefined type immediate type");
+        }
     } 
 
-    return std::make_unique<ImmediateOperand>(Vimm);
+    return std::make_unique<ImmediateOperand>(v);
 }
 
 
@@ -90,8 +106,9 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
             inst = std::make_unique<WSTR>();
             
         }
+        
 
-        if (opcodeCtx->LOAD()) 
+        else if (opcodeCtx->LOAD()) 
         {
             if (numOperands != 2) 
                 throw std::runtime_error("Error: LOAD needs exactly 2 operands");
@@ -100,47 +117,46 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
             createDval_RmInstruction(inst.get(),ops,line);
 
         }
-        if (opcodeCtx->WINT()) 
+        else if (opcodeCtx->WINT()) 
         {
-
             if (numOperands != 0) 
-                throw std::runtime_error("Error: WINT is an unary instruction");
-            
+                throw std::runtime_error("Error: WINT does not support operands");
             inst = std::make_unique<WINT>();
             
         }
-
-        if(opcodeCtx->ADD())
+        else if (opcodeCtx->WFLOAT()) 
+        {
+            if (numOperands != 0) 
+                throw std::runtime_error("Error: WINT does not support operands");
+            inst = std::make_unique<WFLOAT>();
+            
+        }
+        else if(opcodeCtx->ADD())
         {
             inst = std::make_unique<ADD>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
-
-        if(opcodeCtx->SUB())
+        else if(opcodeCtx->SUB())
         {
             inst = std::make_unique<SUB>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
-
-        if(opcodeCtx->QUO())
+        else if(opcodeCtx->QUO())
         {
             inst = std::make_unique<QUO>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
-        
-        if(opcodeCtx->OPP())
+        else if(opcodeCtx->OPP())
         {
             inst = std::make_unique<OPP>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
-
-        if(opcodeCtx->REM())
+        else if(opcodeCtx->REM())
         {
             inst = std::make_unique<REM>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
-
-        if(opcodeCtx->MUL())
+        else if(opcodeCtx->MUL())
         {
             inst = std::make_unique<MUL>();
             createDval_RmInstruction(inst.get(),ops,line);
@@ -188,14 +204,7 @@ void VMListener::finalizeProgram()
 
 void VMListener::enterOperand(VMGrammarParser::OperandContext * ctx)
 {
-    // std::cout << "Operand :  " << ctx->getText() << '\n';
-    // std::cout << "Operand :  " << ctx->getText() << '\n';
-    // IInstruction* lastInstruction = TmpInst.back().get();
 
-    //  if (auto loadInst = dynamic_cast<LOAD*>(lastInstruction)) 
-    //  {
-    //    
-    //  } 
 }
 
 
@@ -228,7 +237,7 @@ void VMListener::visitErrorNode(antlr4::tree::ErrorNode *node) {
 void VMListener::createDval_RmInstruction(IInstruction * inst ,const std::vector<VMGrammarParser::OperandContext *> &operands, size_t line) 
 {
     if (operands.size() != 2) {
-        throw std::runtime_error("Error: ADD requires exactly 2 operands");
+        throw std::runtime_error("Error: Instruction requires exactly 2 operands");
     }
     
     auto operand1 = parseDval_Operand(operands[0], vms);

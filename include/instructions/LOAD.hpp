@@ -9,10 +9,9 @@ class LOAD : public IInstruction
     
     public:
         
-        LOAD(std::vector<std::unique_ptr<Operand>> ops);
         LOAD() = default;
         
-        void execute(VMState * vms);
+        void execute(VMState * vms) override;
 
 };
 

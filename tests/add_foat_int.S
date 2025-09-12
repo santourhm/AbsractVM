@@ -1,0 +1,5 @@
+   LOAD #0.1223,R0
+   LOAD #1.34,R1
+   REM  R0,R1
+   WFLOAT
+   HALT
