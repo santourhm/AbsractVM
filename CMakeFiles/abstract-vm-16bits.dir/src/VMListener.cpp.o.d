@@ -413,7 +413,9 @@ CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o: \
  /home/santourh/abstract-vm-32bits/include/instructions/REM.hpp \
  /home/santourh/abstract-vm-32bits/include/instructions/QUO.hpp \
  /home/santourh/abstract-vm-32bits/include/instructions/SUB.hpp \
+ /home/santourh/abstract-vm-32bits/include/instructions/HALT.hpp \
  /home/santourh/abstract-vm-32bits/include/instructions/WFLOAT.hpp \
+ /home/santourh/abstract-vm-32bits/include/LabelOperand.hpp \
  /home/santourh/abstract-vm-32bits/include/machine/Register.hpp \
  /home/santourh/abstract-vm-32bits/include/machine/VMtypes.hpp \
  /home/santourh/abstract-vm-32bits/include/IOperand.hpp \
@@ -422,4 +424,5 @@ CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o: \
  /home/santourh/abstract-vm-32bits/include/machine/RRegister.hpp \
  /home/santourh/abstract-vm-32bits/include/machine/Register.hpp \
  /home/santourh/abstract-vm-32bits/include/machine/EnvRegisters.hpp \
- /home/santourh/abstract-vm-32bits/include/machine/RRegister.hpp
+ /home/santourh/abstract-vm-32bits/include/machine/RRegister.hpp \
+ /home/santourh/abstract-vm-32bits/include/instructions/Label.hpp

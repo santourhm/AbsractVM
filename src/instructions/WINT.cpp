@@ -13,6 +13,7 @@ void WINT::execute(VMState * vms)
       if(v.getType() != TypeTag::INTEGER)
       {
             throw std::runtime_error(": WINT print for integers only");
+            return;
       }
       std::cout << "WINT = " << v.getInt() << '\n'; 
 }

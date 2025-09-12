@@ -11,6 +11,7 @@ void OPP::execute(VMState * vms)
     {
         if (operands.size() < 2) {
             throw std::runtime_error(" : MUL requires 2 operands but got " + std::to_string(operands.size()));
+            return;
         }
 
         auto& src = operands[0];

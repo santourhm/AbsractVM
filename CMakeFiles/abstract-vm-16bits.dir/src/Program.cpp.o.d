@@ -188,4 +188,12 @@ CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o: \
  /usr/include/c++/14/bits/locale_facets.tcc \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc
+ /usr/include/c++/14/bits/istream.tcc \
+ /home/santourh/abstract-vm-32bits/include/machine/Register.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/VMtypes.hpp \
+ /home/santourh/abstract-vm-32bits/include/IOperand.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/EnvRegisters.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/Register.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/RRegister.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/arithmitics/Op_Results.hpp \
+ /home/santourh/abstract-vm-32bits/include/machine/arithmitics/Value.hpp

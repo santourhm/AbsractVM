@@ -6,8 +6,10 @@ abstract-vm-16bits: \
   CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/HALT.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o \
+  CMakeFiles/abstract-vm-16bits.dir/src/instructions/Label.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o \
   CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o \
@@ -79,9 +81,13 @@ CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o:
 
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/HALT.cpp.o:
+
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o:
+
+CMakeFiles/abstract-vm-16bits.dir/src/instructions/Label.cpp.o:
 
 CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o:
 

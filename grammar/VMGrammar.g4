@@ -15,7 +15,7 @@ instruction
     ;
 
 opcode
-    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL | WFLOAT
+    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL | WFLOAT | HALT
     ;
 
 operand
@@ -61,6 +61,7 @@ CMP : 'CMP';
 BEQ : 'BEQ';
 WINT: 'WINT';
 WNL : 'WNL';
+HALT : 'HALT';
 WFLOAT : 'WFLOAT';
 
 COMMA  : ',';

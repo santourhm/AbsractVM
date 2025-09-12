@@ -146,6 +146,7 @@ Op_Results Value::operator%(const Value& rhs) const {
         });
 }
 
+
 int32_t Value::getInt() const { return std::get<int32_t>(data); }
 
 float Value::getFloat() const { return std::get<float>(data); }

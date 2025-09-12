@@ -11,6 +11,7 @@ void REM::execute(VMState * vms)
     {
         if (operands.size() < 2) {
             throw std::runtime_error(" : REM requires 2 operands but got " + std::to_string(operands.size()));
+            return;
         }
 
         auto& src = operands[0];

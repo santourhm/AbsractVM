@@ -13,6 +13,7 @@ void WFLOAT::execute(VMState * vms)
       if(v.getType() != TypeTag::FLOAT)
       {
             throw std::runtime_error(": WFLOAT print for floats only");
+            return;
       }
       std::cout << "WFLOAT = " << v.getFloat() << '\n'; 
 }

@@ -12,6 +12,7 @@
 
 using namespace antlr4;
 
+bool ishalt_program = false; 
 
 int main(int argc, const char* argv[]) {
     (void)argc;  

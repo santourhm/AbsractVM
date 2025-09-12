@@ -9,15 +9,18 @@
 #include "REM.hpp"
 #include "QUO.hpp"
 #include "SUB.hpp"
+#include "HALT.hpp"
 #include "WFLOAT.hpp"
 #include <memory>
 #include "StringLiteralOperand.hpp"
+#include "LabelOperand.hpp"
 #include "VMGrammarParser.h"
 #include "Register.hpp"
 #include "ImmediateOperand.hpp"
 #include "RRegOperand.hpp"
 #include "Value.hpp"
 #include "machine/EnvRegisters.hpp"
+#include "Label.hpp"
 
 VMListener::VMListener(VMState * vms)  : ProgATS(std::make_unique<Program>()), vms(vms) {}
 
@@ -106,8 +109,6 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
             inst = std::make_unique<WSTR>();
             
         }
-        
-
         else if (opcodeCtx->LOAD()) 
         {
             if (numOperands != 2) 
@@ -161,6 +162,10 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
             inst = std::make_unique<MUL>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
+        else if(opcodeCtx->HALT())
+        {
+            inst = std::make_unique<HALT>();
+        }
     } 
     catch (const std::runtime_error &e) {
         std::cerr << "Semantic Error on line " 
@@ -195,6 +200,13 @@ void VMListener::enterString_literal(VMGrammarParser::String_literalContext * ct
 void VMListener::enterLabel_definition(VMGrammarParser::Label_definitionContext * ctx)
 {
     std::cout << "enterLabel_definition : " << ctx->getText() << '\n';
+    
+    std::unique_ptr<IInstruction> inst; 
+    Value v(static_cast<uint32_t>(TmpInst.size()));
+    inst = std::make_unique<Label>();
+    inst->addOperand(std::make_unique<LabelOperand>(v));
+
+    TmpInst.push_back(std::move(inst));
 }
 
 void VMListener::finalizeProgram() 

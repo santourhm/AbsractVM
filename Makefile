@@ -370,6 +370,30 @@ src/instructions/ADD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.s
 .PHONY : src/instructions/ADD.cpp.s
 
+src/instructions/HALT.o: src/instructions/HALT.cpp.o
+.PHONY : src/instructions/HALT.o
+
+# target to build an object file
+src/instructions/HALT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/HALT.cpp.o
+.PHONY : src/instructions/HALT.cpp.o
+
+src/instructions/HALT.i: src/instructions/HALT.cpp.i
+.PHONY : src/instructions/HALT.i
+
+# target to preprocess a source file
+src/instructions/HALT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/HALT.cpp.i
+.PHONY : src/instructions/HALT.cpp.i
+
+src/instructions/HALT.s: src/instructions/HALT.cpp.s
+.PHONY : src/instructions/HALT.s
+
+# target to generate assembly for a file
+src/instructions/HALT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/HALT.cpp.s
+.PHONY : src/instructions/HALT.cpp.s
+
 src/instructions/IInstruction.o: src/instructions/IInstruction.cpp.o
 .PHONY : src/instructions/IInstruction.o
 
@@ -417,6 +441,30 @@ src/instructions/LOAD.s: src/instructions/LOAD.cpp.s
 src/instructions/LOAD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.s
 .PHONY : src/instructions/LOAD.cpp.s
+
+src/instructions/Label.o: src/instructions/Label.cpp.o
+.PHONY : src/instructions/Label.o
+
+# target to build an object file
+src/instructions/Label.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/Label.cpp.o
+.PHONY : src/instructions/Label.cpp.o
+
+src/instructions/Label.i: src/instructions/Label.cpp.i
+.PHONY : src/instructions/Label.i
+
+# target to preprocess a source file
+src/instructions/Label.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/Label.cpp.i
+.PHONY : src/instructions/Label.cpp.i
+
+src/instructions/Label.s: src/instructions/Label.cpp.s
+.PHONY : src/instructions/Label.s
+
+# target to generate assembly for a file
+src/instructions/Label.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/abstract-vm-16bits.dir/build.make CMakeFiles/abstract-vm-16bits.dir/src/instructions/Label.cpp.s
+.PHONY : src/instructions/Label.cpp.s
 
 src/instructions/MUL.o: src/instructions/MUL.cpp.o
 .PHONY : src/instructions/MUL.o
@@ -961,12 +1009,18 @@ help:
 	@echo "... src/instructions/ADD.o"
 	@echo "... src/instructions/ADD.i"
 	@echo "... src/instructions/ADD.s"
+	@echo "... src/instructions/HALT.o"
+	@echo "... src/instructions/HALT.i"
+	@echo "... src/instructions/HALT.s"
 	@echo "... src/instructions/IInstruction.o"
 	@echo "... src/instructions/IInstruction.i"
 	@echo "... src/instructions/IInstruction.s"
 	@echo "... src/instructions/LOAD.o"
 	@echo "... src/instructions/LOAD.i"
 	@echo "... src/instructions/LOAD.s"
+	@echo "... src/instructions/Label.o"
+	@echo "... src/instructions/Label.i"
+	@echo "... src/instructions/Label.s"
 	@echo "... src/instructions/MUL.o"
 	@echo "... src/instructions/MUL.i"
 	@echo "... src/instructions/MUL.s"
