@@ -55,9 +55,8 @@ void Program::executeProgram(VMState* vms)
                         throw std::runtime_error(" : PC register is out of program code region");
                         break;
                 }
-                
-                PC->RegisterSetValue(Next_PC.val); 
 
+                PC->RegisterSetValue(Next_PC.val); 
         }
 
 }
