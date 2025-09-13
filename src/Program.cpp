@@ -28,6 +28,15 @@ void    Program::setInstructions(std::vector<std::unique_ptr<IInstruction>>&& in
         instructions = std::move(instrs);
 }
 
+void Program::verifyProgram(void)
+{
+//      for(auto& ins : instructions)
+//      {
+//         if(ins)
+//      }
+}
+
+
 void Program::executeProgram(VMState* vms)
 {
 
@@ -44,7 +53,7 @@ void Program::executeProgram(VMState* vms)
                 instructions[PC->RegisterGetValue().getAddr()]->execute(vms);
 
                 if(ishalt_program)
-                {
+                {       
                         break;
                 }
                                           

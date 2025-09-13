@@ -14,4 +14,9 @@ EnvRegisters * VMState::getEnv_Registers()
     return Env_Registers.get();
 }
 
+std::unordered_map<std::string, Value>& VMState::getSymbol_Table() {
+    return symbolTable;
+}
+
+
 VMState::~VMState() = default;

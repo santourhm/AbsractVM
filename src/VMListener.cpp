@@ -9,6 +9,7 @@
 #include "REM.hpp"
 #include "QUO.hpp"
 #include "SUB.hpp"
+#include "BRA.hpp"
 #include "HALT.hpp"
 #include "WFLOAT.hpp"
 #include <memory>
@@ -22,11 +23,11 @@
 #include "machine/EnvRegisters.hpp"
 #include "Label.hpp"
 
-VMListener::VMListener(VMState * vms)  : ProgATS(std::make_unique<Program>()), vms(vms) {}
+VMListener::VMListener(VMState * vms)  : ProgATS(std::make_unique<Program>()), vms(vms), nb_intsructions(0) {}
 
 std::unique_ptr<RRegOperand> static parseRm_Operand(VMGrammarParser::OperandContext *operand, VMState * vs) {
     if (!operand->register_()) {
-        throw std::runtime_error("Error: expected RREGISTER operand");
+        throw std::runtime_error(" : expected RREGISTER operand");
     }
 
     std::string regText = operand->register_()->RREGISTER()->getText();
@@ -35,10 +36,10 @@ std::unique_ptr<RRegOperand> static parseRm_Operand(VMGrammarParser::OperandCont
         try {
             regIndex = std::stoi(regText.substr(1));
         } catch (const std::exception &) {
-            throw std::runtime_error("Error: invalid register number in " + regText);
+            throw std::runtime_error(" : invalid register number in " + regText);
         }
     } else {
-        throw std::runtime_error("Error: invalid register format in " + regText);
+        throw std::runtime_error(" : invalid register format in " + regText);
     }
 
     RRegister *reg = vs->getEnv_Registers()->getR(regIndex);
@@ -47,7 +48,7 @@ std::unique_ptr<RRegOperand> static parseRm_Operand(VMGrammarParser::OperandCont
 
 std::unique_ptr<ImmediateOperand> static parseImm_Operand(VMGrammarParser::OperandContext *operand, VMState * vs) {
     if (!operand->immediate()) {
-        throw std::runtime_error("Error: expected immediate operand");
+        throw std::runtime_error(" : expected immediate operand");
     }
 
     std::string imm = operand->immediate()->getText();
@@ -83,10 +84,22 @@ static std::variant<std::unique_ptr<RRegOperand>, std::unique_ptr<ImmediateOpera
     {
         return parseImm_Operand(operand, vs);
     } else {
-        throw std::runtime_error("Error: unsupported operand type");
+        throw std::runtime_error(" : unsupported operand type");
     }
 }
 
+
+std::unique_ptr<LabelOperand> static parseLabel_Operand(VMGrammarParser::OperandContext *operand) {
+    if (!operand->label() && ! !operand->label()->ID()) {
+        throw std::runtime_error(" : expected Label operand");
+    }
+
+    std::string label = operand->label()->ID()->getText();
+    
+    Value  v(label);
+
+    return std::make_unique<LabelOperand>(v);
+}
 
 
 void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx) 
@@ -104,7 +117,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
         if (opcodeCtx->WSTR()) 
         {
             if (numOperands != 1) 
-                throw std::runtime_error("Error: WSTR needs exactly one operand");
+                throw std::runtime_error(" : WSTR needs exactly one operand");
             
             inst = std::make_unique<WSTR>();
             
@@ -112,7 +125,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
         else if (opcodeCtx->LOAD()) 
         {
             if (numOperands != 2) 
-                throw std::runtime_error("Error: LOAD needs exactly 2 operands");
+                throw std::runtime_error(" : LOAD needs exactly 2 operands");
             
             inst = std::make_unique<LOAD>();
             createDval_RmInstruction(inst.get(),ops,line);
@@ -121,50 +134,72 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
         else if (opcodeCtx->WINT()) 
         {
             if (numOperands != 0) 
-                throw std::runtime_error("Error: WINT does not support operands");
+                throw std::runtime_error(" : WINT does not support operands");
             inst = std::make_unique<WINT>();
             
         }
         else if (opcodeCtx->WFLOAT()) 
         {
             if (numOperands != 0) 
-                throw std::runtime_error("Error: WINT does not support operands");
+                throw std::runtime_error(" : WINT does not support operands");
             inst = std::make_unique<WFLOAT>();
             
         }
         else if(opcodeCtx->ADD())
         {
+            if (numOperands != 2) 
+                throw std::runtime_error(" : ADD needs exactly 2 operands");
             inst = std::make_unique<ADD>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
         else if(opcodeCtx->SUB())
         {
+            if (numOperands != 2) 
+                throw std::runtime_error(" : SUB needs exactly 2 operands");
             inst = std::make_unique<SUB>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
         else if(opcodeCtx->QUO())
         {
+            if (numOperands != 2) 
+                throw std::runtime_error(" : QUO needs exactly 2 operands");
             inst = std::make_unique<QUO>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
         else if(opcodeCtx->OPP())
         {
+            if (numOperands != 2) 
+                throw std::runtime_error(" : OPP needs exactly 2 operands");
             inst = std::make_unique<OPP>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
         else if(opcodeCtx->REM())
         {
+            if (numOperands != 2) 
+                throw std::runtime_error(" : REM needs exactly 2 operands");
             inst = std::make_unique<REM>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
         else if(opcodeCtx->MUL())
         {
+            if (numOperands != 2) 
+                throw std::runtime_error(" : MUL needs exactly 2 operands");
             inst = std::make_unique<MUL>();
             createDval_RmInstruction(inst.get(),ops,line);
         }
         else if(opcodeCtx->HALT())
         {
+            if (numOperands != 0) 
+                throw std::runtime_error(" : HALT works without operands");
             inst = std::make_unique<HALT>();
+        }
+        else if(opcodeCtx->BRA())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BRA needs exactly 1 label operand");
+
+            inst = std::make_unique<BRA>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
         }
     } 
     catch (const std::runtime_error &e) {
@@ -174,6 +209,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
     }
     
     TmpInst.push_back(std::move(inst));
+    nb_intsructions++;
 }
 
 void VMListener::enterOpcode(VMGrammarParser::OpcodeContext * ctx)
@@ -199,14 +235,34 @@ void VMListener::enterString_literal(VMGrammarParser::String_literalContext * ct
 
 void VMListener::enterLabel_definition(VMGrammarParser::Label_definitionContext * ctx)
 {
-    std::cout << "enterLabel_definition : " << ctx->getText() << '\n';
+
     
     std::unique_ptr<IInstruction> inst; 
-    Value v(static_cast<uint32_t>(TmpInst.size()));
+    
+    std::string label = ctx->getText();
+
+    if (!label.empty() && label.back() == ':') {
+        label = label.substr(0, label.size() - 1);  
+    }
+    else{
+        throw std::runtime_error(" : unsupported label definition"); 
+    }
+    
+    std::cout << "enterLabel_definition : " << label << '\n';
+    
+    uint32_t address = static_cast<uint32_t>(nb_intsructions);
+    
+    Value v(address);
+                                                                                 
+    vms->getSymbol_Table()[label] = v;
+
     inst = std::make_unique<Label>();
+
     inst->addOperand(std::make_unique<LabelOperand>(v));
 
     TmpInst.push_back(std::move(inst));
+ 
+    nb_intsructions++;
 }
 
 void VMListener::finalizeProgram() 
@@ -249,7 +305,7 @@ void VMListener::visitErrorNode(antlr4::tree::ErrorNode *node) {
 void VMListener::createDval_RmInstruction(IInstruction * inst ,const std::vector<VMGrammarParser::OperandContext *> &operands, size_t line) 
 {
     if (operands.size() != 2) {
-        throw std::runtime_error("Error: Instruction requires exactly 2 operands");
+        throw std::runtime_error(" : Instruction requires exactly 2 operands");
     }
     
     auto operand1 = parseDval_Operand(operands[0], vms);
