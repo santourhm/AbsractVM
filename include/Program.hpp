@@ -24,6 +24,7 @@ class Program
            
 
         void executeProgram(VMState* vms);
+        void verifyProgram(void);
 
 };
 

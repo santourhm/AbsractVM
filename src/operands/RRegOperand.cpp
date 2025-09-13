@@ -11,12 +11,12 @@ Register* RRegOperand::getRegister() const
     return reg;
 }
 
-Value RRegOperand::read([[maybe_unused]] const VMState& vms) const 
+Value RRegOperand::read() const 
 {
     return reg->RegisterGetValue();
 }
 
-void RRegOperand::write([[maybe_unused]] VMState& vms, const Value& value) const
+void RRegOperand::write(const Value& value) const
 {
     reg->RegisterSetValue(value);
 }

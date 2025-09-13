@@ -14,6 +14,7 @@ class VMListener : public VMGrammarBaseListener
         VMState *vms;
         std::unique_ptr<Program> ProgATS;
         std::vector<std::unique_ptr<IInstruction>> TmpInst;
+        int nb_intsructions;
 
     public:
 

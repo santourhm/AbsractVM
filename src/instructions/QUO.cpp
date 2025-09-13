@@ -17,12 +17,12 @@ void QUO::execute(VMState * vms)
         auto& src = operands[0];
         auto& dst = operands[1];
 
-        Value srcValue = src.get()->read(*vms);
-        Value dstValue = dst.get()->read(*vms);
+        Value srcValue = src.get()->read();
+        Value dstValue = dst.get()->read();
 
         Op_Results results = dstValue/srcValue ;
 
-        dst.get()->write(*vms,results.val);
+        dst.get()->write(results.val);
 
     }
     catch(const std::runtime_error& e)

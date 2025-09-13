@@ -104,7 +104,7 @@ std::unique_ptr<LabelOperand> static parseLabel_Operand(VMGrammarParser::Operand
 
 void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx) 
 {
-    std::cout << "Instruction : " << ctx->getText() << '\n';
+    // std::cout << "Instruction : " << ctx->getText() << '\n';
 
     auto ops = ctx->operand();
     size_t numOperands = ctx->operand().size();
@@ -214,7 +214,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
 
 void VMListener::enterOpcode(VMGrammarParser::OpcodeContext * ctx)
 {
-    std::cout << "Opcode :  " << ctx->getText() << '\n';
+    // std::cout << "Opcode :  " << ctx->getText() << '\n';
     
 }
 
@@ -222,12 +222,36 @@ void VMListener::enterOpcode(VMGrammarParser::OpcodeContext * ctx)
 void VMListener::enterString_literal(VMGrammarParser::String_literalContext * ctx)
 {
 
-    std::cout << "enterString_literal : " << ctx->getText() << '\n';
     if(ctx->STRING_LITERAL())
     {
+        std::string text = ctx->STRING_LITERAL()->getText();
+
+        if (!text.empty() && text.front() == '"' && text.back() == '"') {
+            text = text.substr(1, text.size() - 2);
+        }
+
+        std::string unescaped;
+        for (size_t i = 0; i < text.size(); ++i) 
+        {
+            if (text[i] == '\\' && i + 1 < text.size()) 
+            {
+                i++;
+                switch (text[i]) {
+                    case 'n': unescaped += '\n'; break;
+                    case 't': unescaped += '\t'; break;
+                    case '\\': unescaped += '\\'; break;
+                    case '"': unescaped += '"'; break;
+                    default: unescaped += text[i]; break;
+                }
+            } else
+            {
+                unescaped += text[i];
+            }
+        }
+        
         IInstruction* lastInstruction = TmpInst.back().get();
-        lastInstruction->addOperand( 
-            std::make_unique<StringLiteralOperand>(ctx->getText())
+        lastInstruction->addOperand(
+            std::make_unique<StringLiteralOperand>(unescaped)
         );
     }
 }
@@ -236,9 +260,9 @@ void VMListener::enterString_literal(VMGrammarParser::String_literalContext * ct
 void VMListener::enterLabel_definition(VMGrammarParser::Label_definitionContext * ctx)
 {
 
+    // std::cout << "enterLabel_definition : " << label << '\n';
     
     std::unique_ptr<IInstruction> inst; 
-    
     std::string label = ctx->getText();
 
     if (!label.empty() && label.back() == ':') {
@@ -248,13 +272,11 @@ void VMListener::enterLabel_definition(VMGrammarParser::Label_definitionContext 
         throw std::runtime_error(" : unsupported label definition"); 
     }
     
-    std::cout << "enterLabel_definition : " << label << '\n';
-    
     uint32_t address = static_cast<uint32_t>(nb_intsructions);
     
     Value v(address);
                                                                                  
-    vms->getSymbol_Table()[label] = v;
+    vms->getSymbol_Table()[label] = v++;
 
     inst = std::make_unique<Label>();
 
@@ -284,13 +306,13 @@ void VMListener::enterMemory_address(VMGrammarParser::Memory_addressContext * ct
 
 void VMListener::enterImmediate(VMGrammarParser::ImmediateContext * ctx)
 {
-    std::cout << "Immediate :  " << ctx->getText() << '\n';
+    // std::cout << "Immediate :  " << ctx->getText() << '\n';
 }
 
 
 void VMListener::enterLabel(VMGrammarParser::LabelContext * ctx)
 {
-    std::cout << "Label :  " << ctx->getText() << '\n';
+    // std::cout << "Label :  " << ctx->getText() << '\n';
 }
 
 void VMListener::visitErrorNode(antlr4::tree::ErrorNode *node) {

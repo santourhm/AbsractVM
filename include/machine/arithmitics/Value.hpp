@@ -41,6 +41,8 @@ class Value
         Op_Results operator/(const Value& rhs) const;
         Op_Results operator%(const Value& rhs) const;
         Op_Results operator*(const Value& rhs) const;
+        Value& operator++();
+        Value operator++(int);
 
         int32_t getInt() const;
         float getFloat() const;

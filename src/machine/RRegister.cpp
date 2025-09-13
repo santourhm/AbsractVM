@@ -4,9 +4,8 @@
 
 
 RRegister::RRegister(int idx) :                          
-  Register("R" + std::to_string(idx), Value(0)), 
-  index(idx)
-{}
+  Register("R" + std::to_string(idx), Value()), 
+  index(idx) {}
 
 
 RRegister::~RRegister() = default;

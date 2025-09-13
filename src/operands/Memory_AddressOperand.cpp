@@ -14,12 +14,12 @@ Memory_AddressOperand::Memory_AddressOperand(int offset ,std::unique_ptr<IOperan
 }
 
 
-Value Memory_AddressOperand::read([[maybe_unused]] const VMState& vms) const    
+Value Memory_AddressOperand::read() const    
 {
      return Value(0);
 }
 
-void  Memory_AddressOperand::write([[maybe_unused]]  VMState& vms,[[maybe_unused]]  const Value& value) const 
+void  Memory_AddressOperand::write(const Value& value) const 
 {
 
 }

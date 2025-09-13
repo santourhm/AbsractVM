@@ -13,12 +13,12 @@ StringLiteralOperand::StringLiteralOperand(std::string value)
 }
 
 
-Value StringLiteralOperand::read([[maybe_unused]] const VMState& vms) const 
+Value StringLiteralOperand::read() const 
 {
     return Value(this->v);
 }
 
-void StringLiteralOperand::write([[maybe_unused]] VMState& vms, [[maybe_unused]] const Value& value) const 
+void StringLiteralOperand::write(const Value& value) const 
 {
 
 }

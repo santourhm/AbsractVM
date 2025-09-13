@@ -21,10 +21,10 @@ void LOAD::execute(VMState * vms)
         auto& src = operands[0];
         auto& dst = operands[1];
 
-        Value srcValue = src.get()->read(*vms);
-        Value dstValue = dst.get()->read(*vms);
+        Value srcValue = src.get()->read();
+        Value dstValue = dst.get()->read();
 
-        dst.get()->write(*vms,srcValue);
+        dst.get()->write(srcValue);
 
     }
     catch(const std::runtime_error& e)

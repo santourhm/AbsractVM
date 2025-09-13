@@ -15,5 +15,5 @@ void WINT::execute(VMState * vms)
             throw std::runtime_error(": WINT print for integers only");
             return;
       }
-      std::cout << "WINT = " << v.getInt() << '\n'; 
+      std::cout << v.getInt() ; 
 }

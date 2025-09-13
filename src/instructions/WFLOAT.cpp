@@ -15,5 +15,5 @@ void WFLOAT::execute(VMState * vms)
             throw std::runtime_error(": WFLOAT print for floats only");
             return;
       }
-      std::cout << "WFLOAT = " << v.getFloat() << '\n'; 
+      std::cout << v.getFloat() ; 
 }

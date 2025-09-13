@@ -7,7 +7,6 @@
 
 void WSTR::execute(VMState* vms)  
 {
-    std::cout << "execute WSTR" << '\n';
 
     IOperand* base = operands[0].get();
     StringLiteralOperand* str_op = dynamic_cast<StringLiteralOperand*>(base);
@@ -15,8 +14,8 @@ void WSTR::execute(VMState* vms)
         throw std::runtime_error("WSTR requires a StringLiteralOperand");
     }
 
-    std::string str_val = str_op->read(*vms).getStr();
-
+    std::string str_val = str_op->read().getStr();
+    
     size_t start = 0;
     size_t pos;
     

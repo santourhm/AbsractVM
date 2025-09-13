@@ -17,8 +17,8 @@ class StringLiteralOperand : public IOperand
         StringLiteralOperand(std::string  value);
         ~StringLiteralOperand();
 
-        Value read(const VMState& vms) const override        ;
-        void write(VMState& vms, const Value& value) const override;
+        Value read() const override        ;
+        void  write(const Value& value) const override;
 };
 
 

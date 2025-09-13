@@ -29,17 +29,18 @@ void BRA::execute(VMState * vms)
 
         Register *  PC = vms->getEnv_Registers()->getPC();
 
-        std::string label_str = label->read(*vms).getStr();
+        std::string label_str = label->read().getStr();
 
         std::unordered_map<std::string, Value>&  Symbol_Table = vms->getSymbol_Table();
 
         if (Symbol_Table.find(label_str) == Symbol_Table.end()) 
         {
             throw std::runtime_error(" : Undefined label '" + label_str + "'");
+            vms->not_halt = false;
+            return;
         }
 
         Value addr = Symbol_Table.at(label_str);
-        std::cout << "addr" << addr.getAddr() << '\n';
 
         PC->RegisterSetValue(addr);
 

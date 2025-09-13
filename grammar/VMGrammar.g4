@@ -15,7 +15,7 @@ instruction
     ;
 
 opcode
-    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | WINT | WNL | WFLOAT | HALT
+    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | BRA | WINT | WNL | WFLOAT | HALT
     ;
 
 operand
@@ -59,6 +59,7 @@ WSTR: 'WSTR';
 LOAD: 'LOAD';
 CMP : 'CMP';
 BEQ : 'BEQ';
+BRA : 'BRA';
 WINT: 'WINT';
 WNL : 'WNL';
 HALT : 'HALT';
@@ -75,10 +76,12 @@ COLON  : ':';
 RREGISTER      : 'R' INT;
 GBREGISTER     : 'GB';
 LBREGISTER     : 'LB';
-STRING_LITERAL: '"' ( ~["\\] | '\\' . )* '"';
+STRING_LITERAL: '"' STRING '"';
 INT           : [0-9]+;
 ID            : [a-zA-Z_] [a-zA-Z0-9_.]*;
 FLOAT         : INT '.' INT ;
+
+fragment STRING        : ( ~["\\] | '\\' . )*;
 
 COMMENT : ';' ~[\r\n]* -> skip;
 WS      : [ \t]+ -> skip;

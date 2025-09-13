@@ -6,6 +6,7 @@
 VMState::VMState() 
 {
     Env_Registers = std::make_unique<EnvRegisters>();
+    not_halt      = true;
 } 
 
 

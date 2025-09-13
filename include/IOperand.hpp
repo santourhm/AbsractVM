@@ -12,8 +12,8 @@ class IOperand
     public:
         
         virtual ~IOperand() = default; 
-        virtual Value read(const VMState& vms) const = 0;
-        virtual void write(VMState& vms, const Value& value) const = 0;
+        virtual Value read() const = 0;
+        virtual void write(const Value& value) const = 0;
    
 };
 

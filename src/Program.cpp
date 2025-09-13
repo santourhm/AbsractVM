@@ -47,12 +47,12 @@ void Program::executeProgram(VMState* vms)
         PC->RegisterSetValue(Value(pc));
         int size = instructions.size();
      
-        while(1)
+        while(vms->not_halt)
         {
 
                 instructions[PC->RegisterGetValue().getAddr()]->execute(vms);
 
-                if(ishalt_program)
+                if(!vms->not_halt)
                 {       
                         break;
                 }
@@ -62,6 +62,7 @@ void Program::executeProgram(VMState* vms)
  
                 if(size <= V_PC.getAddr() )
                 {
+                        
                         throw std::runtime_error(" : PC register is out of program code region");
                         break;
                 }

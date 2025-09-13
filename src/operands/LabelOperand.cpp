@@ -14,12 +14,12 @@ LabelOperand::~LabelOperand()   {};
 
 
 
-Value LabelOperand::read([[maybe_unused]] const VMState& vms) const    
+Value LabelOperand::read() const    
 {
      return label;
 }
 
-void  LabelOperand::write([[maybe_unused]]  VMState& vms,[[maybe_unused]]  const Value& value) const 
+void  LabelOperand::write(const Value& value) const 
 {
 
 }
