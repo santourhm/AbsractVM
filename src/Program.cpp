@@ -34,29 +34,30 @@ void Program::executeProgram(VMState* vms)
         int i = 0;
         EnvRegisters * envReg = vms->getEnv_Registers();
         Register * PC =  envReg->getPC();
-        PC->RegisterSetValue(Value(0));
+        uint32_t   pc = 0x0;
+        PC->RegisterSetValue(Value(pc));
         int size = instructions.size();
      
         while(1)
         {
 
-                instructions[PC->RegisterGetValue().getInt()]->execute(vms);
+                instructions[PC->RegisterGetValue().getAddr()]->execute(vms);
 
                 if(ishalt_program)
                 {
                         break;
                 }
-
+                                          
                 Value V_PC = PC->RegisterGetValue();
-                Op_Results Next_PC = Value(1) + V_PC;
-
-                if(size <= Next_PC.val.getInt() )
+                V_PC++;
+ 
+                if(size <= V_PC.getAddr() )
                 {
                         throw std::runtime_error(" : PC register is out of program code region");
                         break;
                 }
 
-                PC->RegisterSetValue(Next_PC.val); 
+                PC->RegisterSetValue(V_PC); 
         }
 
 }

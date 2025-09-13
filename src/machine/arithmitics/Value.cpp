@@ -40,16 +40,55 @@ TypeTag Value::getType() const
     return this->type;
 }
 
-template<typename IntOp, typename FloatOp>
+Value& Value::operator++()
+{
+    switch (type) 
+    {
+        case TypeTag::INTEGER: 
+        {
+            int32_t& val = std::get<int32_t>(data);
+            ++val;
+            break;
+        }
+        case TypeTag::FLOAT: 
+        {
+            float& val = std::get<float>(data);
+            ++val;
+            break;
+        }
+        case TypeTag::ADDRESS: 
+        {
+            uint32_t& val = std::get<uint32_t>(data);
+            ++val;
+            break;
+        }
+        default:
+            throw std::runtime_error("Increment not supported for this type");
+    }
+
+    return *this;
+}
+
+Value Value::operator++(int)
+{
+    Value temp = *this;  
+    ++(*this);           
+    return temp;         
+}
+
+template<typename IntOp, typename FloatOp, typename AddrOp>
 static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
                                IntOp intOp,
-                               FloatOp floatOp)
+                               FloatOp floatOp, AddrOp addrOp)
 {
     Op_Results result;
 
-    if (lhs.getType() == TypeTag::ADDRESS || rhs.getType() == TypeTag::ADDRESS)
-        throw std::runtime_error(" : Cannot operate on ADDRESS");
-
+    if (lhs.getType() == TypeTag::ADDRESS && rhs.getType() == TypeTag::ADDRESS)
+    {
+        uint32_t fRes = addrOp(lhs.getAddr(), rhs.getAddr());
+        result.val = Value(fRes);
+    }
+        
     if (lhs.getType() == TypeTag::UNDEFINED || rhs.getType() == TypeTag::UNDEFINED)
         throw std::runtime_error(" : Cannot operate on UNDEFINED value");
 
@@ -97,7 +136,7 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
 Op_Results Value::operator+(const Value& rhs) const {
     Op_Results result = arithmeticOp(*this, rhs,
         [](int32_t a, int32_t b){ return a + b; },
-        [](float a, float b){ return a + b; });
+        [](float a, float b){ return a + b; },[](uint32_t a, uint32_t b){ return a + b; });
 
     if (result.val.getType() == TypeTag::INTEGER) {
         int32_t lhs_i = this->getInt();
@@ -113,13 +152,13 @@ Op_Results Value::operator+(const Value& rhs) const {
 Op_Results Value::operator-(const Value& rhs) const {
     return arithmeticOp(*this, rhs,
         [](int32_t a, int32_t b){ return a - b; },
-        [](float a, float b){ return a - b; });
+        [](float a, float b){ return a - b; },[](uint32_t a, uint32_t b){ return a - b; });
 }
 
 Op_Results Value::operator*(const Value& rhs) const {
     return arithmeticOp(*this, rhs,
         [](int32_t a, int32_t b){ return a * b; },
-        [](float a, float b){ return a * b; });
+        [](float a, float b){ return a * b; },[](uint32_t a, uint32_t b){ return a*b; });
 }
 
 Op_Results Value::operator/(const Value& rhs) const {
@@ -131,7 +170,10 @@ Op_Results Value::operator/(const Value& rhs) const {
         [](float a, float b){
             if (b == 0.0f) throw std::runtime_error(" : Division by zero");
             return a / b;
-        });
+        },
+        [](uint32_t a, uint32_t b){ 
+            if (b == 0x0) throw std::runtime_error(" : Division by zero");
+            return a/b; });
 }
 
 Op_Results Value::operator%(const Value& rhs) const {
@@ -143,7 +185,8 @@ Op_Results Value::operator%(const Value& rhs) const {
        
         [](float, float) -> float { 
             throw std::runtime_error(" : Modulo not defined for floats");
-        });
+        }
+        ,[](uint32_t a, uint32_t b){ return a%b; });
 }
 
 
