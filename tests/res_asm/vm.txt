@@ -1,0 +1,25 @@
+--- Testing BEQ ---
+  1A: Branch taken (SUCCESS)
+  1B: Branch NOT taken (SUCCESS)
+--- Testing BNE ---
+  2A: Branch taken (SUCCESS)
+  2B: Branch NOT taken (SUCCESS)
+--- Testing BGT ---
+  3A: Branch taken (SUCCESS)
+  3B: Branch NOT taken (SUCCESS)
+--- Testing BLT ---
+  4A: Branch taken (SUCCESS)
+  4B: Branch NOT taken (SUCCESS)
+--- Testing BGE ---
+  5A: Branch taken (SUCCESS)
+  5B: Branch taken (SUCCESS)
+  5C: Branch NOT taken (SUCCESS)
+--- Testing BLE ---
+  6A: Branch taken (SUCCESS)
+  6B: Branch taken (SUCCESS)
+  6C: Branch NOT taken (SUCCESS)
+--- Testing BOV ---
+  7A: Branch taken (SUCCESS)
+  7B: Branch NOT taken (SUCCESS)
+--- Testing BRA ---
+  8A: Branch taken (SUCCESS)

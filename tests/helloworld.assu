@@ -1,9 +1,0 @@
-; Programme principal : Lecture d'un entier positif, impression de sa factorielle
-; Rem : il faudrait tester le debordement de pile
-
-Ceci_Est_1_etiquette.0
-    WSTR    "Hello world\n"
-    WSTR    "My GirlFriend Is So beautiful"
-sinon_Fact:
-    WSTR  "HEllos"
-
