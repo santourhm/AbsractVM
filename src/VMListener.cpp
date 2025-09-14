@@ -3,6 +3,7 @@
 #include "WSTR.hpp"
 #include "LOAD.hpp"
 #include "WINT.hpp"
+#include "WNL.hpp"
 #include "ADD.hpp"
 #include "MUL.hpp"
 #include "OPP.hpp"
@@ -15,6 +16,7 @@
 #include "Bcc/BLT.hpp"
 #include "Bcc/BGT.hpp"
 #include "Bcc/BLE.hpp"
+#include "Bcc/BGE.hpp"
 #include "Bcc/BOV.hpp"
 #include "Scc/SEQ.hpp"
 #include "Scc/SNE.hpp"
@@ -22,6 +24,9 @@
 #include "Scc/SGT.hpp"
 #include "Scc/SLE.hpp"
 #include "Scc/SOV.hpp"
+#include "Scc/SHL.hpp"
+#include "Scc/SHR.hpp"
+#include "Scc/SGE.hpp"
 #include "HALT.hpp"
 #include "WFLOAT.hpp"
 #include <memory>
@@ -117,7 +122,7 @@ std::unique_ptr<LabelOperand> static parseLabel_Operand(VMGrammarParser::Operand
 
 void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx) 
 {
-    // std::cout << "Instruction : " << ctx->getText() << '\n';
+    //std::cout << "Instruction : " << ctx->getText() << '\n';
 
     auto ops = ctx->operand();
     size_t numOperands = ctx->operand().size();
@@ -149,6 +154,13 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
             if (numOperands != 0) 
                 throw std::runtime_error(" : WINT does not support operands");
             inst = std::make_unique<WINT>();
+            
+        }
+        else if (opcodeCtx->WNL()) 
+        {
+            if (numOperands != 0) 
+                throw std::runtime_error(" : WNL does not support operands");
+            inst = std::make_unique<WNL>();
             
         }
         else if (opcodeCtx->WFLOAT()) 
@@ -238,6 +250,14 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
             inst = std::make_unique<BGT>();
             inst->addOperand(parseLabel_Operand(ops[0]));
         }
+        else if(opcodeCtx->BGE())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BGE needs exactly 1 operands");
+
+            inst = std::make_unique<BGE>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
         else if(opcodeCtx->BLE())
         {
             if (numOperands != 1) 
@@ -264,8 +284,11 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
         }
         else if(opcodeCtx->BOV())
         {
-            if (numOperands != 1) 
+            if (numOperands != 1)
+            { 
                 throw std::runtime_error(" : BOV needs exactly 1 operands");
+                return;
+            }
 
             inst = std::make_unique<BOV>();
             inst->addOperand(parseLabel_Operand(ops[0]));
@@ -277,7 +300,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                 throw std::runtime_error(" : SEQ needs exactly 1 operands");
 
             inst = std::make_unique<SEQ>();
-            inst->addOperand(parseLabel_Operand(ops[0]));
+            inst->addOperand(parseRm_Operand(ops[0],vms));
         }
         else if(opcodeCtx->SGT())
         {
@@ -285,7 +308,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                 throw std::runtime_error(" : SGT needs exactly 1 operands");
 
             inst = std::make_unique<SGT>();
-            inst->addOperand(parseLabel_Operand(ops[0]));
+            inst->addOperand(parseRm_Operand(ops[0],vms));
         }
         else if(opcodeCtx->SLE())
         {
@@ -293,7 +316,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                 throw std::runtime_error(" : SLE needs exactly 1 operands");
 
             inst = std::make_unique<SLE>();
-            inst->addOperand(parseLabel_Operand(ops[0]));
+            inst->addOperand(parseRm_Operand(ops[0],vms));
         }
         else if(opcodeCtx->SLT())
         {
@@ -301,7 +324,7 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                 throw std::runtime_error(" : SLT needs exactly 1 operands");
 
             inst = std::make_unique<SLT>();
-            inst->addOperand(parseLabel_Operand(ops[0]));
+            inst->addOperand(parseRm_Operand(ops[0],vms));
         }
         else if(opcodeCtx->SNE())
         {
@@ -309,7 +332,15 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                 throw std::runtime_error(" : SNE needs exactly 1 operands");
 
             inst = std::make_unique<SNE>();
-            inst->addOperand(parseLabel_Operand(ops[0]));
+            inst->addOperand(parseRm_Operand(ops[0],vms));
+        }
+        else if(opcodeCtx->SGE())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SGE needs exactly 1 operands");
+
+            inst = std::make_unique<SGE>();
+            inst->addOperand(parseRm_Operand(ops[0],vms));
         }
         else if(opcodeCtx->SOV())
         {
@@ -317,9 +348,24 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
                 throw std::runtime_error(" : SOV needs exactly 1 operands");
 
             inst = std::make_unique<SOV>();
-            inst->addOperand(parseLabel_Operand(ops[0]));
+            inst->addOperand((parseRm_Operand(ops[0],vms)));
         }
-        
+        else if(opcodeCtx->SHL())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SHL needs exactly 1 operands");
+
+            inst = std::make_unique<SHL>();
+            inst->addOperand((parseRm_Operand(ops[0],vms)));
+        }
+        else if(opcodeCtx->SHR())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SHR needs exactly 1 operands");
+
+            inst = std::make_unique<SHR>();
+            inst->addOperand((parseRm_Operand(ops[0],vms)));
+        }
     } 
     catch (const std::runtime_error &e) {
         std::cerr << "Semantic Error on line " 

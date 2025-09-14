@@ -2,6 +2,11 @@
    LOAD #1.34,R1
    ADD  R0,R1
    WFLOAT
+   BRA hello_word
    LOAD #2,R1
-   WINT 
+   WINT
    HALT
+hello_word :
+   WSTR "Hello World!"
+   HALT
+   

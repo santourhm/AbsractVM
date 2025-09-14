@@ -15,7 +15,7 @@ instruction
     ;
 
 opcode
-    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | BNE | BLT | BGT | BLE | BOV  | SEQ | SNE | SLT | SGT | SLE | SOV | SHL | SHR | BRA | WINT | WNL | WFLOAT | HALT
+    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | BNE | BLT | BGT | BGE | BLE | BOV  | SEQ | SNE | SLT | SGT  | SGE | SLE | SOV | SHL | SHR | BRA | WINT | WNL | WFLOAT | HALT
     ;
 
 operand
@@ -38,7 +38,7 @@ memory_address
     ;
 
 immediate
-    : HASH (INT | FLOAT)
+    : HASH ( '-'? (INT | FLOAT) )
     ;
 
 label
@@ -62,6 +62,7 @@ SEQ : 'SEQ';
 SNE : 'SNE';
 SLT : 'SLT';
 SGT : 'SGT';
+SGE : 'SGE';
 SLE : 'SLE';
 SOV : 'SOV';
 SHL : 'SHL';
@@ -69,6 +70,7 @@ SHR : 'SHR';
 
 BEQ : 'BEQ';
 BNE : 'BNE';
+BGE : 'BGE';
 BLT : 'BLT';
 BGT : 'BGT';
 BLE : 'BLE';
