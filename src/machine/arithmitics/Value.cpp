@@ -76,6 +76,7 @@ Value Value::operator++(int)
     return temp;         
 }
 
+
 template<typename IntOp, typename FloatOp, typename AddrOp>
 static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
                                IntOp intOp,
@@ -83,18 +84,29 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
 {
     Op_Results result;
 
+    if (lhs.getType() == TypeTag::UNDEFINED || rhs.getType() == TypeTag::UNDEFINED) {
+        throw std::runtime_error(" : Cannot operate on UNDEFINED value");
+    }
+
     if (lhs.getType() == TypeTag::ADDRESS && rhs.getType() == TypeTag::ADDRESS)
     {
-        uint32_t fRes = addrOp(lhs.getAddr(), rhs.getAddr());
-        result.val = Value(fRes);
-    }
+        uint32_t lhs_a = lhs.getAddr();
+        uint32_t rhs_a = rhs.getAddr();
         
-    if (lhs.getType() == TypeTag::UNDEFINED || rhs.getType() == TypeTag::UNDEFINED)
-        throw std::runtime_error(" : Cannot operate on UNDEFINED value");
+        uint32_t aRes = addrOp(lhs_a, rhs_a);
+        result.val = Value(aRes);
 
-    if (lhs.getType() == TypeTag::FLOAT || rhs.getType() == TypeTag::FLOAT)
+        result.cc.OV = 0; 
+        result.cc.EQ = (rhs_a == lhs_a);
+        result.cc.NE = (rhs_a != lhs_a);
+        result.cc.GT = (rhs_a > lhs_a);  
+        result.cc.LT = (rhs_a < lhs_a);  
+        result.cc.GE = (rhs_a >= lhs_a); 
+        result.cc.LE = (rhs_a <= lhs_a); 
+    }
+    // Case 2: Float operation
+    else if (lhs.getType() == TypeTag::FLOAT || rhs.getType() == TypeTag::FLOAT)
     {
-
         float lhs_f = (lhs.getType() == TypeTag::FLOAT) ? lhs.getFloat() : static_cast<float>(lhs.getInt());
         float rhs_f = (rhs.getType() == TypeTag::FLOAT) ? rhs.getFloat() : static_cast<float>(rhs.getInt());
 
@@ -109,6 +121,7 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
         result.cc.GE = (fRes >= 0.0f);
         result.cc.LE = (fRes <= 0.0f);
     }
+
     else if (lhs.getType() == TypeTag::INTEGER && rhs.getType() == TypeTag::INTEGER)
     {
         int32_t lhs_i = lhs.getInt();
@@ -116,7 +129,7 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
         int32_t iRes = intOp(lhs_i, rhs_i);
         result.val = Value(iRes);
 
-        result.cc.OV = 0;
+        result.cc.OV = 0; 
 
         result.cc.EQ = (iRes == 0);
         result.cc.NE = (iRes != 0);
@@ -131,6 +144,7 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
 
     return result;
 }
+
 
 
 Op_Results Value::operator+(const Value& rhs) const {
@@ -187,6 +201,39 @@ Op_Results Value::operator%(const Value& rhs) const {
             throw std::runtime_error(" : Modulo not defined for floats");
         }
         ,[](uint32_t a, uint32_t b){ return a%b; });
+}
+
+
+
+CC Value::operator<(const Value& rhs) const
+{
+    Op_Results reslts = rhs - *this;
+    return reslts.cc;
+}
+
+CC Value::operator<=(const Value& rhs) const
+{
+    Op_Results reslts = rhs - *this;
+    return reslts.cc;
+}
+
+CC Value::operator>(const Value& rhs) const
+{
+    Op_Results reslts = rhs - *this;
+    return reslts.cc;
+}
+
+CC Value::operator>=(const Value& rhs) const
+{
+    Op_Results reslts = rhs - *this;
+    return reslts.cc;
+}
+
+
+CC Value::operator==(const Value& rhs) const
+{
+    Op_Results reslts = rhs - *this;
+    return reslts.cc;
 }
 
 

@@ -13,7 +13,7 @@ class Memory
 {
     private:
 
-        size_t   _size                           ;
+        size_t   _size                          ;
         std::vector<std::unique_ptr<Value>> mem ;
 
     public:

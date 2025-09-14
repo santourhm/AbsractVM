@@ -24,6 +24,8 @@ void MUL::execute(VMState * vms)
 
         dst.get()->write(results.val);
 
+        vms->set_sCC(results.cc);
+
     }
     catch(const std::runtime_error& e)
     {

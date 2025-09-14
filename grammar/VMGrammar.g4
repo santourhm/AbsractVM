@@ -15,7 +15,7 @@ instruction
     ;
 
 opcode
-    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | BRA | WINT | WNL | WFLOAT | HALT
+    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | BNE | BLT | BGT | BLE | BOV  | SEQ | SNE | SLT | SGT | SLE | SOV | SHL | SHR | BRA | WINT | WNL | WFLOAT | HALT
     ;
 
 operand
@@ -25,7 +25,6 @@ operand
     | string_literal
     | label           
     ;
-
 string_literal
     : STRING_LITERAL
     ;
@@ -58,8 +57,23 @@ REM : 'REM' ;
 WSTR: 'WSTR';
 LOAD: 'LOAD';
 CMP : 'CMP';
-BEQ : 'BEQ';
 BRA : 'BRA';
+SEQ : 'SEQ';
+SNE : 'SNE';
+SLT : 'SLT';
+SGT : 'SGT';
+SLE : 'SLE';
+SOV : 'SOV';
+SHL : 'SHL';
+SHR : 'SHR';
+
+BEQ : 'BEQ';
+BNE : 'BNE';
+BLT : 'BLT';
+BGT : 'BGT';
+BLE : 'BLE';
+BOV : 'BOV';
+
 WINT: 'WINT';
 WNL : 'WNL';
 HALT : 'HALT';

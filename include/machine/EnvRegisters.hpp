@@ -29,7 +29,8 @@ class EnvRegisters
         Register *  getLB()  ;
         Register *  getSP()  ;
         Register *  getPC()  ;
-
+        CC       *  get_sCC();
+        void  set_sCC(CC CC_state);
 };
 
 

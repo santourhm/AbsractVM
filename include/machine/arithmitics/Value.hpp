@@ -41,8 +41,15 @@ class Value
         Op_Results operator/(const Value& rhs) const;
         Op_Results operator%(const Value& rhs) const;
         Op_Results operator*(const Value& rhs) const;
+        
         Value& operator++();
         Value operator++(int);
+
+        CC operator<(const Value& rhs) const;
+        CC operator<=(const Value& rhs) const;
+        CC operator>(const Value& rhs) const;
+        CC operator>=(const Value& rhs) const;
+        CC operator==(const Value& rhs) const;
 
         int32_t getInt() const;
         float getFloat() const;

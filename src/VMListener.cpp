@@ -10,6 +10,18 @@
 #include "QUO.hpp"
 #include "SUB.hpp"
 #include "BRA.hpp"
+#include "Bcc/BEQ.hpp"
+#include "Bcc/BNE.hpp"
+#include "Bcc/BLT.hpp"
+#include "Bcc/BGT.hpp"
+#include "Bcc/BLE.hpp"
+#include "Bcc/BOV.hpp"
+#include "Scc/SEQ.hpp"
+#include "Scc/SNE.hpp"
+#include "Scc/SLT.hpp"
+#include "Scc/SGT.hpp"
+#include "Scc/SLE.hpp"
+#include "Scc/SOV.hpp"
 #include "HALT.hpp"
 #include "WFLOAT.hpp"
 #include <memory>
@@ -22,6 +34,7 @@
 #include "Value.hpp"
 #include "machine/EnvRegisters.hpp"
 #include "Label.hpp"
+#include "CMP.hpp"
 
 VMListener::VMListener(VMState * vms)  : ProgATS(std::make_unique<Program>()), vms(vms), nb_intsructions(0) {}
 
@@ -201,6 +214,112 @@ void VMListener::enterInstruction(VMGrammarParser::InstructionContext *ctx)
             inst = std::make_unique<BRA>();
             inst->addOperand(parseLabel_Operand(ops[0]));
         }
+        else if(opcodeCtx->CMP())
+        {
+            if (numOperands != 2) 
+                throw std::runtime_error(" : CMP needs exactly 2 operands");
+
+            inst = std::make_unique<CMP>();
+            createDval_RmInstruction(inst.get(),ops,line);
+        }
+        else if(opcodeCtx->BEQ())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BEQ needs exactly 1 operands");
+
+            inst = std::make_unique<BEQ>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->BGT())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BGT needs exactly 1 operands");
+
+            inst = std::make_unique<BGT>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->BLE())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BLE needs exactly 1 operands");
+
+            inst = std::make_unique<BLE>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->BLT())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BLT needs exactly 1 operands");
+
+            inst = std::make_unique<BLT>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->BNE())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BNE needs exactly 1 operands");
+
+            inst = std::make_unique<BNE>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->BOV())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : BOV needs exactly 1 operands");
+
+            inst = std::make_unique<BOV>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+
+        else if(opcodeCtx->SEQ())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SEQ needs exactly 1 operands");
+
+            inst = std::make_unique<SEQ>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->SGT())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SGT needs exactly 1 operands");
+
+            inst = std::make_unique<SGT>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->SLE())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SLE needs exactly 1 operands");
+
+            inst = std::make_unique<SLE>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->SLT())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SLT needs exactly 1 operands");
+
+            inst = std::make_unique<SLT>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->SNE())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SNE needs exactly 1 operands");
+
+            inst = std::make_unique<SNE>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        else if(opcodeCtx->SOV())
+        {
+            if (numOperands != 1) 
+                throw std::runtime_error(" : SOV needs exactly 1 operands");
+
+            inst = std::make_unique<SOV>();
+            inst->addOperand(parseLabel_Operand(ops[0]));
+        }
+        
     } 
     catch (const std::runtime_error &e) {
         std::cerr << "Semantic Error on line " 
