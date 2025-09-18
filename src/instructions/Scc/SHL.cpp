@@ -49,3 +49,8 @@ void SHL::execute(VMState * vms)
     }
     
 }
+
+void SHL::debug(VMState * vms) 
+{
+    std::cout << "SHL" << std::endl;
+}

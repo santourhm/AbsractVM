@@ -17,3 +17,8 @@ void WFLOAT::execute(VMState * vms)
       }
       std::cout << v.getFloat() ; 
 }
+
+void WFLOAT::debug(VMState * vms) 
+{
+    std::cout << "WFLOAT" << std::endl;
+}

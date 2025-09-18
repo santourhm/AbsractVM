@@ -59,3 +59,8 @@ void BGT::execute(VMState * vms)
     }
     
 }
+
+void BGT::debug(VMState * vms) 
+{
+    std::cout << "BGT" << std::endl;
+}

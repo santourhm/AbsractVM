@@ -1,0 +1,59 @@
+; start main program
+; Main program
+; Beginning of main instructions:
+	LOAD #0, R2
+	STORE R2, 1(GB)
+	LOAD #1, R2
+	LOAD #0, R3
+	CMP R3, R2
+	BLT else.0
+	WSTR "ok"
+	WNL
+	BRA endif.1
+else.0:
+	WSTR "erreur"
+	WNL
+endif.1:
+while_test.2:
+	LOAD 1(GB), R2
+	LOAD #5, R3
+	CMP R3, R2
+	BGT while_end.3
+	LOAD 1(GB), R1
+	WINT
+	WNL
+	LOAD 1(GB), R2
+	LOAD #1, R3
+	ADD R3, R2
+	STORE R2, 1(GB)
+	LOAD #1, R3
+	LOAD #0, R4
+	CMP R4, R3
+	BLE else.4
+	WSTR "first condition"
+	WNL
+	BRA endif.5
+else.4:
+endif.5:
+	LOAD #0, R3
+	LOAD #1, R4
+	CMP R4, R3
+	BLE else.6
+	WSTR "second condition"
+	WNL
+	BRA endif.7
+else.6:
+endif.7:
+	LOAD #2, R3
+	LOAD #2, R4
+	CMP R4, R3
+	BLT else.8
+	WSTR "third condition"
+	WNL
+	BRA endif.9
+else.8:
+endif.9:
+	BRA while_test.2
+while_end.3:
+	HALT
+; end main program

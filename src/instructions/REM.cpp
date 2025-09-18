@@ -32,3 +32,8 @@ void REM::execute(VMState * vms)
         std::cerr << "Error" << e.what() << '\n';
     }
 }
+
+void REM::debug(VMState * vms) 
+{
+    std::cout << "REM" << std::endl;
+}

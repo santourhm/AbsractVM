@@ -59,3 +59,8 @@ void BEQ::execute(VMState * vms)
     }
     
 }
+
+void BEQ::debug(VMState * vms) 
+{
+    std::cout << "BEQ" << std::endl;
+}

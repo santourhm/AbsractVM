@@ -1,0 +1,26 @@
+
+   
+{   
+    int i = 0;
+    int c = 1;        
+    if(i == 0){
+      println(i);
+    
+}
+    if(c!=2){
+     println("c is not 1");
+     }
+    else{
+
+       i = 1;
+       println(i);    
+}
+   
+    while(i!= 5){
+      println(i);
+      i =i + 1;   
+    }
+}
+
+
+

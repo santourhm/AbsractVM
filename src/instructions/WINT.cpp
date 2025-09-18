@@ -12,8 +12,13 @@ void WINT::execute(VMState * vms)
       Value v  =  R1->RegisterGetValue();
       if(v.getType() != TypeTag::INTEGER)
       {
-            throw std::runtime_error(": WINT print for integers only");
+            throw std::runtime_error(": WINT print for integers only, R1 is " + v.get_str_type() + " type" );
             return;
       }
       std::cout << v.getInt() ; 
+}
+
+void WINT::debug(VMState * vms) 
+{
+    std::cout << "WINT" << std::endl;
 }

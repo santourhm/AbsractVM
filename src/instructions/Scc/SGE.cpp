@@ -40,3 +40,8 @@ void SGE::execute(VMState * vms)
     }
     
 }
+
+void SGE::debug(VMState * vms) 
+{
+    std::cout << "SGE" << std::endl;
+}

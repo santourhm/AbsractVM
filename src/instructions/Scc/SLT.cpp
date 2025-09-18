@@ -40,3 +40,8 @@ void SLT::execute(VMState * vms)
     }
     
 }
+
+void SLT::debug(VMState * vms) 
+{
+    std::cout << "SLT" << std::endl;
+}

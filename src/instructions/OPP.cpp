@@ -31,3 +31,10 @@ void OPP::execute(VMState * vms)
         std::cerr << "Error" << e.what() << '\n';
     }
 }
+
+
+
+void OPP::debug(VMState * vms) 
+{
+    std::cout << "OPP" << std::endl;
+}

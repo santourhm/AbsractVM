@@ -59,3 +59,8 @@ void BLT::execute(VMState * vms)
     }
     
 }
+
+void BLT::debug(VMState * vms) 
+{
+    std::cout << "BLT" << std::endl;
+}

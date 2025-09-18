@@ -12,6 +12,7 @@ class SEQ  : public  IInstruction
 
         ~SEQ() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

@@ -12,6 +12,7 @@ class BEQ  : public  IInstruction
 
         ~BEQ() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

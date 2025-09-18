@@ -31,3 +31,8 @@ void ADD::execute(VMState * vms)
     
     
 }
+
+void ADD::debug(VMState * vms) 
+{
+    std::cout << "ADD" << std::endl;
+}

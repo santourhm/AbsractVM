@@ -1,0 +1,12 @@
+; start main program
+; Main program
+; Beginning of main instructions:
+	RFLOAT
+	LOAD R1, R2
+	STORE R2, 1(GB)
+	WSTR "your float is  : "
+	LOAD 1(GB), R1
+	WFLOAT
+	WNL
+	HALT
+; end main program

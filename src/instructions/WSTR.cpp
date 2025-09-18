@@ -27,3 +27,8 @@ void WSTR::execute(VMState* vms)
     std::cout << str_val.substr(start);
 
 }
+
+void WSTR::debug(VMState * vms) 
+{
+    std::cout << "WSTR" << std::endl;
+}

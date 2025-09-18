@@ -49,3 +49,8 @@ void SHR::execute(VMState * vms)
     }
     
 }
+
+void SHR::debug(VMState * vms) 
+{
+    std::cout << "SHR" << std::endl;
+}

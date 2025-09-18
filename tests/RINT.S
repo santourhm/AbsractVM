@@ -1,0 +1,3 @@
+    RINT
+    WSTR "HELLO"
+    HALT

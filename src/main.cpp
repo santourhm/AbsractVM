@@ -51,7 +51,7 @@ int main(int argc, const char* argv[]) {
         
     }
     catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        std::cerr << std::string("Error at ") + __FILE__ + ": " + std::to_string(__LINE__) << e.what() << std::endl;
         return 1;
     }
 

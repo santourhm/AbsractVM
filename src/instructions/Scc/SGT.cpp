@@ -40,3 +40,8 @@ void SGT::execute(VMState * vms)
     }
     
 }
+
+void SGT::debug(VMState * vms) 
+{
+    std::cout << "SGT" << std::endl;
+}

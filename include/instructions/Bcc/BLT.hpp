@@ -12,6 +12,7 @@ class BLT  : public  IInstruction
 
         ~BLT() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

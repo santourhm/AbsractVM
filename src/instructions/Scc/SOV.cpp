@@ -39,3 +39,8 @@ void SOV::execute(VMState * vms)
     }
     
 }
+
+void SOV::debug(VMState * vms) 
+{
+    std::cout << "SOV" << std::endl;
+}

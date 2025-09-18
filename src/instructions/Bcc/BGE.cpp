@@ -28,7 +28,7 @@ void BGE::execute(VMState * vms)
             return;
         }
 
-        if(!vms->get_sCC()->EQ)
+        if(!vms->get_sCC()->GE)
         {
             return;
         }
@@ -58,4 +58,9 @@ void BGE::execute(VMState * vms)
         std::cerr << "Error" << e.what() << '\n';
     }
     
+}
+
+void BGE::debug(VMState * vms) 
+{
+    std::cout << "BGE" << std::endl;
 }

@@ -1,0 +1,47 @@
+; start main program
+; Main program
+; Beginning of main instructions:
+	LOAD #0, R2
+	STORE R2, 1(GB)
+	LOAD #1, R2
+	STORE R2, 2(GB)
+	LOAD 1(GB), R2
+	LOAD #0, R3
+	CMP R3, R2
+	BNE else_0
+	LOAD 1(GB), R1
+	WINT
+	WNL
+	BRA endif_1
+else_0:
+endif_1:
+	LOAD 2(GB), R3
+	LOAD #2, R2
+	CMP R2, R3
+	BEQ else_2
+	WSTR "c is not 1"
+	WNL
+	BRA endif_3
+else_2:
+	LOAD #1, R2
+	STORE R2, 1(GB)
+	LOAD 1(GB), R1
+	WINT
+	WNL
+endif_3:
+	BRA while_cond_4
+while_start_5:
+	LOAD 1(GB), R1
+	WINT
+	WNL
+	LOAD 1(GB), R3
+	LOAD #1, R4
+	ADD R4, R3
+	STORE R3, 1(GB)
+while_cond_4:
+	LOAD 1(GB), R4
+	LOAD #5, R5
+	CMP R5, R4
+	BNE while_start_5
+	HALT
+; end main program

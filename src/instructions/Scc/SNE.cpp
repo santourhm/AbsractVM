@@ -40,3 +40,8 @@ void SNE::execute(VMState * vms)
     }
     
 }
+
+void SNE::debug(VMState * vms) 
+{
+    std::cout << "SNE" << std::endl;
+}

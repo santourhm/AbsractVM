@@ -12,6 +12,7 @@ class WSTR : public IInstruction
 
         WSTR() = default;
         void  execute(VMState * vms)  override;
+        void debug(VMState * vms) override;
 };
 
 

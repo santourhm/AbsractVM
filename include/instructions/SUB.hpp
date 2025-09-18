@@ -12,6 +12,7 @@ class SUB  : public  IInstruction
 
         ~SUB() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

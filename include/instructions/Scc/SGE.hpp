@@ -12,6 +12,7 @@ class SGE  : public  IInstruction
 
         ~SGE() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

@@ -12,6 +12,7 @@ class SHL  : public  IInstruction
 
         ~SHL() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

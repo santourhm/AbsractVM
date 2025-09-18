@@ -1,0 +1,12 @@
+{
+   
+   int i = 1;
+   int c = 2;
+
+
+  if(i == 1 || c == 1){
+     print("hey i'm working correctly ");
+   }
+   else{
+     println("i'm sick :[ ");}
+}

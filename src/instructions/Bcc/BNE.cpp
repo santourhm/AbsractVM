@@ -58,3 +58,8 @@ void BNE::execute(VMState * vms)
     }
     
 }
+
+void BNE::debug(VMState * vms) 
+{
+    std::cout << "BNE" << std::endl;
+}

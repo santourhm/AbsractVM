@@ -15,7 +15,11 @@ instruction
     ;
 
 opcode
-    : ADD | MUL | QUO | OPP | REM | SUB | WSTR | LOAD | CMP | BEQ | BNE | BLT | BGT | BGE | BLE | BOV  | SEQ | SNE | SLT | SGT  | SGE | SLE | SOV | SHL | SHR | BRA | WINT | WNL | WFLOAT | HALT
+    : ADD | MUL | QUO | DIV | OPP | REM | SUB | WSTR | LOAD | CMP | 
+      BEQ | BNE | BLT | BGT | BGE | BLE | BOV  | SEQ | SNE | SLT 
+      | SGT  | SGE | SLE | SOV | SHL | SHR | BRA | WINT | WNL | WFLOAT | HALT 
+      | STORE |  PUSH | POP |  LEA | PEA | BSR | RTS | SUBSP | ADDSP | RINT | RFLOAT | ERROR
+      | TSTO | NEW | WTYPE | WADDR
     ;
 
 operand
@@ -30,7 +34,7 @@ string_literal
     ;
     
 register
-    : RREGISTER | GBREGISTER | LBREGISTER
+    : RREGISTER | GBREGISTER | LBREGISTER | SPREGISTER
     ;
 
 memory_address
@@ -38,7 +42,7 @@ memory_address
     ;
 
 immediate
-    : HASH ( '-'? (INT | FLOAT) )
+    : HASH ( MINUS? (INT | FLOAT) | VALLNULL)  
     ;
 
 label
@@ -51,11 +55,13 @@ label
 OPP : 'OPP';
 MUL : 'MUL';
 QUO : 'QUO';
+DIV : 'DIV';
 ADD : 'ADD';
 SUB : 'SUB';
 REM : 'REM' ; 
 WSTR: 'WSTR';
 LOAD: 'LOAD';
+NEW : 'NEW' ;
 CMP : 'CMP';
 BRA : 'BRA';
 SEQ : 'SEQ';
@@ -76,10 +82,30 @@ BGT : 'BGT';
 BLE : 'BLE';
 BOV : 'BOV';
 
+BSR : 'BSR';
+RTS : 'RTS';
+
+STORE : 'STORE';
+PUSH  : 'PUSH' ;
+POP   : 'POP'  ;
+LEA   : 'LEA'  ;
+PEA   : 'PEA'  ;
+
 WINT: 'WINT';
 WNL : 'WNL';
 HALT : 'HALT';
 WFLOAT : 'WFLOAT';
+WTYPE : 'WTYPE';
+WADDR : 'WADDR';
+
+SUBSP  : 'SUBSP';
+ADDSP  : 'ADDSP';
+TSTO   : 'TSTO' ;
+RINT    :  'RINT';
+RFLOAT  :  'RFLOAT';
+
+ERROR   : 'ERROR';
+
 
 COMMA  : ',';
 OPARENT: '(';
@@ -92,10 +118,12 @@ COLON  : ':';
 RREGISTER      : 'R' INT;
 GBREGISTER     : 'GB';
 LBREGISTER     : 'LB';
+SPREGISTER     : 'SP';
+VALLNULL           : 'null';
 STRING_LITERAL: '"' STRING '"';
 INT           : [0-9]+;
-ID            : [a-zA-Z_] [a-zA-Z0-9_.]*;
-FLOAT         : INT '.' INT ;
+FLOAT: [0-9]+ '.' [0-9]+;
+ID: [a-zA-Z_] [a-zA-Z0-9_.]*;
 
 fragment STRING        : ( ~["\\] | '\\' . )*;
 

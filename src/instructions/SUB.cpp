@@ -32,3 +32,8 @@ void SUB::execute(VMState * vms)
         std::cerr << "Error" << e.what() << '\n';
     }
 }
+
+void SUB::debug(VMState * vms) 
+{
+    std::cout << "SUB" << std::endl;
+}

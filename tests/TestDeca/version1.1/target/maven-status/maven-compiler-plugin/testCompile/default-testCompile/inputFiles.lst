@@ -1,0 +1,9 @@
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/context/ManualTestContext.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/context/TestPlusAdvanced.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/context/TestPlusPlain.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/context/TestPlusWithoutMock.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/syntax/ManualTestLex.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/syntax/ManualTestSynt.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/tools/ManualTestSymbol.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/tools/SymbolTest.java
+/home/santourh/ensimag/GL/Projet_GL/src/test/java/fr/ensimag/deca/tree/ManualTestInitialGencode.java

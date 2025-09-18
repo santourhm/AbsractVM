@@ -13,6 +13,7 @@ class WFLOAT : public IInstruction
 
         WFLOAT() = default;
         void execute(VMState * vms) override ;
+        void debug(VMState * vms) override;
 };
 
 

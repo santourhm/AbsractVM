@@ -12,6 +12,7 @@ class SHR  : public  IInstruction
 
         ~SHR() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

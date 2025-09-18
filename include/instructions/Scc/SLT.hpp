@@ -12,6 +12,7 @@ class SLT  : public  IInstruction
 
         ~SLT() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

@@ -20,6 +20,7 @@ class IInstruction
         
         virtual ~IInstruction() = default;
         virtual void execute(VMState * vms) = 0 ;
+        virtual void debug(VMState * vms) = 0;
 };
 
 

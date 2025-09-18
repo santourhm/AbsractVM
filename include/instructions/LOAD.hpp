@@ -13,6 +13,7 @@ class LOAD : public IInstruction
         
         void execute(VMState * vms) override;
 
+        void debug(VMState * vms) override;
 };
 
 

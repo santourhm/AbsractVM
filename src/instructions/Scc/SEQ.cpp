@@ -40,3 +40,8 @@ void SEQ::execute(VMState * vms)
     }
     
 }
+
+void SEQ::debug(VMState * vms) 
+{
+    std::cout << "SEQ" << std::endl;
+}

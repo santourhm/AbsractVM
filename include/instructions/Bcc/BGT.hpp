@@ -12,6 +12,7 @@ class BGT  : public  IInstruction
 
         ~BGT() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

@@ -34,3 +34,8 @@ void LOAD::execute(VMState * vms)
     
 
 }
+
+void LOAD::debug(VMState * vms) 
+{
+    std::cout << "LOAD" << std::endl;
+}

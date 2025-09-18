@@ -59,3 +59,8 @@ void BLE::execute(VMState * vms)
     }
     
 }
+
+void BLE::debug(VMState * vms) 
+{
+    std::cout << "BLE" << std::endl;
+}

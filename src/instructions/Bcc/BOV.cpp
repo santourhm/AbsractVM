@@ -59,3 +59,8 @@ void BOV::execute(VMState * vms)
     }
     
 }
+
+void BOV::debug(VMState * vms) 
+{
+    std::cout << "BOV" << std::endl;
+}

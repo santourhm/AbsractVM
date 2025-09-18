@@ -12,6 +12,7 @@ class CMP  : public  IInstruction
 
         ~CMP() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

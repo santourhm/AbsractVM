@@ -1,0 +1,24 @@
+{
+    int x = 10;
+    int y = 5;
+    boolean a = true;
+    boolean b = false;
+    
+    if ((x > 8 && y < 6) || (a && !b)) {
+        println("First block: ", x);  // Should print
+    }
+    
+    while ((x > 0 && y > 0) && (a || b)) {
+        if (x % 2 == 0 && (y % 2 == 0 || a)) {
+            println("Loop block 1: ", x, ", ", y);
+        } else if (!b && x > y) {
+            println("Loop block 2: ", x, ", ", y);
+        }
+        x = x - 1;
+        y = y - 1;
+        if (x == 5) {
+            a = false;
+        }
+    }
+    println("Final: ", x, ", ", y);
+}

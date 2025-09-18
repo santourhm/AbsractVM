@@ -12,6 +12,7 @@ class BGE  : public  IInstruction
 
         ~BGE() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

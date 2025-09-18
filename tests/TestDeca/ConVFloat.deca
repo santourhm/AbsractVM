@@ -1,0 +1,11 @@
+{
+
+    int i = 3;
+    float f = 3.1;
+    float c = 3.1;
+    f = i;  
+
+    print(f);  
+    
+}
+

@@ -10,10 +10,13 @@
 
 class EnvRegisters;
 
+class Memory;
+
 class VMState
 {
     std::unique_ptr<CC>  s_CC;
     std::unique_ptr<EnvRegisters> Env_Registers ;
+    std::unique_ptr<Memory> memr ;
     std::unordered_map<std::string, Value> symbolTable;
 
 
@@ -24,6 +27,7 @@ class VMState
 
         bool  not_halt ;
         EnvRegisters * getEnv_Registers() ;
+        Memory *    getMemory();
         std::unordered_map<std::string, Value>& getSymbol_Table() ;
         
         CC * get_sCC();

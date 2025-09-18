@@ -32,3 +32,8 @@ void MUL::execute(VMState * vms)
         std::cerr << "Error" << e.what() << '\n';
     }
 }
+
+void MUL::debug(VMState * vms) 
+{
+    std::cout << "MUL" << std::endl;
+}

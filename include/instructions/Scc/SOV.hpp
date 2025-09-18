@@ -12,6 +12,7 @@ class SOV  : public  IInstruction
 
         ~SOV() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

@@ -13,6 +13,7 @@ class WNL : public IInstruction
 
         WNL() = default;
         void execute(VMState * vms) override ;
+        void debug(VMState * vms) override;
 };
 
 

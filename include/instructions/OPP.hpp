@@ -12,6 +12,7 @@ class OPP  : public  IInstruction
 
         ~OPP() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

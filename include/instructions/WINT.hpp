@@ -13,6 +13,7 @@ class WINT : public IInstruction
 
         WINT() = default;
         void execute(VMState * vms) override ;
+        void debug(VMState * vms) override;
 };
 
 

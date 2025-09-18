@@ -43,12 +43,18 @@ void Program::executeProgram(VMState* vms)
         int i = 0;
         EnvRegisters * envReg = vms->getEnv_Registers();
         Register * PC =  envReg->getPC();
+        Register * SP  = envReg->getSP();
+
         uint32_t   pc = 0x0;
         PC->RegisterSetValue(Value(pc));
         int size = instructions.size();
-     
+        
         while(vms->not_halt)
-        {
+        {                 
+        
+        //#ifdef DEBUG_MODE
+                instructions[PC->RegisterGetValue().getAddr()]->debug(vms);
+        //#endif
 
                 instructions[PC->RegisterGetValue().getAddr()]->execute(vms);
 
@@ -68,6 +74,7 @@ void Program::executeProgram(VMState* vms)
                 }
 
                 PC->RegisterSetValue(V_PC); 
+                std::cout << "SP = " << SP->RegisterGetValue().getAddr() << std::endl; 
         }
 
 }

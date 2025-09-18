@@ -1,0 +1,25 @@
+; start main program
+; Main program
+; Beginning of main instructions:
+	LOAD #1, R2
+	STORE R2, 1(GB)
+	LOAD #2, R2
+	STORE R2, 2(GB)
+	LOAD 1(GB), R2
+	LOAD #1, R3
+	CMP R3, R2
+	BEQ or_next_2
+	BRA else_0
+or_next_2:
+	LOAD 2(GB), R3
+	LOAD #1, R2
+	CMP R2, R3
+	BEQ else_0
+	WSTR "hey i'm working correctly "
+	BRA endif_1
+else_0:
+	WSTR "i'm sick :[ "
+	WNL
+endif_1:
+	HALT
+; end main program

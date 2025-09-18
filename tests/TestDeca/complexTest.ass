@@ -1,0 +1,133 @@
+; start main program
+; Main program
+; Beginning of main instructions:
+	LOAD #10, R2
+	STORE R2, 1(GB)
+	LOAD #5, R2
+	STORE R2, 2(GB)
+	LOAD #1, R2
+	STORE R2, 3(GB)
+	LOAD #0x0.0p0, R2
+	STORE R2, 4(GB)
+	LOAD #0, R2
+	STORE R2, 5(GB)
+	LOAD #0, R2
+	STORE R2, 6(GB)
+	LOAD 1(GB), R2
+	LOAD 2(GB), R3
+	ADD R3, R2
+	FLOAT R2, R2
+	STORE R2, 4(GB)
+	WSTR "Addition: "
+	LOAD 4(GB), R1
+	WFLOAT
+	WNL
+	LOAD 1(GB), R3
+	LOAD 2(GB), R4
+	SUB R4, R3
+	FLOAT R3, R3
+	STORE R3, 4(GB)
+	WSTR "Subtraction: "
+	LOAD 4(GB), R1
+	WFLOAT
+	WNL
+	LOAD 1(GB), R4
+	LOAD 2(GB), R5
+	MUL R5, R4
+	FLOAT R4, R4
+	STORE R4, 4(GB)
+	WSTR "Multiplication: "
+	LOAD 4(GB), R1
+	WFLOAT
+	WNL
+	LOAD 1(GB), R5
+	LOAD 2(GB), R6
+	CMP #0, R6
+	BEQ div_by_zero_error
+	QUO R6, R5
+div_by_zero_error:
+	FLOAT R5, R5
+	STORE R5, 4(GB)
+	WSTR "Division: "
+	LOAD 4(GB), R1
+	WFLOAT
+	WNL
+while_test.0:
+	LOAD 1(GB), R1
+	LOAD #0, R6
+	CMP R6, R1
+	SGE R1
+	BEQ short_circuit.3
+	LOAD 2(GB), R1
+	LOAD #0, R6
+	CMP R6, R1
+	SGE R1
+	BRA end.bool.2
+short_circuit.3:
+	LOAD #0, R1
+end.bool.2:
+	CMP #0, R1
+	BEQ while_end.1
+	LOAD 1(GB), R6
+	LOAD #2, R8
+	REM R8, R6
+	LOAD #0, R7
+	CMP R7, R6
+	SEQ R6
+	STORE R6, 5(GB)
+	LOAD 2(GB), R7
+	LOAD #2, R9
+	REM R9, R7
+	LOAD #0, R8
+	CMP R8, R7
+	SEQ R7
+	STORE R7, 6(GB)
+	LOAD 5(GB), R1
+	BNE short_circuit.7
+	LOAD 6(GB), R1
+	BRA end.bool.6
+short_circuit.7:
+	LOAD #1, R1
+end.bool.6:
+	CMP #0, R1
+	BEQ else.5
+	WSTR "Either x or y is even"
+	WNL
+	LOAD 4(GB), R8
+	LOAD #0x1.0p-1, R9
+	ADD R9, R8
+	STORE R8, 4(GB)
+	BRA endif.4
+else.5:
+	WSTR "Both x and y are odd"
+	WNL
+	LOAD 4(GB), R9
+	LOAD #0x1.0p-1, R10
+	SUB R10, R9
+	STORE R9, 4(GB)
+endif.4:
+	LOAD 1(GB), R10
+	LOAD #1, R11
+	SUB R11, R10
+	STORE R10, 1(GB)
+	LOAD 2(GB), R11
+	LOAD #1, R12
+	SUB R12, R11
+	STORE R11, 2(GB)
+	WSTR "Current values: x = "
+	LOAD 1(GB), R1
+	WINT
+	WSTR ", y = "
+	LOAD 2(GB), R1
+	WINT
+	WNL
+	BRA while_test.0
+while_end.1:
+	WSTR "Final result: "
+	LOAD 4(GB), R1
+	WFLOAT
+	WNL
+	WSTR "Test completed"
+	WNL
+	HALT
+; end main program

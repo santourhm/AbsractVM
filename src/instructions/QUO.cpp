@@ -20,6 +20,12 @@ void QUO::execute(VMState * vms)
         Value srcValue = src.get()->read();
         Value dstValue = dst.get()->read();
 
+        if(srcValue.getType() != TypeTag::INTEGER  && dstValue.getType() != TypeTag::INTEGER )
+        {
+            throw std::runtime_error("QUO given arg type are not pure integers");
+            return;
+        }
+
         Op_Results results = dstValue/srcValue ;
 
         dst.get()->write(results.val);
@@ -29,6 +35,11 @@ void QUO::execute(VMState * vms)
     }
     catch(const std::runtime_error& e)
     {
-        std::cerr << "Error" << e.what() << '\n';
+        std::cerr << "Error :" << e.what() << '\n';
     }
+}
+
+void QUO::debug(VMState * vms) 
+{
+    std::cout << "QUO" << std::endl;
 }

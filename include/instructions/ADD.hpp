@@ -12,6 +12,7 @@ class ADD  : public  IInstruction
 
         ~ADD() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

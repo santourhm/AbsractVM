@@ -12,6 +12,7 @@ class BLE  : public  IInstruction
 
         ~BLE() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

@@ -12,6 +12,7 @@ class BOV  : public  IInstruction
 
         ~BOV() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

@@ -1,0 +1,14 @@
+{
+
+  int c = 1;
+   if(c == 1){
+
+    println(c);
+  }else if(c == 2){
+    println("Not C");
+  }
+  else{
+    println("i'm else");
+}
+  
+}

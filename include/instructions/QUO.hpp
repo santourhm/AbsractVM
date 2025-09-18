@@ -12,6 +12,7 @@ class QUO  : public  IInstruction
 
         ~QUO() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

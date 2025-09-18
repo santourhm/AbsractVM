@@ -12,6 +12,7 @@ class MUL  : public  IInstruction
 
         ~MUL() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

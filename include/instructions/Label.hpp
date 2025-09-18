@@ -11,5 +11,6 @@ class Label : public IInstruction
 
         virtual void execute(VMState * vms)  ;
 
+        void debug(VMState * vms) override;
 };
 

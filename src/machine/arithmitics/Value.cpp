@@ -5,9 +5,10 @@
 #include "Op_Results.hpp"
 
 
-Value::Value()
+Value::Value() : data(std::monostate{})
 {
     this->type = TypeTag::UNDEFINED;
+    
 }
 
 Value::Value(int32_t val)
@@ -23,9 +24,9 @@ Value::Value(float val)
 }
 
 
-Value::Value(uint32_t val)
+Value::Value(uint32_t val,TypeTag t)
 {
-    this->type = TypeTag::ADDRESS;
+    this->type = t;
     this->data = val;
 }
 
@@ -69,6 +70,36 @@ Value& Value::operator++()
     return *this;
 }
 
+Value& Value::operator--()
+{
+
+    switch (type) 
+    {
+        case TypeTag::INTEGER: 
+        {
+            int32_t& val = std::get<int32_t>(data);
+            --val;
+            break;
+        }
+        case TypeTag::FLOAT: 
+        {
+            float& val = std::get<float>(data);
+            --val;
+            break;
+        }
+        case TypeTag::ADDRESS: 
+        {
+            uint32_t& val = std::get<uint32_t>(data);
+            --val;
+            break;
+        }
+        default:
+            throw std::runtime_error("Increment not supported for this type");
+    }
+
+    return *this;
+}
+
 Value Value::operator++(int)
 {
     Value temp = *this;  
@@ -76,6 +107,12 @@ Value Value::operator++(int)
     return temp;         
 }
 
+Value Value::operator--(int)
+{
+    Value temp = *this;  
+    --(*this);           
+    return temp;         
+}
 
 template<typename IntOp, typename FloatOp, typename AddrOp>
 static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
@@ -84,25 +121,40 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
 {
     Op_Results result;
 
-    if (lhs.getType() == TypeTag::UNDEFINED || rhs.getType() == TypeTag::UNDEFINED) {
+    if (lhs.getType() == TypeTag::UNDEFINED || rhs.getType() == TypeTag::UNDEFINED) 
+    {
         throw std::runtime_error(" : Cannot operate on UNDEFINED value");
     }
 
-    if (lhs.getType() == TypeTag::ADDRESS && rhs.getType() == TypeTag::ADDRESS)
+   if (lhs.getType() == TypeTag::ADDRESS || lhs.getType() == TypeTag::NULL_ADDR ||
+        rhs.getType() == TypeTag::ADDRESS || rhs.getType() == TypeTag::NULL_ADDR)
     {
-        uint32_t lhs_a = lhs.getAddr();
-        uint32_t rhs_a = rhs.getAddr();
-        
-        uint32_t aRes = addrOp(lhs_a, rhs_a);
-        result.val = Value(aRes);
+        uint32_t lhs_val = 0;
+        uint32_t rhs_val = 0;
 
-        result.cc.OV = 0; 
-        result.cc.EQ = (rhs_a == lhs_a);
-        result.cc.NE = (rhs_a != lhs_a);
-        result.cc.GT = (rhs_a > lhs_a);  
-        result.cc.LT = (rhs_a < lhs_a);  
-        result.cc.GE = (rhs_a >= lhs_a); 
-        result.cc.LE = (rhs_a <= lhs_a); 
+
+        if (lhs.getType() == TypeTag::ADDRESS) lhs_val = lhs.getAddr();
+        else if (lhs.getType() == TypeTag::NULL_ADDR) lhs_val = 0;
+        else if (lhs.getType() == TypeTag::INTEGER) lhs_val = static_cast<uint32_t>(lhs.getInt());
+        else throw std::runtime_error(" : Unsupported lhs type for Address/Null arithmetic");
+
+        if (rhs.getType() == TypeTag::ADDRESS) rhs_val = rhs.getAddr();
+        else if (rhs.getType() == TypeTag::NULL_ADDR) rhs_val = 0;
+        else if (rhs.getType() == TypeTag::INTEGER) rhs_val = static_cast<uint32_t>(rhs.getInt());
+        else throw std::runtime_error(" : Unsupported rhs type for Address/Null arithmetic");
+
+        uint32_t aRes = addrOp(lhs_val, rhs_val);
+
+        result.val = Value(aRes, TypeTag::ADDRESS); 
+
+        result.cc.OV = 0;
+        result.cc.EQ = (aRes == 0);
+        result.cc.NE = (aRes != 0);
+        result.cc.GT = (aRes > 0);
+        result.cc.LT = false;
+        result.cc.GE = true;
+        result.cc.LE = (aRes == 0);
+        result.cc.NG = (aRes < 0);
     }
     // Case 2: Float operation
     else if (lhs.getType() == TypeTag::FLOAT || rhs.getType() == TypeTag::FLOAT)
@@ -120,6 +172,8 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
         result.cc.LT = (fRes < 0.0f);
         result.cc.GE = (fRes >= 0.0f);
         result.cc.LE = (fRes <= 0.0f);
+        result.cc.NG = (fRes < 0);
+
     }
 
     else if (lhs.getType() == TypeTag::INTEGER && rhs.getType() == TypeTag::INTEGER)
@@ -137,6 +191,8 @@ static Op_Results arithmeticOp(const Value& lhs, const Value& rhs,
         result.cc.LT = (iRes < 0);
         result.cc.GE = (iRes >= 0);
         result.cc.LE = (iRes <= 0);
+        result.cc.NG = (iRes < 0);
+
     }
     else {
         throw std::runtime_error(" : Unsupported types for arithmetic operation");
@@ -241,6 +297,30 @@ int32_t Value::getInt() const { return std::get<int32_t>(data); }
 
 float Value::getFloat() const { return std::get<float>(data); }
 
-uint32_t Value::getAddr() const { return std::get<uint32_t>(data); }
+uint32_t Value::getAddr() const 
+{ 
+    return std::get<uint32_t>(data); 
+}
 
 std::string Value::getStr() const { return std::get<std::string>(data); }
+
+std::string Value::get_str_type()
+{
+      switch (this->type)
+      {
+            case TypeTag::ADDRESS:
+                  
+                  return std::string("ADDRESS");
+
+            case TypeTag::UNDEFINED:
+                  
+                  return std::string("UNDEFINED");
+            case TypeTag::NULL_ADDR:
+                  
+                  return std::string("NULL_ADDR");
+
+            default:
+                  break;
+      }
+      return std::string("UKNOWN");
+}

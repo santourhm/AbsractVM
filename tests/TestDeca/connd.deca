@@ -1,0 +1,39 @@
+// Description:
+//    tests conditionnelle
+//
+// Resultats:
+//    ok
+// 
+// Historique:
+//    cree le 01/01/2025
+
+{
+
+   int i = 0;
+   if (1 >= 0) {
+      println("ok"); 
+   } else { 
+      println("erreur");
+   }
+   while(i<= 5){
+      
+      println(i);
+      i = i+1; 
+
+      
+    if (1 > 0) {
+        println("first condition");
+    }
+    
+    if (0 > 1) {
+        println("second condition");
+    }
+    
+    if (2 >= 2) {
+        println("third condition");
+    }
+}
+ 
+   }
+   
+

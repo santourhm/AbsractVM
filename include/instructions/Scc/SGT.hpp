@@ -12,6 +12,7 @@ class SGT  : public  IInstruction
 
         ~SGT() = default ;
         void execute(VMState * vms) override;
+        void debug(VMState * vms) override;
 };
 
 

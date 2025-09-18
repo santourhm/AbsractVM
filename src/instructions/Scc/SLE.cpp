@@ -40,3 +40,8 @@ void SLE::execute(VMState * vms)
     }
     
 }
+
+void SLE::debug(VMState * vms) 
+{
+    std::cout << "SLE" << std::endl;
+}

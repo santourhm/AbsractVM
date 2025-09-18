@@ -3,6 +3,7 @@
 #include "RRegOperand.hpp"
 #include <iostream>
 #include "Op_Results.hpp"
+#include <iostream>
 
 
 void CMP::execute(VMState * vms) 
@@ -29,4 +30,9 @@ void CMP::execute(VMState * vms)
     {
         std::cerr << "Error" << e.what() << '\n';
     }
+}
+
+void CMP::debug(VMState * vms) 
+{
+    std::cout << "CMP" << std::endl;
 }

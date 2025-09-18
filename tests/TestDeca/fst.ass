@@ -1,0 +1,35 @@
+; start main program
+; Main program
+; Beginning of main instructions:
+	LOAD #10, R2
+	STORE R2, 1(GB)
+	LOAD #5, R2
+	STORE R2, 2(GB)
+	LOAD #0, R2
+	STORE R2, 3(GB)
+	LOAD #1, R2
+	STORE R2, 4(GB)
+	LOAD 1(GB), R2
+	LOAD #8, R3
+	CMP R3, R2
+	BLE E_Sinon.0
+	LOAD 2(GB), R3
+	LOAD #6, R2
+	CMP R2, R3
+	BGE E_Sinon.0
+	LOAD 3(GB), R2
+	CMP #0, R2
+	BNE E_Fin_2
+	LOAD 4(GB), R3
+	CMP #0, R3
+	BNE E_Sinon.0
+E_Fin_2:
+	WSTR "First block: "
+	LOAD 1(GB), R1
+	WINT
+	WNL
+	BRA E_Fin.1
+E_Sinon.0:
+E_Fin.1:
+	HALT
+; end main program

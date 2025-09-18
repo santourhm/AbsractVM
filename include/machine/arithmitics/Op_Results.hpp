@@ -14,7 +14,7 @@ struct CC
     unsigned int NE : 1;
     unsigned int LT : 1;
     unsigned int LE : 1;
-    unsigned int _unused : 1;
+    unsigned int NG : 1;
     
 };
 
