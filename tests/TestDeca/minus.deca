@@ -1,8 +1,0 @@
-{
-   float x = 1;
-   float y = 1;
-   float z ;
-   z = x+y; 
-   println(z); 
-
-}

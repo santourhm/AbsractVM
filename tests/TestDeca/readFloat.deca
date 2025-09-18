@@ -1,9 +1,0 @@
-
-
-
-{
-  float x = readFloat();
-  print("your float is  : ");
-  println(x);
-
-}
