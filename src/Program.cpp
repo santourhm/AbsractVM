@@ -91,7 +91,7 @@ void  Program::debugProgram(VMState* vms)
         int size = instructions.size();
         Value V_PC = PC->read();
         
-        Debugger debug(instructions);
+        Debugger debug(vms,instructions);
 
             std::cout << R"(
                 __      __       .__                                  ________               
@@ -125,19 +125,64 @@ void  Program::debugProgram(VMState* vms)
                 }
                 else if(cmd == "c" || cmd == "continue")
                 {
-
+                        
                         std::cout <<  std::endl;
                         debug.execute(vms);
 
                 }
-                else if(cmd.rfind("p",0) == 0)
+                else if (cmd.rfind("p", 0) == 0)  
                 {
-                        if(cmd.size() > 1)
-                        {
-                            std::cout << "no pointer history" << std::endl;
-                            continue;
-                        }
+                        std::string reg = cmd.substr(2);  
+                        
 
+                        try {
+                                debug.setReg_Pointer(reg);
+                                std::cout << "pointing on : " << reg << std::endl;
+
+                        }
+                        catch (const std::runtime_error& e) {
+                                std::cerr << e.what() << std::endl;
+                        }
+                }
+                else if(cmd.rfind("rd", 0) == 0)
+                {
+                        try
+                        {  
+                                Value val =  debug.read_Pointer() ;
+
+                                std::cout << "Value = ";
+
+                                if(val.getType() == TypeTag::STRING)
+                                {
+                                        std::cout << val.getStr() ;
+                                }
+                                else if(val.getType() == TypeTag::ADDRESS)
+                                {
+                                        std::cout << "0x" << std::hex << val.getAddr();
+                                }
+                                else if(val.getType() == TypeTag::INTEGER)
+                                {
+                                        std::cout << val.getInt();
+                                }
+                                else if(val.getType() == TypeTag::FLOAT)
+                                {
+                                        std::cout << val.getFloat();
+                                }
+                                else if(val.getType() == TypeTag::NULL_ADDR)
+                                {
+                                        std::cout << "null";
+                                }
+                                else
+                                {
+                                        std::cout << "UNDEFINED" ;
+                                }
+                                std::cout  << std::endl;
+                        }
+                        catch(const std::runtime_error& e)
+                        {
+                                std::cerr << e.what() << std::endl;
+                        }
+                        
                 }
                 else if(cmd.rfind("b",0) == 0)
                 {
