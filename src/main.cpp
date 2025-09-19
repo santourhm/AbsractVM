@@ -81,8 +81,11 @@ int main(int argc, const char* argv[]) {
         listener.finalizeProgram();
         
         Program& programAST = listener.getProgramAST();
-
-        programAST.executeProgram(vms.get());
+        
+        if(debug_mode)
+            programAST.debugProgram(vms.get());
+        else
+            programAST.executeProgram(vms.get());
         
         
     }
