@@ -1,0 +1,12 @@
+calc/Main.class
+calc/Minus.class
+calc/CalcParser$LiteralContext.class
+calc/AbstractExpr.class
+calc/IntLiteral.class
+calc/CalcParser$Sum_exprContext.class
+calc/CalcParser$ExprContext.class
+calc/CalcParser$Mult_exprContext.class
+calc/CalcParser.class
+calc/Plus.class
+calc/CalcLexer.class
+calc/Times.class

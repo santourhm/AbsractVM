@@ -49,7 +49,7 @@ void BLT::execute(VMState * vms)
         Value addr = Symbol_TablT.at(label_str);
 
 
-        PC->RegisterSetValue(addr);
+        PC->write(addr);
         
 
     }

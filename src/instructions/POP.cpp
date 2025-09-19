@@ -28,7 +28,7 @@ void POP::execute(VMState * vms)
             return;
         }
 
-        reg->getRegister()->RegisterSetValue(vms->getMemory()->pop());
+        reg->getRegister()->write(vms->getMemory()->pop());
         
     }
     catch(const std::runtime_error& e)

@@ -13,7 +13,7 @@ EnvRegisters::EnvRegisters()
     
     for(int i = 0 ; i < NUMBER_MAX_GENPORPSE_REG ; i++)
     {
-        RRegisters.push_back(std::make_unique<RRegister>(i));
+        RRegisters.push_back(std::make_unique<Register>("R" + std::to_string(i),Value()));
     }
 
 }
@@ -22,7 +22,7 @@ EnvRegisters::EnvRegisters()
 EnvRegisters::~EnvRegisters() = default ;
 
 
-RRegister *  EnvRegisters::getR(int i) 
+Register *  EnvRegisters::getR(int i) 
 {
     return  RRegisters[i].get();
 }

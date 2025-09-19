@@ -30,12 +30,12 @@ class Memory
 
         uint32_t  allocate(uint32_t size);
 
-        uint32_t getSP() const { return sp_val->RegisterGetValue().getAddr(); }
-        uint32_t getGB() const { return gb_val->RegisterGetValue().getAddr(); }
-        uint32_t getLB() const { return lb_val->RegisterGetValue().getAddr(); }
+        uint32_t getSP() const { return sp_val->read().getAddr(); }
+        uint32_t getGB() const { return gb_val->read().getAddr(); }
+        uint32_t getLB() const { return lb_val->read().getAddr(); }
 
-        void setSP(uint32_t value) { sp_val->RegisterSetValue(Value((uint32_t)value)); }
-        void setLB(uint32_t value) { lb_val->RegisterSetValue(Value((uint32_t)value)); }
+        void setSP(uint32_t value) { sp_val->write(Value((uint32_t)value)); }
+        void setLB(uint32_t value) { lb_val->write(Value((uint32_t)value)); }
 
     private:
         

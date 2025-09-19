@@ -12,11 +12,16 @@
 class  VMGrammarParser : public antlr4::Parser {
 public:
   enum {
-    OPP = 1, MUL = 2, QUO = 3, ADD = 4, SUB = 5, REM = 6, WSTR = 7, LOAD = 8, 
-    CMP = 9, BEQ = 10, WINT = 11, WNL = 12, HALT = 13, WFLOAT = 14, COMMA = 15, 
-    OPARENT = 16, CPARENT = 17, HASH = 18, MINUS = 19, COLON = 20, RREGISTER = 21, 
-    GBREGISTER = 22, LBREGISTER = 23, STRING_LITERAL = 24, INT = 25, ID = 26, 
-    FLOAT = 27, COMMENT = 28, WS = 29, NEWLINE = 30
+    OPP = 1, MUL = 2, QUO = 3, DIV = 4, ADD = 5, SUB = 6, REM = 7, WSTR = 8, 
+    LOAD = 9, NEW = 10, CMP = 11, BRA = 12, SEQ = 13, SNE = 14, SLT = 15, 
+    SGT = 16, SGE = 17, SLE = 18, SOV = 19, SHL = 20, SHR = 21, BEQ = 22, 
+    BNE = 23, BGE = 24, BLT = 25, BGT = 26, BLE = 27, BOV = 28, BSR = 29, 
+    RTS = 30, STORE = 31, PUSH = 32, POP = 33, LEA = 34, PEA = 35, WINT = 36, 
+    WNL = 37, HALT = 38, WFLOAT = 39, WTYPE = 40, WADDR = 41, SUBSP = 42, 
+    ADDSP = 43, TSTO = 44, RINT = 45, RFLOAT = 46, ERROR = 47, COMMA = 48, 
+    OPARENT = 49, CPARENT = 50, HASH = 51, MINUS = 52, COLON = 53, RREGISTER = 54, 
+    GBREGISTER = 55, LBREGISTER = 56, SPREGISTER = 57, VALLNULL = 58, STRING_LITERAL = 59, 
+    INT = 60, FLOAT = 61, ID = 62, COMMENT = 63, WS = 64, NEWLINE = 65
   };
 
   enum {
@@ -147,6 +152,7 @@ public:
     antlr4::tree::TerminalNode *ADD();
     antlr4::tree::TerminalNode *MUL();
     antlr4::tree::TerminalNode *QUO();
+    antlr4::tree::TerminalNode *DIV();
     antlr4::tree::TerminalNode *OPP();
     antlr4::tree::TerminalNode *REM();
     antlr4::tree::TerminalNode *SUB();
@@ -154,10 +160,42 @@ public:
     antlr4::tree::TerminalNode *LOAD();
     antlr4::tree::TerminalNode *CMP();
     antlr4::tree::TerminalNode *BEQ();
+    antlr4::tree::TerminalNode *BNE();
+    antlr4::tree::TerminalNode *BLT();
+    antlr4::tree::TerminalNode *BGT();
+    antlr4::tree::TerminalNode *BGE();
+    antlr4::tree::TerminalNode *BLE();
+    antlr4::tree::TerminalNode *BOV();
+    antlr4::tree::TerminalNode *SEQ();
+    antlr4::tree::TerminalNode *SNE();
+    antlr4::tree::TerminalNode *SLT();
+    antlr4::tree::TerminalNode *SGT();
+    antlr4::tree::TerminalNode *SGE();
+    antlr4::tree::TerminalNode *SLE();
+    antlr4::tree::TerminalNode *SOV();
+    antlr4::tree::TerminalNode *SHL();
+    antlr4::tree::TerminalNode *SHR();
+    antlr4::tree::TerminalNode *BRA();
     antlr4::tree::TerminalNode *WINT();
     antlr4::tree::TerminalNode *WNL();
     antlr4::tree::TerminalNode *WFLOAT();
     antlr4::tree::TerminalNode *HALT();
+    antlr4::tree::TerminalNode *STORE();
+    antlr4::tree::TerminalNode *PUSH();
+    antlr4::tree::TerminalNode *POP();
+    antlr4::tree::TerminalNode *LEA();
+    antlr4::tree::TerminalNode *PEA();
+    antlr4::tree::TerminalNode *BSR();
+    antlr4::tree::TerminalNode *RTS();
+    antlr4::tree::TerminalNode *SUBSP();
+    antlr4::tree::TerminalNode *ADDSP();
+    antlr4::tree::TerminalNode *RINT();
+    antlr4::tree::TerminalNode *RFLOAT();
+    antlr4::tree::TerminalNode *ERROR();
+    antlr4::tree::TerminalNode *TSTO();
+    antlr4::tree::TerminalNode *NEW();
+    antlr4::tree::TerminalNode *WTYPE();
+    antlr4::tree::TerminalNode *WADDR();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -209,6 +247,7 @@ public:
     antlr4::tree::TerminalNode *RREGISTER();
     antlr4::tree::TerminalNode *GBREGISTER();
     antlr4::tree::TerminalNode *LBREGISTER();
+    antlr4::tree::TerminalNode *SPREGISTER();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -243,8 +282,10 @@ public:
     ImmediateContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *HASH();
+    antlr4::tree::TerminalNode *VALLNULL();
     antlr4::tree::TerminalNode *INT();
     antlr4::tree::TerminalNode *FLOAT();
+    antlr4::tree::TerminalNode *MINUS();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;

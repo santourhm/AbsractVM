@@ -12,13 +12,13 @@
 Register::Register(const std::string& n, Value v ) : name(n) , value(v) { } ;
 
 
-void   Register::RegisterSetValue(Value v)            
+void   Register::write(const Value& v)       const   
 {
-       value = v;
+       this->value = v;
 }
 
 
-Value   Register::RegisterGetValue() const
+Value   Register::read() const
 {
         return value;
 }

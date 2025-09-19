@@ -33,7 +33,7 @@ void SHL::execute(VMState * vms)
         if(V_Reg.getType() == TypeTag::INTEGER)
         {
             Value V_result(Value(V_Reg.getInt() << 1));
-            reg->getRegister()->RegisterSetValue(V_result);
+            reg->getRegister()->write(V_result);
             Op_Results new_cc = V_result - Value(0);
             vms->set_sCC(new_cc.cc);
         }

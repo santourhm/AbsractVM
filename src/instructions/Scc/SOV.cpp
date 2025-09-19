@@ -30,7 +30,7 @@ void SOV::execute(VMState * vms)
 
         Value v(static_cast<int32_t>(vms->get_sCC()->OV));
 
-        reg->getRegister()->RegisterSetValue(v);
+        reg->getRegister()->write(v);
         
     }
     catch(const std::runtime_error& e)

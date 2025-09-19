@@ -49,7 +49,7 @@ void BOV::execute(VMState * vms)
 
         Value addr = Symbol_TaBOV.at(label_str);
 
-        PC->RegisterSetValue(addr);
+        PC->write(addr);
         
 
     }

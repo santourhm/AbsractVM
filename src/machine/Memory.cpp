@@ -15,9 +15,9 @@ Memory::Memory(EnvRegisters * r_env,size_t total_memory_words)
 
 void Memory::initialize() 
 {
-    gb_val->RegisterSetValue(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
-    lb_val->RegisterSetValue(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
-    sp_val->RegisterSetValue(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
+    gb_val->write(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
+    lb_val->write(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
+    sp_val->write(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
 
     heap_ptr = HEAP_START_ADDR;
 }

@@ -49,19 +49,22 @@ void BSR::execute(VMState * vms)
         Register * LB = vms->getEnv_Registers()->getLB();
         Memory * mem  = vms->getMemory();
 
-        uint32_t V_SP = SP->RegisterGetValue().getAddr();
-        uint32_t V_LB = LB->RegisterGetValue().getAddr();
-        Value V_PC    = PC->RegisterGetValue();
+        Value V_SP = SP->read();
+        uint32_t V_LB = LB->read().getAddr();
+        Value V_PC    = PC->read();
 
-        SP->RegisterSetValue(Value(V_SP + 2));
+        V_SP++;
+        V_SP++;
 
-        mem->setWord(V_SP + 1, V_PC);
+        SP->write(V_SP);
 
-        mem->setWord(V_SP + 2, Value(V_LB));
+        mem->setWord(V_SP.getAddr() - 1, V_PC);
 
-        LB->RegisterSetValue(Value(V_SP + 2));
+        mem->setWord(V_SP.getAddr(), Value(V_LB));
 
-        PC->RegisterSetValue(addr);
+        LB->write(V_SP);
+
+        PC->write(addr);
 
     }
     catch(const std::runtime_error& e) {

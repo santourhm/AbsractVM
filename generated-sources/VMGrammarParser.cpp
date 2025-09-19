@@ -58,43 +58,54 @@ void vmgrammarParserInitialize() {
       "immediate", "label"
     },
     std::vector<std::string>{
-      "", "'OPP'", "'MUL'", "'QUO'", "'ADD'", "'SUB'", "'REM'", "'WSTR'", 
-      "'LOAD'", "'CMP'", "'BEQ'", "'WINT'", "'WNL'", "'HALT'", "'WFLOAT'", 
-      "','", "'('", "')'", "'#'", "'-'", "':'", "", "'GB'", "'LB'"
+      "", "'OPP'", "'MUL'", "'QUO'", "'DIV'", "'ADD'", "'SUB'", "'REM'", 
+      "'WSTR'", "'LOAD'", "'NEW'", "'CMP'", "'BRA'", "'SEQ'", "'SNE'", "'SLT'", 
+      "'SGT'", "'SGE'", "'SLE'", "'SOV'", "'SHL'", "'SHR'", "'BEQ'", "'BNE'", 
+      "'BGE'", "'BLT'", "'BGT'", "'BLE'", "'BOV'", "'BSR'", "'RTS'", "'STORE'", 
+      "'PUSH'", "'POP'", "'LEA'", "'PEA'", "'WINT'", "'WNL'", "'HALT'", 
+      "'WFLOAT'", "'WTYPE'", "'WADDR'", "'SUBSP'", "'ADDSP'", "'TSTO'", 
+      "'RINT'", "'RFLOAT'", "'ERROR'", "','", "'('", "')'", "'#'", "'-'", 
+      "':'", "", "'GB'", "'LB'", "'SP'", "'null'"
     },
     std::vector<std::string>{
-      "", "OPP", "MUL", "QUO", "ADD", "SUB", "REM", "WSTR", "LOAD", "CMP", 
-      "BEQ", "WINT", "WNL", "HALT", "WFLOAT", "COMMA", "OPARENT", "CPARENT", 
-      "HASH", "MINUS", "COLON", "RREGISTER", "GBREGISTER", "LBREGISTER", 
-      "STRING_LITERAL", "INT", "ID", "FLOAT", "COMMENT", "WS", "NEWLINE"
+      "", "OPP", "MUL", "QUO", "DIV", "ADD", "SUB", "REM", "WSTR", "LOAD", 
+      "NEW", "CMP", "BRA", "SEQ", "SNE", "SLT", "SGT", "SGE", "SLE", "SOV", 
+      "SHL", "SHR", "BEQ", "BNE", "BGE", "BLT", "BGT", "BLE", "BOV", "BSR", 
+      "RTS", "STORE", "PUSH", "POP", "LEA", "PEA", "WINT", "WNL", "HALT", 
+      "WFLOAT", "WTYPE", "WADDR", "SUBSP", "ADDSP", "TSTO", "RINT", "RFLOAT", 
+      "ERROR", "COMMA", "OPARENT", "CPARENT", "HASH", "MINUS", "COLON", 
+      "RREGISTER", "GBREGISTER", "LBREGISTER", "SPREGISTER", "VALLNULL", 
+      "STRING_LITERAL", "INT", "FLOAT", "ID", "COMMENT", "WS", "NEWLINE"
     }
   );
   static const int32_t serializedATNSegment[] = {
-  	4,1,30,86,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+  	4,1,65,91,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
   	7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,1,0,5,0,26,8,0,10,0,12,0,29,9,
   	0,1,0,3,0,32,8,0,1,0,1,0,1,1,1,1,3,1,38,8,1,1,1,4,1,41,8,1,11,1,12,1,
   	42,1,2,1,2,1,3,1,3,1,3,1,4,1,4,1,4,1,4,3,4,54,8,4,3,4,56,8,4,1,5,1,5,
   	1,6,1,6,1,6,1,6,1,6,3,6,65,8,6,1,7,1,7,1,8,1,8,1,9,3,9,72,8,9,1,9,3,9,
-  	75,8,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,11,1,11,1,11,0,0,12,0,2,4,6,8,
-  	10,12,14,16,18,20,22,0,3,1,0,1,14,1,0,21,23,2,0,25,25,27,27,86,0,27,1,
-  	0,0,0,2,37,1,0,0,0,4,44,1,0,0,0,6,46,1,0,0,0,8,49,1,0,0,0,10,57,1,0,0,
-  	0,12,64,1,0,0,0,14,66,1,0,0,0,16,68,1,0,0,0,18,74,1,0,0,0,20,80,1,0,0,
-  	0,22,83,1,0,0,0,24,26,3,2,1,0,25,24,1,0,0,0,26,29,1,0,0,0,27,25,1,0,0,
-  	0,27,28,1,0,0,0,28,31,1,0,0,0,29,27,1,0,0,0,30,32,3,4,2,0,31,30,1,0,0,
-  	0,31,32,1,0,0,0,32,33,1,0,0,0,33,34,5,0,0,1,34,1,1,0,0,0,35,38,3,6,3,
-  	0,36,38,3,4,2,0,37,35,1,0,0,0,37,36,1,0,0,0,37,38,1,0,0,0,38,40,1,0,0,
-  	0,39,41,5,30,0,0,40,39,1,0,0,0,41,42,1,0,0,0,42,40,1,0,0,0,42,43,1,0,
-  	0,0,43,3,1,0,0,0,44,45,3,8,4,0,45,5,1,0,0,0,46,47,5,26,0,0,47,48,5,20,
-  	0,0,48,7,1,0,0,0,49,55,3,10,5,0,50,53,3,12,6,0,51,52,5,15,0,0,52,54,3,
-  	12,6,0,53,51,1,0,0,0,53,54,1,0,0,0,54,56,1,0,0,0,55,50,1,0,0,0,55,56,
-  	1,0,0,0,56,9,1,0,0,0,57,58,7,0,0,0,58,11,1,0,0,0,59,65,3,18,9,0,60,65,
-  	3,20,10,0,61,65,3,16,8,0,62,65,3,14,7,0,63,65,3,22,11,0,64,59,1,0,0,0,
-  	64,60,1,0,0,0,64,61,1,0,0,0,64,62,1,0,0,0,64,63,1,0,0,0,65,13,1,0,0,0,
-  	66,67,5,24,0,0,67,15,1,0,0,0,68,69,7,1,0,0,69,17,1,0,0,0,70,72,5,19,0,
-  	0,71,70,1,0,0,0,71,72,1,0,0,0,72,73,1,0,0,0,73,75,5,25,0,0,74,71,1,0,
-  	0,0,74,75,1,0,0,0,75,76,1,0,0,0,76,77,5,16,0,0,77,78,3,16,8,0,78,79,5,
-  	17,0,0,79,19,1,0,0,0,80,81,5,18,0,0,81,82,7,2,0,0,82,21,1,0,0,0,83,84,
-  	5,26,0,0,84,23,1,0,0,0,9,27,31,37,42,53,55,64,71,74
+  	75,8,9,1,9,1,9,1,9,1,9,1,10,1,10,3,10,83,8,10,1,10,1,10,3,10,87,8,10,
+  	1,11,1,11,1,11,0,0,12,0,2,4,6,8,10,12,14,16,18,20,22,0,3,1,0,1,47,1,0,
+  	54,57,1,0,60,61,93,0,27,1,0,0,0,2,37,1,0,0,0,4,44,1,0,0,0,6,46,1,0,0,
+  	0,8,49,1,0,0,0,10,57,1,0,0,0,12,64,1,0,0,0,14,66,1,0,0,0,16,68,1,0,0,
+  	0,18,74,1,0,0,0,20,80,1,0,0,0,22,88,1,0,0,0,24,26,3,2,1,0,25,24,1,0,0,
+  	0,26,29,1,0,0,0,27,25,1,0,0,0,27,28,1,0,0,0,28,31,1,0,0,0,29,27,1,0,0,
+  	0,30,32,3,4,2,0,31,30,1,0,0,0,31,32,1,0,0,0,32,33,1,0,0,0,33,34,5,0,0,
+  	1,34,1,1,0,0,0,35,38,3,6,3,0,36,38,3,4,2,0,37,35,1,0,0,0,37,36,1,0,0,
+  	0,37,38,1,0,0,0,38,40,1,0,0,0,39,41,5,65,0,0,40,39,1,0,0,0,41,42,1,0,
+  	0,0,42,40,1,0,0,0,42,43,1,0,0,0,43,3,1,0,0,0,44,45,3,8,4,0,45,5,1,0,0,
+  	0,46,47,5,62,0,0,47,48,5,53,0,0,48,7,1,0,0,0,49,55,3,10,5,0,50,53,3,12,
+  	6,0,51,52,5,48,0,0,52,54,3,12,6,0,53,51,1,0,0,0,53,54,1,0,0,0,54,56,1,
+  	0,0,0,55,50,1,0,0,0,55,56,1,0,0,0,56,9,1,0,0,0,57,58,7,0,0,0,58,11,1,
+  	0,0,0,59,65,3,18,9,0,60,65,3,20,10,0,61,65,3,16,8,0,62,65,3,14,7,0,63,
+  	65,3,22,11,0,64,59,1,0,0,0,64,60,1,0,0,0,64,61,1,0,0,0,64,62,1,0,0,0,
+  	64,63,1,0,0,0,65,13,1,0,0,0,66,67,5,59,0,0,67,15,1,0,0,0,68,69,7,1,0,
+  	0,69,17,1,0,0,0,70,72,5,52,0,0,71,70,1,0,0,0,71,72,1,0,0,0,72,73,1,0,
+  	0,0,73,75,5,60,0,0,74,71,1,0,0,0,74,75,1,0,0,0,75,76,1,0,0,0,76,77,5,
+  	49,0,0,77,78,3,16,8,0,78,79,5,50,0,0,79,19,1,0,0,0,80,86,5,51,0,0,81,
+  	83,5,52,0,0,82,81,1,0,0,0,82,83,1,0,0,0,83,84,1,0,0,0,84,87,7,2,0,0,85,
+  	87,5,58,0,0,86,82,1,0,0,0,86,85,1,0,0,0,87,21,1,0,0,0,88,89,5,62,0,0,
+  	89,23,1,0,0,0,11,27,31,37,42,53,55,64,71,74,82,86
   };
   staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
 
@@ -222,7 +233,7 @@ VMGrammarParser::ProgramContext* VMGrammarParser::program() {
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 32766) != 0)) {
+      ((1ULL << _la) & 281474976710654) != 0)) {
       setState(30);
       instruction_line();
     }
@@ -312,17 +323,50 @@ VMGrammarParser::LineContext* VMGrammarParser::line() {
       case VMGrammarParser::OPP:
       case VMGrammarParser::MUL:
       case VMGrammarParser::QUO:
+      case VMGrammarParser::DIV:
       case VMGrammarParser::ADD:
       case VMGrammarParser::SUB:
       case VMGrammarParser::REM:
       case VMGrammarParser::WSTR:
       case VMGrammarParser::LOAD:
+      case VMGrammarParser::NEW:
       case VMGrammarParser::CMP:
+      case VMGrammarParser::BRA:
+      case VMGrammarParser::SEQ:
+      case VMGrammarParser::SNE:
+      case VMGrammarParser::SLT:
+      case VMGrammarParser::SGT:
+      case VMGrammarParser::SGE:
+      case VMGrammarParser::SLE:
+      case VMGrammarParser::SOV:
+      case VMGrammarParser::SHL:
+      case VMGrammarParser::SHR:
       case VMGrammarParser::BEQ:
+      case VMGrammarParser::BNE:
+      case VMGrammarParser::BGE:
+      case VMGrammarParser::BLT:
+      case VMGrammarParser::BGT:
+      case VMGrammarParser::BLE:
+      case VMGrammarParser::BOV:
+      case VMGrammarParser::BSR:
+      case VMGrammarParser::RTS:
+      case VMGrammarParser::STORE:
+      case VMGrammarParser::PUSH:
+      case VMGrammarParser::POP:
+      case VMGrammarParser::LEA:
+      case VMGrammarParser::PEA:
       case VMGrammarParser::WINT:
       case VMGrammarParser::WNL:
       case VMGrammarParser::HALT:
-      case VMGrammarParser::WFLOAT: {
+      case VMGrammarParser::WFLOAT:
+      case VMGrammarParser::WTYPE:
+      case VMGrammarParser::WADDR:
+      case VMGrammarParser::SUBSP:
+      case VMGrammarParser::ADDSP:
+      case VMGrammarParser::TSTO:
+      case VMGrammarParser::RINT:
+      case VMGrammarParser::RFLOAT:
+      case VMGrammarParser::ERROR: {
         setState(36);
         instruction_line();
         break;
@@ -560,7 +604,7 @@ VMGrammarParser::InstructionContext* VMGrammarParser::instruction() {
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 132972544) != 0)) {
+      ((1ULL << _la) & 6618602602374365184) != 0)) {
       setState(50);
       operand();
       setState(53);
@@ -603,6 +647,10 @@ tree::TerminalNode* VMGrammarParser::OpcodeContext::QUO() {
   return getToken(VMGrammarParser::QUO, 0);
 }
 
+tree::TerminalNode* VMGrammarParser::OpcodeContext::DIV() {
+  return getToken(VMGrammarParser::DIV, 0);
+}
+
 tree::TerminalNode* VMGrammarParser::OpcodeContext::OPP() {
   return getToken(VMGrammarParser::OPP, 0);
 }
@@ -631,6 +679,70 @@ tree::TerminalNode* VMGrammarParser::OpcodeContext::BEQ() {
   return getToken(VMGrammarParser::BEQ, 0);
 }
 
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BNE() {
+  return getToken(VMGrammarParser::BNE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BLT() {
+  return getToken(VMGrammarParser::BLT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BGT() {
+  return getToken(VMGrammarParser::BGT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BGE() {
+  return getToken(VMGrammarParser::BGE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BLE() {
+  return getToken(VMGrammarParser::BLE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BOV() {
+  return getToken(VMGrammarParser::BOV, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SEQ() {
+  return getToken(VMGrammarParser::SEQ, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SNE() {
+  return getToken(VMGrammarParser::SNE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SLT() {
+  return getToken(VMGrammarParser::SLT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SGT() {
+  return getToken(VMGrammarParser::SGT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SGE() {
+  return getToken(VMGrammarParser::SGE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SLE() {
+  return getToken(VMGrammarParser::SLE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SOV() {
+  return getToken(VMGrammarParser::SOV, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SHL() {
+  return getToken(VMGrammarParser::SHL, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SHR() {
+  return getToken(VMGrammarParser::SHR, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BRA() {
+  return getToken(VMGrammarParser::BRA, 0);
+}
+
 tree::TerminalNode* VMGrammarParser::OpcodeContext::WINT() {
   return getToken(VMGrammarParser::WINT, 0);
 }
@@ -645,6 +757,70 @@ tree::TerminalNode* VMGrammarParser::OpcodeContext::WFLOAT() {
 
 tree::TerminalNode* VMGrammarParser::OpcodeContext::HALT() {
   return getToken(VMGrammarParser::HALT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::STORE() {
+  return getToken(VMGrammarParser::STORE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::PUSH() {
+  return getToken(VMGrammarParser::PUSH, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::POP() {
+  return getToken(VMGrammarParser::POP, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::LEA() {
+  return getToken(VMGrammarParser::LEA, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::PEA() {
+  return getToken(VMGrammarParser::PEA, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::BSR() {
+  return getToken(VMGrammarParser::BSR, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::RTS() {
+  return getToken(VMGrammarParser::RTS, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::SUBSP() {
+  return getToken(VMGrammarParser::SUBSP, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::ADDSP() {
+  return getToken(VMGrammarParser::ADDSP, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::RINT() {
+  return getToken(VMGrammarParser::RINT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::RFLOAT() {
+  return getToken(VMGrammarParser::RFLOAT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::ERROR() {
+  return getToken(VMGrammarParser::ERROR, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::TSTO() {
+  return getToken(VMGrammarParser::TSTO, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::NEW() {
+  return getToken(VMGrammarParser::NEW, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::WTYPE() {
+  return getToken(VMGrammarParser::WTYPE, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::OpcodeContext::WADDR() {
+  return getToken(VMGrammarParser::WADDR, 0);
 }
 
 
@@ -689,7 +865,7 @@ VMGrammarParser::OpcodeContext* VMGrammarParser::opcode() {
     setState(57);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 32766) != 0))) {
+      ((1ULL << _la) & 281474976710654) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -791,7 +967,8 @@ VMGrammarParser::OperandContext* VMGrammarParser::operand() {
 
       case VMGrammarParser::RREGISTER:
       case VMGrammarParser::GBREGISTER:
-      case VMGrammarParser::LBREGISTER: {
+      case VMGrammarParser::LBREGISTER:
+      case VMGrammarParser::SPREGISTER: {
         enterOuterAlt(_localctx, 3);
         setState(61);
         register_();
@@ -905,6 +1082,10 @@ tree::TerminalNode* VMGrammarParser::RegisterContext::LBREGISTER() {
   return getToken(VMGrammarParser::LBREGISTER, 0);
 }
 
+tree::TerminalNode* VMGrammarParser::RegisterContext::SPREGISTER() {
+  return getToken(VMGrammarParser::SPREGISTER, 0);
+}
+
 
 size_t VMGrammarParser::RegisterContext::getRuleIndex() const {
   return VMGrammarParser::RuleRegister;
@@ -947,7 +1128,7 @@ VMGrammarParser::RegisterContext* VMGrammarParser::register_() {
     setState(68);
     _la = _input->LA(1);
     if (!((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 14680064) != 0))) {
+      ((1ULL << _la) & 270215977642229760) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -1075,12 +1256,20 @@ tree::TerminalNode* VMGrammarParser::ImmediateContext::HASH() {
   return getToken(VMGrammarParser::HASH, 0);
 }
 
+tree::TerminalNode* VMGrammarParser::ImmediateContext::VALLNULL() {
+  return getToken(VMGrammarParser::VALLNULL, 0);
+}
+
 tree::TerminalNode* VMGrammarParser::ImmediateContext::INT() {
   return getToken(VMGrammarParser::INT, 0);
 }
 
 tree::TerminalNode* VMGrammarParser::ImmediateContext::FLOAT() {
   return getToken(VMGrammarParser::FLOAT, 0);
+}
+
+tree::TerminalNode* VMGrammarParser::ImmediateContext::MINUS() {
+  return getToken(VMGrammarParser::MINUS, 0);
 }
 
 
@@ -1124,16 +1313,42 @@ VMGrammarParser::ImmediateContext* VMGrammarParser::immediate() {
     enterOuterAlt(_localctx, 1);
     setState(80);
     match(VMGrammarParser::HASH);
-    setState(81);
-    _la = _input->LA(1);
-    if (!(_la == VMGrammarParser::INT
+    setState(86);
+    _errHandler->sync(this);
+    switch (_input->LA(1)) {
+      case VMGrammarParser::MINUS:
+      case VMGrammarParser::INT:
+      case VMGrammarParser::FLOAT: {
+        setState(82);
+        _errHandler->sync(this);
 
-    || _la == VMGrammarParser::FLOAT)) {
-    _errHandler->recoverInline(this);
-    }
-    else {
-      _errHandler->reportMatch(this);
-      consume();
+        _la = _input->LA(1);
+        if (_la == VMGrammarParser::MINUS) {
+          setState(81);
+          match(VMGrammarParser::MINUS);
+        }
+        setState(84);
+        _la = _input->LA(1);
+        if (!(_la == VMGrammarParser::INT
+
+        || _la == VMGrammarParser::FLOAT)) {
+        _errHandler->recoverInline(this);
+        }
+        else {
+          _errHandler->reportMatch(this);
+          consume();
+        }
+        break;
+      }
+
+      case VMGrammarParser::VALLNULL: {
+        setState(85);
+        match(VMGrammarParser::VALLNULL);
+        break;
+      }
+
+    default:
+      throw NoViableAltException(this);
     }
    
   }
@@ -1194,7 +1409,7 @@ VMGrammarParser::LabelContext* VMGrammarParser::label() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(83);
+    setState(88);
     match(VMGrammarParser::ID);
    
   }

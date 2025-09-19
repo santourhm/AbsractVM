@@ -48,7 +48,7 @@ void BNE::execute(VMState * vms)
 
         Value addr = Symbol_TaBNE.at(label_str);
 
-        PC->RegisterSetValue(addr);
+        PC->write(addr);
         
 
     }

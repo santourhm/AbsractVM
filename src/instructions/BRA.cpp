@@ -42,7 +42,7 @@ void BRA::execute(VMState * vms)
 
         Value addr = Symbol_Table.at(label_str);
 
-        PC->RegisterSetValue(addr);
+        PC->write(addr);
 
     }
     catch(const std::runtime_error& e)

@@ -26,7 +26,7 @@ void TSTO::execute(VMState * vms)
     Memory * mem = vms->getMemory();
 
     uint32_t SP = mem->getSP();
-    uint32_t GB = vms->getEnv_Registers()->getGB()->RegisterGetValue().getAddr();
+    uint32_t GB = vms->getEnv_Registers()->getGB()->read().getAddr();
     
     if (SP + srcValue.getInt() > mem->STACK_SIZE_WORDS) 
     {

@@ -19,7 +19,7 @@ void PEA::execute(VMState * vms)
         }
 
         Register * SP = vms->getEnv_Registers()->getSP();
-        uint32_t   V_SP  = SP->RegisterGetValue().getAddr();
+        uint32_t   V_SP  = SP->read().getAddr();
         IOperand * base = operands[0].get();
 
         Memory_AddressOperand* Memory_Op = dynamic_cast<Memory_AddressOperand*>(base);
@@ -33,7 +33,7 @@ void PEA::execute(VMState * vms)
         Value srcValue(Memory_Op->getAddress());
 
         uint32_t newSP = V_SP + 1;
-        SP->RegisterSetValue(Value(newSP));
+        SP->write(Value(newSP));
 
         vms->getMemory()->setWord(newSP, srcValue);
 

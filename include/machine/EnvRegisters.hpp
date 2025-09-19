@@ -12,7 +12,7 @@ class EnvRegisters
 {
     private:
 
-        std::vector<std::unique_ptr<RRegister>> RRegisters;
+        std::vector<std::unique_ptr<Register>> RRegisters;
         std::unique_ptr<Register> GB ;   
         std::unique_ptr<Register> LB ;   
         std::unique_ptr<Register> SP ;   
@@ -24,7 +24,7 @@ class EnvRegisters
         ~EnvRegisters();
 
 
-        RRegister *  getR(int i)  ;
+        Register *  getR(int i)  ;
         Register *  getGB(void)  ;
         Register *  getLB()  ;
         Register *  getSP()  ;

@@ -25,9 +25,9 @@ void ADDSP::execute(VMState * vms)
             return;
         }
         
-        //Value Next_SP = Value(static_cast<uint32_t>(vms->getEnv_Registers()->getSP()->RegisterGetValue().getAddr() - srcValue.getInt()));
+        //Value Next_SP = Value(static_cast<uint32_t>(vms->getEnv_Registers()->getSP()->read().getAddr() - srcValue.getInt()));
         
-        Op_Results Next_SP =   vms->getEnv_Registers()->getSP()->RegisterGetValue() + srcValue;
+        Op_Results Next_SP =   vms->getEnv_Registers()->getSP()->read() + srcValue;
         
         if(Next_SP.cc.NG)
         {
@@ -35,7 +35,7 @@ void ADDSP::execute(VMState * vms)
             return;
         }
 
-        vms->getEnv_Registers()->getSP()->RegisterSetValue(Next_SP.val);
+        vms->getEnv_Registers()->getSP()->write(Next_SP.val);
 
     }
     catch(const std::runtime_error& e)

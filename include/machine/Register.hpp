@@ -9,20 +9,20 @@
 #include "Value.hpp"
 
 
-class Register  
+class Register  : public IOperand
 {
     private:
         
         std::string     name;
-        Value   value       ;
+        Value&   value       ;
 
     public:
 
         Register(const std::string& n, Value v);
-        ~Register() = default ;
+        ~Register() {} ;
 
-        void    RegisterSetValue(Value v)         ;
-        Value   RegisterGetValue()        const   ;
+        void    write(const Value& value) const override       ;
+        Value   read()        const  override ;
         
 };
 

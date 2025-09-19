@@ -30,7 +30,7 @@ void SEQ::execute(VMState * vms)
 
         Value v(static_cast<int32_t>(vms->get_sCC()->EQ));
 
-        reg->getRegister()->RegisterSetValue(v);
+        reg->getRegister()->write(v);
         
 
     }

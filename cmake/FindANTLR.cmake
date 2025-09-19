@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(abstract-vm-16bits)
+project(abstract-vm-32bits)
 find_package(Java QUIET COMPONENTS Runtime)
 
 if(NOT ANTLR_EXECUTABLE)

@@ -17,23 +17,23 @@ Memory_AddressOperand::Memory_AddressOperand(int offset ,Register *  RegOperand,
 
 Value Memory_AddressOperand::read() const    
 {
-     //std::cout << RegOperand->RegisterGetValue().get_str_type() << std::endl;
-     return mem->getWord(static_cast<uint32_t>(offset + RegOperand->RegisterGetValue().getAddr()));
+     //std::cout << RegOperand->read().get_str_type() << std::endl;
+     return mem->getWord(static_cast<uint32_t>(offset + RegOperand->read().getAddr()));
 } 
 
 void  Memory_AddressOperand::write(const Value& value) const 
 {
-     mem->setWord(static_cast<uint32_t>(offset + RegOperand->RegisterGetValue().getAddr()),value);
+     mem->setWord(static_cast<uint32_t>(offset + RegOperand->read().getAddr()),value);
 }
 
 Value Memory_AddressOperand::getEffectiveAddress() const 
 {
-    return Value(static_cast<uint32_t>(offset + RegOperand->RegisterGetValue().getAddr()));
+    return Value(static_cast<uint32_t>(offset + RegOperand->read().getAddr()));
 }
 
 
 uint32_t  Memory_AddressOperand::getAddress(void)  const
 {
-     //std::cout << "ADDRESS "  << offset +  RegOperand->RegisterGetValue().getAddr() << std::endl;   
-     return static_cast<uint32_t>(offset +  RegOperand->RegisterGetValue().getAddr());
+     //std::cout << "ADDRESS "  << offset +  RegOperand->read().getAddr() << std::endl;   
+     return static_cast<uint32_t>(offset +  RegOperand->read().getAddr());
 }

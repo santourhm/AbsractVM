@@ -1,0 +1,422 @@
+[
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o -c /home/santourh/abstract-vm-32bits/src/Program.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/Program.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/Program.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o -c /home/santourh/abstract-vm-32bits/src/VM.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/VM.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/VM.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o -c /home/santourh/abstract-vm-32bits/src/VMListener.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/VMListener.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/VMListener.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/ADD.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/ADD.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADD.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADDSP.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/ADDSP.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/ADDSP.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/ADDSP.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/BRA.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/BRA.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/BRA.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/BRA.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/BSR.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/BSR.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/BSR.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/BSR.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BEQ.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Bcc/BEQ.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Bcc/BEQ.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BEQ.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BGE.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Bcc/BGE.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Bcc/BGE.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BGE.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BGT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Bcc/BGT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Bcc/BGT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BGT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BLE.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Bcc/BLE.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Bcc/BLE.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BLE.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BLT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Bcc/BLT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Bcc/BLT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BLT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BNE.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Bcc/BNE.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Bcc/BNE.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BNE.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BOV.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Bcc/BOV.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Bcc/BOV.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Bcc/BOV.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/CMP.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/CMP.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/CMP.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/CMP.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/DIV.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/DIV.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/DIV.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/DIV.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/ERROR.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/ERROR.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/ERROR.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/ERROR.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/HALT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/HALT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/HALT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/HALT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/IInstruction.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/IInstruction.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/IInstruction.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/LEA.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/LEA.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/LEA.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/LEA.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/LOAD.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/LOAD.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/LOAD.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Label.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Label.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Label.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Label.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/MUL.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/MUL.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/MUL.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/NEW.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/NEW.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/NEW.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/NEW.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/OPP.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/OPP.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/OPP.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/PEA.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/PEA.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/PEA.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/PEA.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/POP.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/POP.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/POP.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/POP.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/PUSH.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/PUSH.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/PUSH.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/PUSH.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/QUO.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/QUO.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/QUO.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/REM.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/REM.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/REM.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/RFLOAT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/RFLOAT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/RFLOAT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/RFLOAT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/RINT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/RINT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/RINT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/RINT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/RTS.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/RTS.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/RTS.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/RTS.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/STORE.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/STORE.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/STORE.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/STORE.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/SUB.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/SUB.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUB.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUBSP.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/SUBSP.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/SUBSP.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/SUBSP.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SEQ.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SEQ.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SEQ.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SEQ.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SGE.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SGE.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SGE.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SGE.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SGT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SGT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SGT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SGT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SHL.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SHL.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SHL.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SHL.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SHR.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SHR.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SHR.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SHR.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SLE.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SLE.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SLE.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SLE.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SLT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SLT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SLT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SLT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SNE.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SNE.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SNE.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SNE.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SOV.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/Scc/SOV.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/Scc/SOV.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/Scc/SOV.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/TSTO.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/TSTO.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/TSTO.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/TSTO.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WADDR.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WADDR.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/WADDR.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WADDR.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WFLOAT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/WFLOAT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WFLOAT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WINT.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/WINT.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WINT.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WNL.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WNL.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/WNL.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WNL.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o -c /home/santourh/abstract-vm-32bits/src/instructions/WSTR.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/instructions/WSTR.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/instructions/WSTR.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/EnvRegisters.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/machine/EnvRegisters.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/machine/EnvRegisters.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/Memory.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/machine/Memory.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/machine/Memory.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/RRegister.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/machine/RRegister.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/machine/RRegister.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/Register.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/machine/Register.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/machine/Register.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/VMState.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/machine/VMState.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/machine/VMState.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o -c /home/santourh/abstract-vm-32bits/src/machine/arithmitics/Value.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/machine/arithmitics/Value.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/machine/arithmitics/Value.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o -c /home/santourh/abstract-vm-32bits/src/main.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/main.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/IOperand.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/operands/IOperand.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/operands/IOperand.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/ImmediateOperand.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/operands/ImmediateOperand.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/operands/ImmediateOperand.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/LabelOperand.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/operands/LabelOperand.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/operands/LabelOperand.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/Memory_AddressOperand.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/operands/Memory_AddressOperand.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/operands/Memory_AddressOperand.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/RRegOperand.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/operands/RRegOperand.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/operands/RRegOperand.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o -c /home/santourh/abstract-vm-32bits/src/operands/StringLiteralOperand.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/src/operands/StringLiteralOperand.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/src/operands/StringLiteralOperand.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o -c /home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarLexer.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarLexer.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarLexer.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o -c /home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarParser.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarParser.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarParser.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o -c /home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarBaseListener.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarBaseListener.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseListener.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o -c /home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarListener.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarListener.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarListener.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o -c /home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarBaseVisitor.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarBaseVisitor.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarBaseVisitor.cpp.o"
+},
+{
+  "directory": "/home/santourh/abstract-vm-32bits/build",
+  "command": "/usr/bin/c++  -I/home/santourh/abstract-vm-32bits/include -I/home/santourh/abstract-vm-32bits/include/operands -I/home/santourh/abstract-vm-32bits/include/instructions -I/home/santourh/abstract-vm-32bits/include/instructions/Bcc -I/home/santourh/abstract-vm-32bits/include/instructions/Scc -I/home/santourh/abstract-vm-32bits/include/machine -I/home/santourh/abstract-vm-32bits/include/machine/arithmitics -I/home/santourh/abstract-vm-32bits/build/generated-sources -I/usr/local/include/antlr4-runtime -g -std=c++17 -g -o CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o -c /home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarVisitor.cpp",
+  "file": "/home/santourh/abstract-vm-32bits/build/generated-sources/VMGrammarVisitor.cpp",
+  "output": "CMakeFiles/abstract-vm-16bits.dir/generated-sources/VMGrammarVisitor.cpp.o"
+}
+]

@@ -13,10 +13,10 @@ Register* RRegOperand::getRegister() const
 
 Value RRegOperand::read() const 
 {
-    return reg->RegisterGetValue();
+    return reg->read();
 }
 
 void RRegOperand::write(const Value& value) const
 {
-    reg->RegisterSetValue(value);
+    reg->write(value);
 }

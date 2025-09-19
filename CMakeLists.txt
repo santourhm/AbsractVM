@@ -27,7 +27,6 @@ find_path(ANTLR4_RUNTIME_INCLUDE_DIR
     REQUIRED
 )
 
-# Process grammar file - REPLACE "VMGrammar.g4" with your actual grammar file name and path
 ANTLR_TARGET(VMGrammar 
     "${CMAKE_SOURCE_DIR}/grammar/VMGrammar.g4"  # Adjust this path to your actual .g4 file
     VISITOR 
@@ -49,7 +48,10 @@ add_executable(${PROJECT_NAME}
 # Set include directories
 target_include_directories(${PROJECT_NAME} PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/include"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/operands"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/instructions"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/instructions/Bcc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/instructions/Scc"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/machine"
     "${CMAKE_CURRENT_SOURCE_DIR}/include/machine/arithmitics"
     "${ANTLR_OUTPUT_DIR}"

@@ -49,7 +49,7 @@ void BGE::execute(VMState * vms)
         Value addr = Symbol_Table.at(label_str);
 
 
-        PC->RegisterSetValue(addr);
+        PC->write(addr);
         
 
     }

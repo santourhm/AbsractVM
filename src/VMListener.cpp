@@ -62,7 +62,7 @@ VMListener::VMListener(VMState * vms) : ProgATS(std::make_unique<Program>()), vm
 
 std::unique_ptr<RRegOperand> static parseRm_Operand(VMGrammarParser::OperandContext *operand, VMState * vs) {
     if (!operand->register_()) {
-        throw std::runtime_error(" expected RREGISTER operand");
+        throw std::runtime_error(" expected Rm register operand");
     }
 
     std::string regText = operand->register_()->RREGISTER()->getText();
@@ -77,7 +77,7 @@ std::unique_ptr<RRegOperand> static parseRm_Operand(VMGrammarParser::OperandCont
         throw std::runtime_error(" invalid register format in " + regText);
     }
 
-    RRegister *reg = vs->getEnv_Registers()->getR(regIndex);
+    Register *reg = vs->getEnv_Registers()->getR(regIndex);
     return std::make_unique<RRegOperand>(reg);
 }
 

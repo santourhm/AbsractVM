@@ -23,15 +23,15 @@ void RTS::execute(VMState * vms)
         Register * LB = vms->getEnv_Registers()->getLB();
         Memory * mem = vms->getMemory();
 
-        uint32_t V_LB = LB->RegisterGetValue().getAddr();
+        uint32_t V_LB = LB->read().getAddr();
 
         Value returnAddr = mem->getWord(V_LB - 1);
-        PC->RegisterSetValue(returnAddr);
+        PC->write(returnAddr);
 
-        SP->RegisterSetValue(Value(V_LB - 2));
+        SP->write(Value(V_LB - 2));
 
         Value callerLB = mem->getWord(V_LB);
-        LB->RegisterSetValue(callerLB);
+        LB->write(callerLB);
     }
     catch(const std::runtime_error& e) {
         std::cerr << "Error " << e.what() << '\n';

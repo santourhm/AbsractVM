@@ -3,6 +3,9 @@
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/include",
         "${workspaceFolder}/include/instructions",
+        "${workspaceFolder}/include/instructions/Bcc",
+        "${workspaceFolder}/include/instructions/Scc",
+        "${workspaceFolder}/include/operands",
         "${workspaceFolder}/include/machine",
         "${workspaceFolder}/include/machine/arithmitics",
         "${workspaceFolder}/src",

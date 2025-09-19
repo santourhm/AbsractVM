@@ -30,7 +30,7 @@ void SLE::execute(VMState * vms)
 
         Value v(static_cast<int32_t>(vms->get_sCC()->LE));
 
-        reg->getRegister()->RegisterSetValue(v);
+        reg->getRegister()->write(v);
         
 
     }
