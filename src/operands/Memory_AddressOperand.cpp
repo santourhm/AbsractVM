@@ -21,7 +21,7 @@ Value Memory_AddressOperand::read() const
      return mem->getWord(static_cast<uint32_t>(offset + RegOperand->read().getAddr()));
 } 
 
-void  Memory_AddressOperand::write(const Value& value) const 
+void  Memory_AddressOperand::write(const Value& value)  
 {
      mem->setWord(static_cast<uint32_t>(offset + RegOperand->read().getAddr()),value);
 }

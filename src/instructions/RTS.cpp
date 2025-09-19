@@ -26,11 +26,13 @@ void RTS::execute(VMState * vms)
         uint32_t V_LB = LB->read().getAddr();
 
         Value returnAddr = mem->getWord(V_LB - 1);
+        
         PC->write(returnAddr);
 
         SP->write(Value(V_LB - 2));
 
         Value callerLB = mem->getWord(V_LB);
+
         LB->write(callerLB);
     }
     catch(const std::runtime_error& e) {

@@ -18,7 +18,7 @@ Value StringLiteralOperand::read() const
     return Value(this->v);
 }
 
-void StringLiteralOperand::write(const Value& value) const 
+void StringLiteralOperand::write(const Value& value)  
 {
 
 }

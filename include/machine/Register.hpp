@@ -14,14 +14,14 @@ class Register  : public IOperand
     private:
         
         std::string     name;
-        Value&   value       ;
+        Value   value       ;
 
     public:
 
         Register(const std::string& n, Value v);
         ~Register() {} ;
 
-        void    write(const Value& value) const override       ;
+        void  write(const Value& value)  override;
         Value   read()        const  override ;
         
 };

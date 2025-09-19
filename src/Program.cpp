@@ -53,7 +53,7 @@ void Program::executeProgram(VMState* vms)
         {                 
         
         //#ifdef DEBUG_MODE
-                instructions[PC->read().getAddr()]->debug(vms);
+                //instructions[PC->read().getAddr()]->debug(vms);
         //#endif
 
                 instructions[PC->read().getAddr()]->execute(vms);
@@ -74,7 +74,7 @@ void Program::executeProgram(VMState* vms)
                 }
 
                 PC->write(V_PC); 
-                std::cout << "SP = " << SP->read().getAddr() << std::endl; 
+                //std::cout << "SP = " << SP->read().getAddr() << std::endl; 
         }
 
 }

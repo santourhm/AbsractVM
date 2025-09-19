@@ -24,7 +24,7 @@ class Memory_AddressOperand : public IOperand
         ~Memory_AddressOperand();
 
         Value read() const override        ;
-        void  write(const Value& value) const override;
+        void  write(const Value& value)  ;
 
         uint32_t  getAddress(void)  const;
         Value getEffectiveAddress() const; 

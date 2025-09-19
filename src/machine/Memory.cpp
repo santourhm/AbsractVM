@@ -15,9 +15,11 @@ Memory::Memory(EnvRegisters * r_env,size_t total_memory_words)
 
 void Memory::initialize() 
 {
-    gb_val->write(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
-    lb_val->write(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
-    sp_val->write(Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1)));
+    const Value v = Value(static_cast<uint32_t>(STACK_BASE_ADDR - 1));
+
+    gb_val->write(v);
+    lb_val->write(v);
+    sp_val->write(v);
 
     heap_ptr = HEAP_START_ADDR;
 }

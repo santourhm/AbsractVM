@@ -22,7 +22,7 @@ class ImmediateOperand  :  public IOperand
 
 
         Value read() const override;
-        void  write(const Value& value) const override;
+        void  write(const Value& value)  override;
 
 };
 

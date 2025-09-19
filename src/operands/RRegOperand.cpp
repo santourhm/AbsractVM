@@ -16,7 +16,7 @@ Value RRegOperand::read() const
     return reg->read();
 }
 
-void RRegOperand::write(const Value& value) const
+void RRegOperand::write(const Value& value) 
 {
     reg->write(value);
 }

@@ -18,7 +18,7 @@ class Memory
         static constexpr uint32_t HEAP_SIZE_WORDS      = 4 * 1024 * 1024; // ~4M words
         static constexpr uint32_t TOTAL_MEMORY_WORDS   = HEAP_START_ADDR + HEAP_SIZE_WORDS;
 
-        explicit Memory(EnvRegisters * r_env,size_t total_memory_words = TOTAL_MEMORY_WORDS);
+        Memory(EnvRegisters * r_env,size_t total_memory_words = TOTAL_MEMORY_WORDS);
         ~Memory() = default;
 
         void initialize();

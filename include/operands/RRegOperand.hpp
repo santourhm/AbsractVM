@@ -2,8 +2,8 @@
 #define RREGOPERAND_HPP
 
 #include "IOperand.hpp"
+#include "Register.hpp"
 #include <string>
-#include <RRegister.hpp>
 
 
 
@@ -21,7 +21,7 @@ class RRegOperand : public IOperand
         Register* getRegister() const;
 
         Value read() const override        ;
-        void write(const Value& value) const override;
+        void write(const Value& value) override;
 };
 
 #endif

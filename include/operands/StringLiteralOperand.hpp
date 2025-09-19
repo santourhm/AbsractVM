@@ -18,7 +18,7 @@ class StringLiteralOperand : public IOperand
         ~StringLiteralOperand();
 
         Value read() const override        ;
-        void  write(const Value& value) const override;
+        void  write(const Value& value)  ;
 };
 
 

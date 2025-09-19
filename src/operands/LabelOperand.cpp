@@ -19,7 +19,7 @@ Value LabelOperand::read() const
      return label;
 }
 
-void  LabelOperand::write(const Value& value) const 
+void  LabelOperand::write(const Value& value) 
 {
 
 }

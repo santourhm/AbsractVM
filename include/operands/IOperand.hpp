@@ -13,7 +13,7 @@ class IOperand
         
         virtual ~IOperand() = default; 
         virtual Value read() const = 0;
-        virtual void write(const Value& value) const = 0;
+        virtual void write(const Value& value)  = 0;
    
 };
 
