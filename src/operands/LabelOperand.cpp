@@ -23,3 +23,12 @@ void  LabelOperand::write(const Value& value)
 {
 
 }
+
+
+
+std::string LabelOperand::show() const    
+{
+
+    return label.getStr();
+    
+}

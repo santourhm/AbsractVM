@@ -60,7 +60,18 @@ void BEQ::execute(VMState * vms)
     
 }
 
-void BEQ::debug(VMState * vms) 
+void BEQ::debug(VMState * vms)
 {
-    std::cout << "BEQ" << std::endl;
+    std::cout << "BEQ      " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+

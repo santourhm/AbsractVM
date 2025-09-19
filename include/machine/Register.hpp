@@ -23,6 +23,8 @@ class Register  : public IOperand
 
         void  write(const Value& value)  override;
         Value   read()        const  override ;
+        std::string show() const override;
+
         
 };
 

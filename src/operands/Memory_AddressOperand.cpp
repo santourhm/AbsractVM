@@ -37,3 +37,10 @@ uint32_t  Memory_AddressOperand::getAddress(void)  const
      //std::cout << "ADDRESS "  << offset +  RegOperand->read().getAddr() << std::endl;   
      return static_cast<uint32_t>(offset +  RegOperand->read().getAddr());
 }
+
+std::string Memory_AddressOperand::show() const    
+{
+     std::string Mem_Op_Str ;
+     Mem_Op_Str  =std::to_string(offset) + "(" + RegOperand->show() + ")"; 
+     return Mem_Op_Str; 
+}

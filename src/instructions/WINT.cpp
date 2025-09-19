@@ -17,7 +17,19 @@ void WINT::execute(VMState * vms)
       std::cout << v.getInt() ; 
 }
 
-void WINT::debug(VMState * vms) 
+void WINT::debug(VMState * vms)
 {
-    std::cout << "WINT" << std::endl;
+    std::cout << "WINT   " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+
+

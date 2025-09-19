@@ -19,3 +19,10 @@ Value Register::read() const
 {
     return value;
 }
+
+
+
+std::string Register::show() const
+{
+    return name;
+}

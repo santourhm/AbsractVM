@@ -60,7 +60,17 @@ void BOV::execute(VMState * vms)
     
 }
 
-void BOV::debug(VMState * vms) 
+void BOV::debug(VMState * vms)
 {
-    std::cout << "BOV" << std::endl;
+    std::cout << "BOV      " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }

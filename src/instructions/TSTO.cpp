@@ -39,7 +39,17 @@ void TSTO::execute(VMState * vms)
 }
 
 
-void TSTO::debug(VMState * vms) 
+void TSTO::debug(VMState * vms)
 {
-    std::cout << "TSTO" << std::endl;
+    std::cout << "TSTO   " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }

@@ -13,16 +13,52 @@
 using namespace antlr4;
 
 bool ishalt_program = false; 
+bool debug_mode = false;
 
 int main(int argc, const char* argv[]) {
-    (void)argc;  
     
-    try {
-        std::ifstream stream;
-        stream.open(argv[1]);
+    if (argc < 2) 
+    {
+        std::cerr << "Usage: " << argv[0] << " <file.S> [-d|--debug]\n";
+        return 1;
+    }
+
+    std::string filePath;
         
-        if (!stream.is_open()) {
-            std::cerr << "Error: Could not open file " << argv[1] << std::endl;
+    for (int i = 1; i < argc; ++i) 
+    {
+        std::string arg = argv[i];
+        size_t  size = arg.size();
+
+        if (arg == "-d" || arg == "--debug") 
+        {
+                debug_mode = true;
+        } 
+        else if( arg.size() > 2  && (arg.substr(size - 2, size ) == ".S" || arg.substr(size - 2, size ) == ".ass")) 
+        {
+                filePath = arg; 
+        }
+        else
+        {
+            std::cerr << "Error: unknown argument / option" << arg << std::endl;
+            return 1;
+        }
+        
+    }
+
+    if(filePath.empty())
+    {
+        std::cerr << "Error : you must give a assembly (.S , .ass) file"  << std::endl;
+        return 1;
+    }
+
+    try {
+        
+        std::ifstream stream(filePath);
+        
+        if (!stream.is_open()) 
+        {
+            std::cerr << "Error: Could not open file " << filePath << std::endl;
             return 1;
         }
 
@@ -51,7 +87,7 @@ int main(int argc, const char* argv[]) {
         
     }
     catch (const std::exception& e) {
-        std::cerr << std::string("Error at ") + __FILE__ + ": " + std::to_string(__LINE__) << e.what() << std::endl;
+        std::cerr << std::string("Error at ")  << e.what() << std::endl;
         return 1;
     }
 

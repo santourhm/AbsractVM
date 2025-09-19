@@ -5,6 +5,7 @@
 #include "Op_Results.hpp"
 
 extern bool ishalt_program;
+extern bool debug_mode;
 
 void    Program::addIntruction(std::unique_ptr<IInstruction> inst)
 {
@@ -52,9 +53,9 @@ void Program::executeProgram(VMState* vms)
         while(vms->not_halt)
         {                 
         
-        //#ifdef DEBUG_MODE
-                //instructions[PC->read().getAddr()]->debug(vms);
-        //#endif
+                if(debug_mode)
+                        instructions[PC->read().getAddr()]->debug(vms);
+        
 
                 instructions[PC->read().getAddr()]->execute(vms);
 
@@ -74,7 +75,6 @@ void Program::executeProgram(VMState* vms)
                 }
 
                 PC->write(V_PC); 
-                //std::cout << "SP = " << SP->read().getAddr() << std::endl; 
         }
 
 }

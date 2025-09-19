@@ -33,7 +33,18 @@ void MUL::execute(VMState * vms)
     }
 }
 
-void MUL::debug(VMState * vms) 
+void MUL::debug(VMState * vms)
 {
-    std::cout << "MUL" << std::endl;
+    std::cout << "MUL    " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+

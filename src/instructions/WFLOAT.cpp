@@ -17,7 +17,17 @@ void WFLOAT::execute(VMState * vms)
       std::cout << v.getFloat() ; 
 }
 
-void WFLOAT::debug(VMState * vms) 
+void WFLOAT::debug(VMState * vms)
 {
-    std::cout << "WFLOAT" << std::endl;
+    std::cout << "WFLOAT " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }

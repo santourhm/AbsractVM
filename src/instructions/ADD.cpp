@@ -31,7 +31,19 @@ void ADD::execute(VMState * vms)
     
 }
 
-void ADD::debug(VMState * vms) 
+void ADD::debug(VMState * vms)
 {
-    std::cout << "ADD" << std::endl;
+    std::cout << "ADD    " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+
+

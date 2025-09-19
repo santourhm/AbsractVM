@@ -10,7 +10,17 @@ void ERROR::execute(VMState * vms)
 }
 
 
-void ERROR::debug(VMState * vms) 
+void ERROR::debug(VMState * vms)
 {
-    std::cout << "ERROR" << std::endl;
+    std::cout << "ERROR  " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }

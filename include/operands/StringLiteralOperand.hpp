@@ -19,6 +19,8 @@ class StringLiteralOperand : public IOperand
 
         Value read() const override        ;
         void  write(const Value& value)  ;
+        std::string show() const override;
+
 };
 
 

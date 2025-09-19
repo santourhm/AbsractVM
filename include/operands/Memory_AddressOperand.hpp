@@ -25,6 +25,8 @@ class Memory_AddressOperand : public IOperand
 
         Value read() const override        ;
         void  write(const Value& value)  ;
+        std::string show() const override;
+
 
         uint32_t  getAddress(void)  const;
         Value getEffectiveAddress() const; 

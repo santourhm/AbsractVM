@@ -38,7 +38,19 @@ void POP::execute(VMState * vms)
     
 }
 
-void POP::debug(VMState * vms) 
+void POP::debug(VMState * vms)
 {
-    std::cout << "POP" << std::endl;
+    std::cout << "POP    " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+
+

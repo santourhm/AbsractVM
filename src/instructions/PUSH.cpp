@@ -38,7 +38,18 @@ void PUSH::execute(VMState * vms)
     
 }
 
-void PUSH::debug(VMState * vms) 
+void PUSH::debug(VMState * vms)
 {
-    std::cout << "PUSH" << std::endl;
+    std::cout << "PUSH   " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+

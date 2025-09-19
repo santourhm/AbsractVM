@@ -33,7 +33,19 @@ void REM::execute(VMState * vms)
     }
 }
 
-void REM::debug(VMState * vms) 
+void REM::debug(VMState * vms)
 {
-    std::cout << "REM" << std::endl;
+    std::cout << "REM    " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+
+

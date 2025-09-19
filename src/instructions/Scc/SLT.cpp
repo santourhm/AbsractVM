@@ -41,7 +41,18 @@ void SLT::execute(VMState * vms)
     
 }
 
-void SLT::debug(VMState * vms) 
+void SLT::debug(VMState * vms)
 {
-    std::cout << "SLT" << std::endl;
+    std::cout << "SLT      " ;
+
+    size_t numberOf_Operands = operands.size();
+
+    for (size_t a = 0; a < numberOf_Operands ; a++ )
+    {
+        if(a >= 1)  std::cout << " , ";
+        std::cout << operands[a].get()->show();
+    }
+
+    std::cout << std::endl;
 }
+

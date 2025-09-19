@@ -24,3 +24,7 @@ void StringLiteralOperand::write(const Value& value)
 }
 
 
+std::string StringLiteralOperand::show()   const
+{
+    return v;
+}

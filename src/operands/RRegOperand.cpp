@@ -20,3 +20,9 @@ void RRegOperand::write(const Value& value)
 {
     reg->write(value);
 }
+
+
+std::string RRegOperand::show() const    
+{
+     return reg->show(); 
+}
